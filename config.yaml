@@ -1,0 +1,16 @@
+runtime:
+  advocate_bin: "../ADVOCATE/advocate/advocate"
+  patched_go: "../ADVOCATE/goPatch/bin/go"
+  go_runtime: "../../../Tools/go-runtime/bin/go"
+
+results:
+  root: "results"
+  keep_raw_advocate_result: false
+
+modes:
+  - GFuzz
+  - GFuzzHB
+  - GFuzzHBFlow
+  - Flow
+  - GoCR
+  - GoCRHB

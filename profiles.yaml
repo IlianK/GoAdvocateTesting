@@ -1,0 +1,61 @@
+analysisProfiles:
+  all-quick:
+    scen: ""
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
+
+  mixed-default:
+    scen: "m"
+    timeoutRec: 20
+    timeoutRep: 20
+    keepTrace: true
+    stats: true
+    time: true
+    
+  mixed-quick:
+    scen: "m"
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
+
+  mixed-deep:
+    scen: "m"
+    timeoutRec: 60
+    timeoutRep: 60
+    keepTrace: true
+    stats: true
+    time: true
+
+
+fuzzProfiles:
+  default:
+    maxRuns: 50
+    timeoutFuz: 10
+    timeoutRec: 20
+    timeoutRep: 20
+    keepTrace: true
+    stats: true
+    time: true
+
+  quick:
+    maxRuns: 10
+    timeoutFuz: 5
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
+
+  deep:
+    maxRuns: 200
+    timeoutFuz: 30
+    timeoutRec: 60
+    timeoutRep: 60
+    keepTrace: true
+    stats: true
+    time: true

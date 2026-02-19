@@ -1,0 +1,13 @@
+=== RUN   TestCockroach1055
+--- PASS: TestCockroach1055 (0.00s)
+PASS
+ok  	GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/1055	0.002s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/1055/cockroach1055_test.go
+TestName:  TestCockroach1055
+Import added at line: 3
+Header added at line: 67
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/1055/cockroach1055_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestCockroach1055
+signal: interrupt
+FAIL	GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/1055	9.373s

@@ -1,0 +1,10 @@
+=== RUN   TestUnbufferedRecvNoSend
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Channel/channel_unbuffered_test.go
+TestName:  TestUnbufferedRecvNoSend
+Import added at line: 3
+Header added at line: 30
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Channel/channel_unbuffered_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestUnbufferedRecvNoSend
+signal: interrupt
+FAIL	channel	1.952s

@@ -1,0 +1,20 @@
+# binaries
+advocate-runner
+*.exe
+*.out
+
+# go build cache
+/bin/
+/dist/
+
+# editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Examples
+Examples/GoGuard/
+Examples/Projects/
+Examples/GoBench/goker/nonblocking
