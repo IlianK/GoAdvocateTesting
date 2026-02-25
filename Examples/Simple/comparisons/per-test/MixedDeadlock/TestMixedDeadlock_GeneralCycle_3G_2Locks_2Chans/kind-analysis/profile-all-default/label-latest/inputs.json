@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:32.206453943Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/MixedDeadlock/TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+        "testRel": "MixedDeadlock",
+        "testName": "TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-54-20Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+          "-exec",
+          "TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans",
+          "-prog",
+          "TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:54:20.390591301Z",
+        "endedAt": "2026-02-25T01:54:56.41065597Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P05;P06",
+        "Total_Bugs": 5,
+        "Unique_Bugs": 2,
+        "duration_ms": 36020,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-54-20Z",
+        "test_name": "MixedDeadlock/TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans"
+      }
+    }
+  ]
+}

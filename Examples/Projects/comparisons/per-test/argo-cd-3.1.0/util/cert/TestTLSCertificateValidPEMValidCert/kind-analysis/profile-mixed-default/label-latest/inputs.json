@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:04:44.761483382Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/cert/TestTLSCertificateValidPEMValidCert/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/cert",
+        "testRel": "argo-cd-3.1.0/util/cert",
+        "testName": "TestTLSCertificateValidPEMValidCert",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T06-36-12Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/cert",
+          "-exec",
+          "TestTLSCertificateValidPEMValidCert",
+          "-prog",
+          "TestTLSCertificateValidPEMValidCert",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T06:36:12.368890625Z",
+        "endedAt": "2026-02-25T06:36:15.097617469Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2728,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T06-36-12Z",
+        "test_name": "argo-cd-3.1.0/util/cert/TestTLSCertificateValidPEMValidCert"
+      }
+    }
+  ]
+}

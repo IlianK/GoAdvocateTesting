@@ -9,12 +9,15 @@ import (
 
 // BuildAnalysisCommand builds:
 // advocate analysis -path <dir> -timeoutRec X -timeoutRep Y -keepTrace -stats -scen m
-func BuildAnalysisCommand(cfg *app.Config, testDir string, profileName string, p app.AnalysisProfile) (bin string, argv []string) {
+func BuildAnalysisCommand(cfg *app.Config, testDir string, testName, profileName string, p app.AnalysisProfile) (bin string, argv []string) {
 	bin = cfg.Runtime.AdvocateBin
 
 	argv = []string{
 		"analysis",
 		"-path", filepath.Clean(testDir),
+		"-exec", testName,
+		"-prog", testName,
+
 		"-timeoutRec", strconv.Itoa(p.TimeoutRec),
 		"-timeoutRep", strconv.Itoa(p.TimeoutRep),
 	}

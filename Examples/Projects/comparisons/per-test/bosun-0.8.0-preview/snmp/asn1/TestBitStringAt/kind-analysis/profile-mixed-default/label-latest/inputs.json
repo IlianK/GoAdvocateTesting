@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:18:39.786384919Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bosun-0.8.0-preview/snmp/asn1/TestBitStringAt/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/snmp/asn1",
+        "testRel": "bosun-0.8.0-preview/snmp/asn1",
+        "testName": "TestBitStringAt",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-57-34Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/snmp/asn1",
+          "-exec",
+          "TestBitStringAt",
+          "-prog",
+          "TestBitStringAt",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:57:34.155081057Z",
+        "endedAt": "2026-02-25T10:57:35.467217108Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1312,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-57-34Z",
+        "test_name": "bosun-0.8.0-preview/snmp/asn1/TestBitStringAt"
+      }
+    }
+  ]
+}

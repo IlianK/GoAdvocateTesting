@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:34.13575616Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/Scenarios/TestP01_PossibleSendOnClosed/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+        "testRel": "Scenarios",
+        "testName": "TestP01_PossibleSendOnClosed",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-01-46Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+          "-exec",
+          "TestP01_PossibleSendOnClosed",
+          "-prog",
+          "TestP01_PossibleSendOnClosed",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:01:46.58130091Z",
+        "endedAt": "2026-02-25T02:01:47.946202716Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "A01",
+        "Total_Bugs": 2,
+        "Unique_Bugs": 1,
+        "duration_ms": 1364,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-01-46Z",
+        "test_name": "Scenarios/TestP01_PossibleSendOnClosed"
+      }
+    }
+  ]
+}

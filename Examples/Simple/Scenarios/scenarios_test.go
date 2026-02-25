@@ -1,6 +1,7 @@
 package scenarios
 
 import (
+	"advocate"
 	"sync"
 	"testing"
 	"time"
@@ -57,6 +58,10 @@ func TestA07_ConcurrentRecv(t *testing.T) {
 // ---------------- P01–P03: Possible Bugs ----------------
 
 func TestP01_PossibleSendOnClosed(t *testing.T) {
+	// ======= Preamble Start =======
+  advocate.InitFuzzing("/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/fuzzingTraces/fuzzingTrace_2", 20)
+  defer advocate.FinishFuzzing()
+  // ======= Preamble End =======
 	ch := make(chan int)
 	go func() {
 		time.Sleep(10 * time.Millisecond)
@@ -177,4 +182,3 @@ func TestL10_LeakOnCond(t *testing.T) {
 	cond.Wait() // L10: waits forever
 	mu.Unlock()
 }
-

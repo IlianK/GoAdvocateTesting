@@ -1,0 +1,4 @@
+N,2,1000000001,NC,0,/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:65
+G,4,2,/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:66
+C,6,14,1000000001,S,t,1,0,0,/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:70
+E,16

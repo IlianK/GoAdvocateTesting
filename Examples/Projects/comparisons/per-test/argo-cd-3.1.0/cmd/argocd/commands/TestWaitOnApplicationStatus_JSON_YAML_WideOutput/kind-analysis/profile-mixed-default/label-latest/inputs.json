@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:52:06.512895039Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/cmd/argocd/commands/TestWaitOnApplicationStatus_JSON_YAML_WideOutput/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands",
+        "testRel": "argo-cd-3.1.0/cmd/argocd/commands",
+        "testName": "TestWaitOnApplicationStatus_JSON_YAML_WideOutput",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-16-10Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands",
+          "-exec",
+          "TestWaitOnApplicationStatus_JSON_YAML_WideOutput",
+          "-prog",
+          "TestWaitOnApplicationStatus_JSON_YAML_WideOutput",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:16:10.027449964Z",
+        "endedAt": "2026-02-25T03:16:49.795258491Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 39767,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-16-10Z",
+        "test_name": "argo-cd-3.1.0/cmd/argocd/commands/TestWaitOnApplicationStatus_JSON_YAML_WideOutput"
+      }
+    }
+  ]
+}

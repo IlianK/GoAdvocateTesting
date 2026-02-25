@@ -6,16 +6,9 @@ import (
 )
 
 type MoveParams struct {
-	// TestDir is the directory where ADVOCATE was executed and where advocateResult exists.
-	TestDir string
-
-	// DatasetDir is the directory where results/ should be written (the CLI root path).
-	// If empty, we fall back to TestDir for backward compatibility.
-	DatasetDir string
-
-	// TestRel is the relative path from DatasetDir to TestDir (e.g. "cockroach/10214").
-	// Used to keep results interpretable and avoid test-name collisions.
-	TestRel string
+	TestDir    string // TestDir is directory where ADVOCATE was executed and where advocateResult exists
+	DatasetDir string // DatasetDir is directory where results/ should be written (the CLI root path) - if empty, defaults to TestDir
+	TestRel    string // TestRel is the relative path from DatasetDir to TestDir (e.g. "cockroach/10214")
 
 	ResultsRoot string
 	TestName    string
@@ -37,7 +30,6 @@ func DestinationDir(p MoveParams) (string, error) {
 		p.Profile = "default"
 	}
 
-	// Backward compatibility: if DatasetDir is empty, behave like old code.
 	baseRoot := p.DatasetDir
 	if baseRoot == "" {
 		if p.TestDir == "" {
@@ -55,7 +47,7 @@ func DestinationDir(p MoveParams) (string, error) {
 		base = filepath.Join(base, p.TestRel)
 	}
 
-	// Always keep test name as a final folder before kind/profile/run.
+	// Keep test name as a final folder before kind/profile/run.
 	base = filepath.Join(base, p.TestName)
 
 	switch p.Kind {

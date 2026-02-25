@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:18.188699378Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/kubernetes/25331/TestKubernetes25331/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/kubernetes/25331",
+        "testRel": "kubernetes/25331",
+        "testName": "TestKubernetes25331",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-00-50Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/kubernetes/25331",
+          "-exec",
+          "TestKubernetes25331",
+          "-prog",
+          "TestKubernetes25331",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:00:50.730090414Z",
+        "endedAt": "2026-02-25T02:00:52.082747295Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "A07",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 1,
+        "duration_ms": 1352,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-00-50Z",
+        "test_name": "kubernetes/25331/TestKubernetes25331"
+      }
+    }
+  ]
+}

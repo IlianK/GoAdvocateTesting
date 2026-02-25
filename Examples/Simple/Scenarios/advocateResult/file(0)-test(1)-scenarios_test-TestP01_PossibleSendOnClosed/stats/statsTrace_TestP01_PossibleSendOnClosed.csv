@@ -1,0 +1,5 @@
+TestName,NrEvents,NrGoroutines,NrAtomicEvents,NrChannelEvents,NrSelectEvents,NrMutexEvents,NrWaitgroupEvents,NrCondVariablesEvents,NrOnceOperations
+TestP01_PossibleSendOnClosed,6,2,0,2,0,0,0,0,0
+TestP01_PossibleSendOnClosed,6,2,0,2,0,0,0,0,0
+TestP01_PossibleSendOnClosed,8,27,0,2,0,0,0,0,0
+TestP01_PossibleSendOnClosed,8,27,0,2,0,0,0,0,0

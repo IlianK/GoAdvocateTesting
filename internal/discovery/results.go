@@ -32,9 +32,9 @@ type Run struct {
 
 type Filter struct {
 	Kind    string // "", "analysis", "fuzzing"
-	Profile string // ""
-	Label   string // "" means no label filtering (caller may apply LatestPerGroup)
-	Test    string // ""
+	Profile string
+	Label   string // "" means no label filtering
+	Test    string
 	Mode    string // "" means any
 }
 
@@ -143,7 +143,7 @@ func FilterRuns(runs []Run, f Filter) []Run {
 	return out
 }
 
-// LatestPerGroup selects the newest run by StartedAt within each group.
+// LatestPerGroup selects newest run by StartedAt within each group
 // Keys: "test","kind","profile","mode","label"
 func LatestPerGroup(runs []Run, keys ...string) []Run {
 	type key string
@@ -194,7 +194,6 @@ func LatestPerGroup(runs []Run, keys ...string) []Run {
 }
 
 // ---- RunIndex (for interactive compare menus) ----
-
 type RunIndex struct {
 	Runs []Run
 }
@@ -242,8 +241,8 @@ func (idx RunIndex) Labels(kind, profile string) []string {
 	return sortedKeys(m)
 }
 
-// Tests returns test names with runs matching kind/profile.
-// If label == "" (meaning "latest"), we do not restrict by label.
+// Tests returns test names with runs matching kind/profile
+// If label == "" (meaning "latest"), do not restrict by label
 func (idx RunIndex) Tests(kind, profile, label string) []string {
 	m := map[string]struct{}{}
 	for _, r := range idx.Runs {
@@ -263,8 +262,8 @@ func (idx RunIndex) Tests(kind, profile, label string) []string {
 	return sortedKeys(m)
 }
 
-// Modes returns fuzz modes present for a fuzz profile.
-// If label == "" we do not restrict by label.
+// Modes returns fuzz modes present for a fuzz profile
+// If label == "" do not restrict by label
 func (idx RunIndex) Modes(profile, label string) []string {
 	m := map[string]struct{}{}
 	for _, r := range idx.Runs {

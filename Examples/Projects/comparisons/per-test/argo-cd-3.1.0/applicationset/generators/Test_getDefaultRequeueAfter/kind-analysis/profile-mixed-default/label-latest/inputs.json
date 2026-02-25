@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:50:21.302645468Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/generators/Test_getDefaultRequeueAfter/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+        "testRel": "argo-cd-3.1.0/applicationset/generators",
+        "testName": "Test_getDefaultRequeueAfter",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-45-30Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+          "-exec",
+          "Test_getDefaultRequeueAfter",
+          "-prog",
+          "Test_getDefaultRequeueAfter",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:45:30.04265208Z",
+        "endedAt": "2026-02-25T02:45:38.678507596Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 8635,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-45-30Z",
+        "test_name": "argo-cd-3.1.0/applicationset/generators/Test_getDefaultRequeueAfter"
+      }
+    }
+  ]
+}

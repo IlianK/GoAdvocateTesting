@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:23:01.731154733Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/Test_App_UseParentErrorHandler/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+        "testRel": "fiber-2.40.1",
+        "testName": "Test_App_UseParentErrorHandler",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-31-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+          "-exec",
+          "Test_App_UseParentErrorHandler",
+          "-prog",
+          "Test_App_UseParentErrorHandler",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:31:29.750110585Z",
+        "endedAt": "2026-02-25T11:31:32.280711817Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2530,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-31-29Z",
+        "test_name": "fiber-2.40.1/Test_App_UseParentErrorHandler"
+      }
+    }
+  ]
+}

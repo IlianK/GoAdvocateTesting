@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:14:51.899484659Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/index/upsidedown/store/gtreap/TestGTreapReaderOwnsGetBytes/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/upsidedown/store/gtreap",
+        "testRel": "bleve-2.5.3/index/upsidedown/store/gtreap",
+        "testName": "TestGTreapReaderOwnsGetBytes",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T08-05-13Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/upsidedown/store/gtreap",
+          "-exec",
+          "TestGTreapReaderOwnsGetBytes",
+          "-prog",
+          "TestGTreapReaderOwnsGetBytes",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T08:05:13.448092406Z",
+        "endedAt": "2026-02-25T08:05:14.888554008Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1440,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T08-05-13Z",
+        "test_name": "bleve-2.5.3/index/upsidedown/store/gtreap/TestGTreapReaderOwnsGetBytes"
+      }
+    }
+  ]
+}

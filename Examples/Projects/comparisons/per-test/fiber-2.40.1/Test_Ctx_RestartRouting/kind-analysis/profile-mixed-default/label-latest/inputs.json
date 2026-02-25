@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:24:43.052532565Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/Test_Ctx_RestartRouting/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+        "testRel": "fiber-2.40.1",
+        "testName": "Test_Ctx_RestartRouting",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-19-44Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+          "-exec",
+          "Test_Ctx_RestartRouting",
+          "-prog",
+          "Test_Ctx_RestartRouting",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:19:44.245061747Z",
+        "endedAt": "2026-02-25T11:19:46.862909266Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2617,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-19-44Z",
+        "test_name": "fiber-2.40.1/Test_Ctx_RestartRouting"
+      }
+    }
+  ]
+}

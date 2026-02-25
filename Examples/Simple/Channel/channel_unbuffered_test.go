@@ -1,7 +1,6 @@
 package channel
 
 import (
-	"advocate"
 	"testing"
 	"time"
 )
@@ -29,10 +28,6 @@ func TestUnbufferedLeakNoRecv(t *testing.T) {
 
 // TestUnbufferedRecvNoSend: recv blocks forever
 func TestUnbufferedRecvNoSend(t *testing.T) {
-	// ======= Preamble Start =======
-  advocate.InitTracing(5)
-  defer advocate.FinishTracing()
-  // ======= Preamble End =======
 	ch := make(chan int)
 	// no send
 	_ = <-ch // L01 or deadlock

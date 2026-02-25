@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:17.963219836Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/cockroach/10214/TestCockroach10214/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/10214",
+        "testRel": "cockroach/10214",
+        "testName": "TestCockroach10214",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-51-26Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/cockroach/10214",
+          "-exec",
+          "TestCockroach10214",
+          "-prog",
+          "TestCockroach10214",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:51:26.200712185Z",
+        "endedAt": "2026-02-25T01:51:30.350778001Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P05",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 1,
+        "duration_ms": 4150,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-51-26Z",
+        "test_name": "cockroach/10214/TestCockroach10214"
+      }
+    }
+  ]
+}

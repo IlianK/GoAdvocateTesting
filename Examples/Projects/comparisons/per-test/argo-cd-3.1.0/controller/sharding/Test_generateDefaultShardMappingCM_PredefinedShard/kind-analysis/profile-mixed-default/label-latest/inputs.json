@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:54:42.293340693Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/sharding/Test_generateDefaultShardMappingCM_PredefinedShard/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller/sharding",
+        "testRel": "argo-cd-3.1.0/controller/sharding",
+        "testName": "Test_generateDefaultShardMappingCM_PredefinedShard",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-50-16Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller/sharding",
+          "-exec",
+          "Test_generateDefaultShardMappingCM_PredefinedShard",
+          "-prog",
+          "Test_generateDefaultShardMappingCM_PredefinedShard",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:50:16.713524901Z",
+        "endedAt": "2026-02-25T03:50:23.821423904Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7107,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-50-16Z",
+        "test_name": "argo-cd-3.1.0/controller/sharding/Test_generateDefaultShardMappingCM_PredefinedShard"
+      }
+    }
+  ]
+}

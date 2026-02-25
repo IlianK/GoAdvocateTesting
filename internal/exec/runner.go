@@ -21,7 +21,7 @@ func NewRunner(cfg *app.Config) *Runner {
 func (r *Runner) RunAnalysis(testDir, testName, profileName string, prof app.AnalysisProfile, label string) (*app.RunInfo, error) {
 	runID := time.Now().UTC().Format("2006-01-02T15-04-05Z")
 
-	bin, argv := BuildAnalysisCommand(r.cfg, testDir, profileName, prof)
+	bin, argv := BuildAnalysisCommand(r.cfg, testDir, testName, profileName, prof)
 
 	cmd := exec.Command(bin, argv...)
 	cmd.Stdout = os.Stdout

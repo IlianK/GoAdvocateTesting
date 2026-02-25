@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:18.163009067Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/istio/18454/TestIstio18454/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/istio/18454",
+        "testRel": "istio/18454",
+        "testName": "TestIstio18454",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-00-17Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/istio/18454",
+          "-exec",
+          "TestIstio18454",
+          "-prog",
+          "TestIstio18454",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:00:17.218302197Z",
+        "endedAt": "2026-02-25T02:00:18.581339977Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "A07",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 1,
+        "duration_ms": 1363,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-00-17Z",
+        "test_name": "istio/18454/TestIstio18454"
+      }
+    }
+  ]
+}

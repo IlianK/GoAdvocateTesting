@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:27:53.884404302Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/flannel-0.20.2/pkg/ip/TestEnsureV6AddressOnLink/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/pkg/ip",
+        "testRel": "flannel-0.20.2/pkg/ip",
+        "testName": "TestEnsureV6AddressOnLink",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-33-55Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/pkg/ip",
+          "-exec",
+          "TestEnsureV6AddressOnLink",
+          "-prog",
+          "TestEnsureV6AddressOnLink",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:33:55.225720092Z",
+        "endedAt": "2026-02-25T11:33:56.639685024Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1413,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-33-55Z",
+        "test_name": "flannel-0.20.2/pkg/ip/TestEnsureV6AddressOnLink"
+      }
+    }
+  ]
+}

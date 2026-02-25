@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:51:06.703915056Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/services/scm_provider/TestGiteaHasPath/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testRel": "argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testName": "TestGiteaHasPath",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-58-03Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+          "-exec",
+          "TestGiteaHasPath",
+          "-prog",
+          "TestGiteaHasPath",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:58:03.409343117Z",
+        "endedAt": "2026-02-25T02:58:10.621406185Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7212,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-58-03Z",
+        "test_name": "argo-cd-3.1.0/applicationset/services/scm_provider/TestGiteaHasPath"
+      }
+    }
+  ]
+}

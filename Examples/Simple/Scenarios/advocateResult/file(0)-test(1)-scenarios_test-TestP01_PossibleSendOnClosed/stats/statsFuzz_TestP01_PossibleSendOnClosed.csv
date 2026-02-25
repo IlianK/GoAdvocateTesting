@@ -1,0 +1,5 @@
+TestName,NrMut,NrMutInvalid,ActiveReleased,AllActiveReleased
+TestP01_PossibleSendOnClosed,0,0,1,1
+TestP01_PossibleSendOnClosed,63,1,1,1
+TestP01_PossibleSendOnClosed,63,1,1,1
+TestP01_PossibleSendOnClosed,64,1,1,1

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:26:31.472881157Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/limiter/Test_Limiter_Concurrency/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/limiter",
+        "testRel": "fiber-2.40.1/middleware/limiter",
+        "testName": "Test_Limiter_Concurrency",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-25-58Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/limiter",
+          "-exec",
+          "Test_Limiter_Concurrency",
+          "-prog",
+          "Test_Limiter_Concurrency",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:25:58.678563207Z",
+        "endedAt": "2026-02-25T11:26:12.421223791Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 13742,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-25-58Z",
+        "test_name": "fiber-2.40.1/middleware/limiter/Test_Limiter_Concurrency"
+      }
+    }
+  ]
+}

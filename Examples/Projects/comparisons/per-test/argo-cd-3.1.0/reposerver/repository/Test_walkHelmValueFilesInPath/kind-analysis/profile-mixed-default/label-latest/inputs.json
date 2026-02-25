@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:57:32.108454602Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/Test_walkHelmValueFilesInPath/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "Test_walkHelmValueFilesInPath",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-32-36Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "Test_walkHelmValueFilesInPath",
+          "-prog",
+          "Test_walkHelmValueFilesInPath",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:32:36.388886721Z",
+        "endedAt": "2026-02-25T04:32:43.992425821Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7603,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-32-36Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/Test_walkHelmValueFilesInPath"
+      }
+    }
+  ]
+}

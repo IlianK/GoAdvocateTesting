@@ -21,6 +21,7 @@ type PivotParams struct {
 	OutRoot string // <testDir>/comparisons
 }
 
+// Performs pivot-style comparison for specified profile/label/metric, with tests as rows and modes as columns.
 func Pivot(p PivotParams) (outDir string, err error) {
 	if p.OutRoot == "" {
 		p.OutRoot = filepath.Join(p.TestDir, "comparisons")
@@ -145,6 +146,7 @@ func Pivot(p PivotParams) (outDir string, err error) {
 	return outDir, nil
 }
 
+// sanitizeMetricName replaces characters that are not alphanumeric or ._- with underscores for safe file naming
 func sanitizeMetricName(s string) string {
 	out := make([]rune, 0, len(s))
 	for _, r := range s {

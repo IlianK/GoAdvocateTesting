@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:13:55.601469781Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/index/scorch/TestIndexOpenReopen/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/scorch",
+        "testRel": "bleve-2.5.3/index/scorch",
+        "testName": "TestIndexOpenReopen",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-57-28Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/scorch",
+          "-exec",
+          "TestIndexOpenReopen",
+          "-prog",
+          "TestIndexOpenReopen",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:57:28.661494053Z",
+        "endedAt": "2026-02-25T07:58:08.686178219Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40024,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-57-28Z",
+        "test_name": "bleve-2.5.3/index/scorch/TestIndexOpenReopen"
+      }
+    }
+  ]
+}

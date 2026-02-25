@@ -58,7 +58,7 @@ type RunMeta struct {
 	Tool     string `json:"tool"`
 	Kind     string `json:"kind"` // fuzzing | analysis
 	TestDir  string `json:"testDir"`
-	TestRel  string `json:"testRel,omitempty"` // NEW: relative path from dataset root to TestDir (e.g. cockroach/10214)
+	TestRel  string `json:"testRel,omitempty"` // relative path from dataset root to TestDir (e.g. cockroach/10214)
 	TestName string `json:"testName"`
 
 	Mode     string `json:"mode,omitempty"`

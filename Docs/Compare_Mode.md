@@ -4,11 +4,11 @@
 
 ## Purpose
 
-Compare mode turns the structured `results/` into **CSV summaries** under `<datasetDir>/comparisons/` to make runs comparable at a glance:
+Compare mode turns the structured `results/` into **CSV summaries** under `<datasetDir>/comparisons/` to make runs comparable at glance:
 
 - **cross-test**: compare metrics **across many tests** (most useful for analysis runs)
 - **per-test**: compare metrics **within one test across fuzz modes** (most useful for fuzzing runs)
-- **pivot**: pivot **one chosen metric across tests and fuzz modes** (“matrix view”)
+- **pivot**: one chosen metric **across tests and fuzz modes** (“matrix view”)
 
 ---
 
@@ -24,44 +24,39 @@ A dataset directory is the folder that contains `results/` (and later `compariso
   comparisons/      // created with advocate-runner compare
 ```
 
-Most commands accept either:
-- `<datasetDir>`
-- `<datasetDir>/results`
-
-The CLI will resolve both correctly.
-
 
 ### Kind
-- **analysis**: one analysis run per test (no fuzzing mode dimension)
-- **fuzzing**: many runs per test across fuzz modes (e.g. Flow, GFuzz, …)
+- **analysis**: one analysis run per test
+- **fuzzing**: many runs per test across fuzz modes (listed in `config.yaml` e.g. Flow, GFuzz, …)
 
 
 ### Label
 A label groups runs (e.g. `baseline` or config specific names for identification)
-- If you pass no `--label`, comparisons use latest runs per grouping.
-- If you pass `--label X`, comparisons use that label.
+- If no `--label` is passed, comparisons use latest runs for grouping.
+- If `--label X` is passed, comparisons use that label.
 
 In output folders, label is reflected as:
-- `label-latest` (when no label specified)
-- `label-<yourlabel>`
+- `run-latest` (when no label specified)
+- `run-<label>`
 
 ---
 
 ## Run
 ### Interactive Menu 
-The **`--interactive`** mode shows menus to pick:
-- test
-- kind (analysis / fuzzing)
-- profile
-- label (or “latest”)
-- metric (for pivot)
+The **`--interactive`** mode shows menus to select:
+- `kind`: `analysis` / `fuzzing` results to compare
+- `compare-action`: `cross-test`/ `per-test`
+- `profile`
+- `label` (or “latest”)
+- (`metric` only for pivot)
 
 
-Run with `<datasetDir>` or pass results directly with `<datasetDir>/results`
+Run providing the dataset path or pass results directly. The CLI will correctly resolve paths as either:
+- `<datasetDir>`
+- `<datasetDir>/results`
+
 ```
-./advocate-runner compare <datasetDir> --interactive --config config.yaml
-
-./advocate-runner compare <datasetDir>/results --interactive --config config.yaml
+./advocate-runner compare <datasetDir|datasetDir/results>  --interactive 
 ```
 
 ### Non-Interactive
@@ -75,26 +70,20 @@ Run with `<datasetDir>` or pass results directly with `<datasetDir>/results`
 # per-test (all modes within one test)
 ./advocate-runner compare per-test <datasetDir>/results/<TestName> \
   --kind fuzzing \
-  --profile <profile> \
-  --config config.yaml
+  --profile <profile> 
 
 # cross-test (all tests, one kind/profile)
 ./advocate-runner compare cross-test <datasetDir>/results \
   --kind analysis \
-  --profile <profile> \
-  --config config.yaml
+  --profile <profile> 
 
 # pivot (fuzzing only)
 ./advocate-runner compare pivot <datasetDir>/results \
   --profile <profile> \
-  --metric Bug_Types \
-  --config config.yaml
+  --metric Bug_Types 
 ```
 
-Add a label (optional), if omitted, comparisons are generated for latest runs:
-```
---label baseline
-```
+Add a label (optional), if omitted, comparisons are generated for latest runs.
 
 ---
 
@@ -150,23 +139,19 @@ Batch compare is the “one command” way to generate the **full suite** of com
 
 Run:
 ```
-./advocate-runner compare all <datasetDir|datasetDir/results> \
-  --config config.yaml
+./advocate-runner compare all <datasetDir|datasetDir/results> 
 ```
 
-This generates for every `(kind, profile)`:
-- `cross-test` (latest)
-- `per-test` for every test (latest)
-
-For fuzzing profiles:
-- `pivot` for the core metrics (latest)
+This generates in the provided path for every `kind` and every `profile`:
+- `cross-test` results over all tests
+- `per-test` results for every test 
+- `pivot` results for all metrics listed in `metrics_select.yaml`
 
 Alternatively **include all explicit labels** (not only latest):
 
 ```
 ./advocate-runner compare all <datasetDir|datasetDir/results> \
   --all-labels \
-  --config config.yaml
 ```
 
 This generates the same structure for every discovered label as well as `label-latest`.

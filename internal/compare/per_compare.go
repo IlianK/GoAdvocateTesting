@@ -3,7 +3,6 @@ package compare
 import (
 	"fmt"
 	"path/filepath"
-	"sort"
 
 	"GoAdvocateTesting/internal/discovery"
 	"GoAdvocateTesting/internal/metrics"
@@ -56,20 +55,8 @@ func ComparePerTest(p PerTestParams) (outDir string, err error) {
 	for _, r := range runs {
 		ms, _ := metrics.Extract(r)
 		sets = append(sets, ms)
-		rows = append(rows, rowForCompareCSV(ms, false))
+		rows = append(rows, RowForCompareCSV(ms, false))
 	}
-
-	// Stable sort by Mode for fuzzing (and by Profile for analysis)
-	sort.Slice(rows, func(i, j int) bool {
-		mi, _ := rows[i].Get("Mode")
-		mj, _ := rows[j].Get("Mode")
-		pi, _ := rows[i].Get("Profile")
-		pj, _ := rows[j].Get("Profile")
-		if mi == mj {
-			return pi < pj
-		}
-		return mi < mj
-	})
 
 	labelFolder := p.Label
 	if labelFolder == "" {
@@ -85,8 +72,13 @@ func ComparePerTest(p PerTestParams) (outDir string, err error) {
 		"label-"+labelFolder,
 	)
 
+	header, err := metrics.ActiveCSVHeader(false, true)
+	if err != nil {
+		return "", err
+	}
+
 	csvPath := filepath.Join(outDir, "compare.csv")
-	if err := WriteCSVOrdered(csvPath, rows, compareHeaderPerTest()); err != nil {
+	if err := WriteCSVOrdered(csvPath, rows, header); err != nil {
 		return "", err
 	}
 
@@ -96,23 +88,4 @@ func ComparePerTest(p PerTestParams) (outDir string, err error) {
 	}
 
 	return outDir, nil
-}
-
-func compareHeaderPerTest() []string {
-	return []string{
-		"Mode",
-		"Unique_Bugs",
-		"Bug_Types",
-		"Total_Bugs",
-		"Panics",
-		"Leaks",
-		"Confirmed_Replays",
-		"Total_Runs",
-		"Total_Time_s",
-		"Rec_s",
-		"Ana_s",
-		"Rep_s",
-		"Replays_Written",
-		"Replays_Successful",
-	}
 }

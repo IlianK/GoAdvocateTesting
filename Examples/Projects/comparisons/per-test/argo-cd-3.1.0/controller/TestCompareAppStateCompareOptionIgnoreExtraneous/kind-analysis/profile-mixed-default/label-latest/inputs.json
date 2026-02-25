@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:53:12.179070873Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/TestCompareAppStateCompareOptionIgnoreExtraneous/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+        "testRel": "argo-cd-3.1.0/controller",
+        "testName": "TestCompareAppStateCompareOptionIgnoreExtraneous",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-51-21Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+          "-exec",
+          "TestCompareAppStateCompareOptionIgnoreExtraneous",
+          "-prog",
+          "TestCompareAppStateCompareOptionIgnoreExtraneous",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:51:21.502189168Z",
+        "endedAt": "2026-02-25T03:51:31.434472946Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 0,
+        "duration_ms": 9932,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-51-21Z",
+        "test_name": "argo-cd-3.1.0/controller/TestCompareAppStateCompareOptionIgnoreExtraneous"
+      }
+    }
+  ]
+}

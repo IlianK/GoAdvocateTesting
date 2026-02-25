@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:58:52.106982208Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/cluster/TestGetCluster_CannotSetCADataAndInsecureTrue/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/cluster",
+        "testRel": "argo-cd-3.1.0/server/cluster",
+        "testName": "TestGetCluster_CannotSetCADataAndInsecureTrue",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-04-05Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/cluster",
+          "-exec",
+          "TestGetCluster_CannotSetCADataAndInsecureTrue",
+          "-prog",
+          "TestGetCluster_CannotSetCADataAndInsecureTrue",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:04:05.396293679Z",
+        "endedAt": "2026-02-25T05:04:13.947514702Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 8551,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-04-05Z",
+        "test_name": "argo-cd-3.1.0/server/cluster/TestGetCluster_CannotSetCADataAndInsecureTrue"
+      }
+    }
+  ]
+}

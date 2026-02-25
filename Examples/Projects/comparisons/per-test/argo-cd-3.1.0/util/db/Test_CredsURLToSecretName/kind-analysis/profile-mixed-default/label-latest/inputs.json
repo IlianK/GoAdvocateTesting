@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:05:36.061266587Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/db/Test_CredsURLToSecretName/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/db",
+        "testRel": "argo-cd-3.1.0/util/db",
+        "testName": "Test_CredsURLToSecretName",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T06-46-23Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/db",
+          "-exec",
+          "Test_CredsURLToSecretName",
+          "-prog",
+          "Test_CredsURLToSecretName",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T06:46:23.943778926Z",
+        "endedAt": "2026-02-25T06:46:31.13228791Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7188,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T06-46-23Z",
+        "test_name": "argo-cd-3.1.0/util/db/Test_CredsURLToSecretName"
+      }
+    }
+  ]
+}

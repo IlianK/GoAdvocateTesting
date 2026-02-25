@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:33.796028816Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/Scenarios/TestL03_BufferedLeakWithPartner/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+        "testRel": "Scenarios",
+        "testName": "TestL03_BufferedLeakWithPartner",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-59-39Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+          "-exec",
+          "TestL03_BufferedLeakWithPartner",
+          "-prog",
+          "TestL03_BufferedLeakWithPartner",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:59:39.49272824Z",
+        "endedAt": "2026-02-25T01:59:40.874745788Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1382,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-59-39Z",
+        "test_name": "Scenarios/TestL03_BufferedLeakWithPartner"
+      }
+    }
+  ]
+}

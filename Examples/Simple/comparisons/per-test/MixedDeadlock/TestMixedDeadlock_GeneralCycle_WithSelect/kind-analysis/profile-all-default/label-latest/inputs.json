@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:32.292586734Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/MixedDeadlock/TestMixedDeadlock_GeneralCycle_WithSelect/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+        "testRel": "MixedDeadlock",
+        "testName": "TestMixedDeadlock_GeneralCycle_WithSelect",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-55-36Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+          "-exec",
+          "TestMixedDeadlock_GeneralCycle_WithSelect",
+          "-prog",
+          "TestMixedDeadlock_GeneralCycle_WithSelect",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:55:36.433236967Z",
+        "endedAt": "2026-02-25T01:56:15.913102035Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P05;P06",
+        "Total_Bugs": 5,
+        "Unique_Bugs": 2,
+        "duration_ms": 39479,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-55-36Z",
+        "test_name": "MixedDeadlock/TestMixedDeadlock_GeneralCycle_WithSelect"
+      }
+    }
+  ]
+}

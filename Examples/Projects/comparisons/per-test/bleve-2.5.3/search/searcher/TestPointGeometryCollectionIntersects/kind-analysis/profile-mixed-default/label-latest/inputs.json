@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:17:03.725921244Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/searcher/TestPointGeometryCollectionIntersects/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+        "testRel": "bleve-2.5.3/search/searcher",
+        "testName": "TestPointGeometryCollectionIntersects",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T09-12-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+          "-exec",
+          "TestPointGeometryCollectionIntersects",
+          "-prog",
+          "TestPointGeometryCollectionIntersects",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T09:12:29.531056491Z",
+        "endedAt": "2026-02-25T09:13:09.626512932Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40095,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T09-12-29Z",
+        "test_name": "bleve-2.5.3/search/searcher/TestPointGeometryCollectionIntersects"
+      }
+    }
+  ]
+}

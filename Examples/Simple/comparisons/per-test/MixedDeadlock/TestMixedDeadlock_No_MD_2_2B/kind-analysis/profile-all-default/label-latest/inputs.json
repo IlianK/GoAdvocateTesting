@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:32.908304386Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/MixedDeadlock/TestMixedDeadlock_No_MD_2_2B/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+        "testRel": "MixedDeadlock",
+        "testName": "TestMixedDeadlock_No_MD_2_2B",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-56-15Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+          "-exec",
+          "TestMixedDeadlock_No_MD_2_2B",
+          "-prog",
+          "TestMixedDeadlock_No_MD_2_2B",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:56:15.913597923Z",
+        "endedAt": "2026-02-25T01:56:17.777283973Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1863,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-56-15Z",
+        "test_name": "MixedDeadlock/TestMixedDeadlock_No_MD_2_2B"
+      }
+    }
+  ]
+}

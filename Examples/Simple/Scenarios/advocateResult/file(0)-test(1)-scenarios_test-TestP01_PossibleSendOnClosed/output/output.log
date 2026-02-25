@@ -1,0 +1,23 @@
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go
+TestName:  TestP01_PossibleSendOnClosed
+Import added at line: 3
+Header added at line: 59
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestP01_PossibleSendOnClosed
+Init FuzzingReplay
+Reading trace from /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/fuzzingTraces/fuzzingTrace_1
+2:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:68  ->  1
+1:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:70  ->  1
+RELEASE ACTIVE:  2:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:68
+RELEASE ACTIVE:  1:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:70
+PANIC
+STOP REPLAY MANAGER
+
+Exit Replay with code  30 Send on close
+Exit Message: panic: send on closed channel
+
+FAIL	scenarios	3.018s
+FAIL
+Bugreport info: 0_1,fail
+Bugreport info: 0_2,fail

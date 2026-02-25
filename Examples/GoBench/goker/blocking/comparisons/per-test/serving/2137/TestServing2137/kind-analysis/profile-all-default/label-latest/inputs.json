@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:18.342585623Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/serving/2137/TestServing2137/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/serving/2137",
+        "testRel": "serving/2137",
+        "testName": "TestServing2137",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-03-53Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/serving/2137",
+          "-exec",
+          "TestServing2137",
+          "-prog",
+          "TestServing2137",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:03:53.946179951Z",
+        "endedAt": "2026-02-25T02:03:55.261258035Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "A09",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 1,
+        "duration_ms": 1315,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-03-53Z",
+        "test_name": "serving/2137/TestServing2137"
+      }
+    }
+  ]
+}

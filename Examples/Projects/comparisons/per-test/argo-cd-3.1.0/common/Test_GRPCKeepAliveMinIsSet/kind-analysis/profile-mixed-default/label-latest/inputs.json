@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:53:03.956410891Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/common/Test_GRPCKeepAliveMinIsSet/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/common",
+        "testRel": "argo-cd-3.1.0/common",
+        "testName": "Test_GRPCKeepAliveMinIsSet",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-31-51Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/common",
+          "-exec",
+          "Test_GRPCKeepAliveMinIsSet",
+          "-prog",
+          "Test_GRPCKeepAliveMinIsSet",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:31:51.367955186Z",
+        "endedAt": "2026-02-25T03:31:54.862950885Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 3494,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-31-51Z",
+        "test_name": "argo-cd-3.1.0/common/Test_GRPCKeepAliveMinIsSet"
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// Config loading from config.yaml
 func LoadConfig(path string) (*Config, error) {
 	b, err := os.ReadFile(path)
 	if err != nil {
@@ -34,6 +35,7 @@ func LoadConfig(path string) (*Config, error) {
 	return &cfg, nil
 }
 
+// Profiles loading from profiles.yaml
 func LoadProfiles(path string) (*Profiles, error) {
 	b, err := os.ReadFile(path)
 	if err != nil {

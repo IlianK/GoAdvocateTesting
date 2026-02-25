@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:11:26.225058901Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/TestDuplicateLocationsIssue1168/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3",
+        "testRel": "bleve-2.5.3",
+        "testName": "TestDuplicateLocationsIssue1168",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-29-59Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3",
+          "-exec",
+          "TestDuplicateLocationsIssue1168",
+          "-prog",
+          "TestDuplicateLocationsIssue1168",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:29:59.763539817Z",
+        "endedAt": "2026-02-25T10:30:39.822054128Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40058,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-29-59Z",
+        "test_name": "bleve-2.5.3/TestDuplicateLocationsIssue1168"
+      }
+    }
+  ]
+}

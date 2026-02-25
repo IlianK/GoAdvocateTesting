@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:04:57.449505717Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/config/TestFlagWithDoubleQuotes/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/config",
+        "testRel": "argo-cd-3.1.0/util/config",
+        "testName": "TestFlagWithDoubleQuotes",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T06-37-40Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/config",
+          "-exec",
+          "TestFlagWithDoubleQuotes",
+          "-prog",
+          "TestFlagWithDoubleQuotes",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T06:37:40.68992236Z",
+        "endedAt": "2026-02-25T06:37:42.267230953Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1577,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T06-37-40Z",
+        "test_name": "argo-cd-3.1.0/util/config/TestFlagWithDoubleQuotes"
+      }
+    }
+  ]
+}

@@ -25,7 +25,6 @@ LockType:
 package mixeddeadlock
 
 import (
-	"advocate"
 	"sync"
 	"testing"
 	"time"
@@ -90,6 +89,69 @@ func TestMixedDeadlock_MD2_1B(t *testing.T) {
 	run2(sender, receiver)
 }
 
+// MD2-1U: Unbuffered Close Variant
+func TestMixedDeadlock_MD2_1_CloseU(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int) // buffered
+
+	closer := func() {
+		m.Lock()
+		close(c) // close inside CS
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond) // let closer go first
+		m.Lock()
+		<-c // receive inside CS
+		m.Unlock()
+	}
+
+	run2(closer, receiver)
+}
+
+// MD2-1B: Buffered Close Variant
+func TestMixedDeadlock_MD2_1_CloseB(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1) // buffered
+
+	closer := func() {
+		m.Lock()
+		close(c) // close inside CS
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond) // let closer go first
+		m.Lock()
+		<-c // receive inside CS
+		m.Unlock()
+	}
+
+	run2(closer, receiver)
+}
+
+// MD2-1B: Buffered READ/WRTIE Variant
+func TestMixedDeadlock_MD_2_1B_RW(t *testing.T) {
+	var rw sync.RWMutex
+	c := make(chan int, 1)
+
+	writer := func() {
+		rw.Lock()
+		c <- 1 // send inside CS
+		rw.Unlock()
+	}
+
+	reader := func() {
+		time.Sleep(50 * time.Millisecond) // let sender finish PCS
+		rw.RLock()
+		<-c // receive in CS
+		rw.RUnlock()
+	}
+
+	run2(reader, writer)
+}
+
 // ------------------------------------------------------------
 // MD2-2: Sender inside CS, Receiver with PCS
 // ------------------------------------------------------------
@@ -116,26 +178,26 @@ func TestMixedDeadlock_MD2_2U(t *testing.T) {
 	run2(sender, receiver)
 }
 
-// MD2-2B: Buffered Variant
-func TestMixedDeadlock_MD2_2B(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int, 1)
+// MD2-2U: Unbuffered READ/WRTIE Variant
+func TestMixedDeadlock_MD_2_2U_RW(t *testing.T) {
+	var rw sync.RWMutex
+	c := make(chan int)
 
-	sender := func() {
-		// no sleep, always non-blocking due to buffer
-		m.Lock()
+	writer := func() {
+		time.Sleep(50 * time.Millisecond) // let receiver finish PCS
+		rw.Lock()
 		c <- 1 // send inside CS
-		m.Unlock()
+		rw.Unlock()
 	}
 
-	receiver := func() {
-		m.Lock()
-		time.Sleep(50 * time.Millisecond)
-		m.Unlock()
-		<-c // receive after PCS
+	reader := func() {
+		rw.RLock()
+		time.Sleep(10 * time.Millisecond)
+		rw.RUnlock() // PCS
+		<-c          // receive after PCS
 	}
 
-	run2(sender, receiver)
+	run2(reader, writer)
 }
 
 // ------------------------------------------------------------
@@ -186,97 +248,7 @@ func TestMixedDeadlock_MD2_3B(t *testing.T) {
 	run2(sender, receiver)
 }
 
-// ------------------------------------------------------------
-// CLOSE TESTS: MDX-Y-CLOSE VARIANTS
-// ------------------------------------------------------------
-
-// MD2-1U: Unbuffered Variant
-func TestMixedDeadlock_MD2_1_CloseU(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int) // buffered
-
-	closer := func() {
-		m.Lock()
-		close(c) // close inside CS
-		m.Unlock()
-	}
-
-	receiver := func() {
-		time.Sleep(50 * time.Millisecond) // let closer go first
-		m.Lock()
-		<-c // receive inside CS
-		m.Unlock()
-	}
-
-	run2(closer, receiver)
-}
-
-// MD2-1B: Buffered Variant
-func TestMixedDeadlock_MD2_1_CloseB(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int, 1) // buffered
-
-	closer := func() {
-		m.Lock()
-		close(c) // close inside CS
-		m.Unlock()
-	}
-
-	receiver := func() {
-		time.Sleep(50 * time.Millisecond) // let closer go first
-		m.Lock()
-		<-c // receive inside CS
-		m.Unlock()
-	}
-
-	run2(closer, receiver)
-}
-
-// MD-CloseU: Unbuffered Variant
-func TestMixedDeadlock_MD_2_2CloseU(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int) // unbuffered
-
-	closer := func() {
-		// no sleep, recv is blocking until close
-		m.Lock()
-		close(c) // close in CS
-		m.Unlock()
-	}
-
-	receiver := func() {
-		m.Lock()
-		time.Sleep(50 * time.Millisecond)
-		m.Unlock()
-		<-c // recv with PCS
-	}
-
-	run2(receiver, closer)
-}
-
-// MD-CloseB: Buffered Variant (Mirror of MD-2-2B)
-func TestMixedDeadlock_MD_2_2CloseB(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int, 1) // unbuffered
-
-	closer := func() {
-		// no sleep, recv is blocking until close
-		m.Lock()
-		close(c) // close in CS
-		m.Unlock()
-	}
-
-	receiver := func() {
-		m.Lock()
-		time.Sleep(50 * time.Millisecond)
-		m.Unlock()
-		<-c // recv with PCS
-	}
-
-	run2(receiver, closer)
-}
-
-// MD-CloseU: Unbuffered Variant
+// MD2-3U: Unbuffered Close Variant
 func TestMixedDeadlock_MD_2_3CloseU(t *testing.T) {
 	var m sync.Mutex
 	c := make(chan int) // unbuffered
@@ -298,7 +270,7 @@ func TestMixedDeadlock_MD_2_3CloseU(t *testing.T) {
 	run2(receiver, closer)
 }
 
-// MD-CloseB: Buffered Variant (Mirror of MD-2-3B)
+// MD2-3B: Buffered Close Variant
 func TestMixedDeadlock_MD_2_3CloseB(t *testing.T) {
 	var m sync.Mutex
 	c := make(chan int, 1) // buffered
@@ -320,77 +292,8 @@ func TestMixedDeadlock_MD_2_3CloseB(t *testing.T) {
 	run2(receiver, closer)
 }
 
-// ------------------------------------------------------------
-// LOCKTYPE TESTS: READ/WRITE MD-Cases
-// ------------------------------------------------------------
-
-// READ/WRTIE MD2-1B
-func TestMixedDeadlock_MD_2_1B_RW(t *testing.T) {
-	var rw sync.RWMutex
-	c := make(chan int, 1)
-
-	writer := func() {
-		rw.Lock()
-		c <- 1 // send inside CS
-		rw.Unlock()
-	}
-
-	reader := func() {
-		time.Sleep(50 * time.Millisecond) // let sender finish PCS
-		rw.RLock()
-		<-c // receive in CS
-		rw.RUnlock()
-	}
-
-	run2(reader, writer)
-}
-
-// READ/WRTIE MD2-2U
-func TestMixedDeadlock_MD_2_2U_RW(t *testing.T) {
-	var rw sync.RWMutex
-	c := make(chan int)
-
-	writer := func() {
-		time.Sleep(50 * time.Millisecond) // let receiver finish PCS
-		rw.Lock()
-		c <- 1 // send inside CS
-		rw.Unlock()
-	}
-
-	reader := func() {
-		rw.RLock()
-		time.Sleep(10 * time.Millisecond)
-		rw.RUnlock() // PCS
-		<-c          // receive after PCS
-	}
-
-	run2(reader, writer)
-}
-
-// READ/WRTIE MD2-2B
-func TestMixedDeadlock_MD_2_2B_RW_FP(t *testing.T) {
-	var rw sync.RWMutex
-	c := make(chan int, 1)
-
-	writer := func() {
-		time.Sleep(50 * time.Millisecond) // let receiver finish PCS
-		rw.Lock()
-		c <- 1 // send inside CS
-		rw.Unlock()
-	}
-
-	reader := func() {
-		rw.RLock()
-		time.Sleep(10 * time.Millisecond)
-		rw.RUnlock() // PCS
-		<-c          // receive after PCS
-	}
-
-	run2(reader, writer)
-}
-
-// READ/WRTIE MD2-3U
-func TestMixedDeadlock_MD_2_3_RW(t *testing.T) {
+// MD2-3U: Unbuffered READ/WRTIE Variant
+func TestMixedDeadlock_MD_2_3U_RW(t *testing.T) {
 	var rw sync.RWMutex
 	c := make(chan int)
 
@@ -411,7 +314,7 @@ func TestMixedDeadlock_MD_2_3_RW(t *testing.T) {
 	run2(reader, writer)
 }
 
-// READ/WRTIE MD2-3B
+// MD2-3B: Buffered READ/WRTIE Variant
 func TestMixedDeadlock_MD_2_3B_RW(t *testing.T) {
 	var rw sync.RWMutex
 	c := make(chan int, 1)
@@ -432,6 +335,10 @@ func TestMixedDeadlock_MD_2_3B_RW(t *testing.T) {
 
 	run2(reader, writer)
 }
+
+// ------------------------------------------------------------
+// RWMutex Variants
+// ------------------------------------------------------------
 
 // Multiple Read Locks/Unlocks
 func TestRWMutex_DoubleRLockCounter_MD2_1B(t *testing.T) {
@@ -483,7 +390,7 @@ func TestRWMutex_DoubleRUnlock_MD2_2U(t *testing.T) {
 }
 
 // ------------------------------------------------------------
-// MORE THAN ONE CS
+// MULTIPLE CS
 // ------------------------------------------------------------
 
 func TestMixedDeadlock_DoubleCS_Send(t *testing.T) {
@@ -557,10 +464,6 @@ func TestMixedDeadlock_DoubleCS_Recv(t *testing.T) {
 }
 
 func TestMixedDeadlock_DoubleCS_Recv_2(t *testing.T) {
-	// ======= Preamble Start =======
-  advocate.InitReplay("rewrittenTrace_1", 5, true)
-  defer advocate.FinishReplay()
-  // ======= Preamble End =======
 	var m sync.Mutex
 	c := make(chan int, 1)
 
@@ -725,118 +628,4 @@ func TestMixedDeadlock_MultiDep_FirstOnly(t *testing.T) {
 	}
 
 	run2(receiver, sender)
-}
-
-// ------------------------------------------------------------
-// FALSE POSITIVE TESTS
-// ------------------------------------------------------------
-
-// READ/READ
-func TestMixedDeadlock_MD_Read(t *testing.T) {
-	var rw sync.RWMutex
-	c := make(chan int)
-
-	reader_1 := func() {
-		rw.RLock()
-		<-c
-		rw.RUnlock()
-	}
-
-	reader_2 := func() {
-		rw.RLock()
-		c <- 1
-		rw.RUnlock()
-	}
-
-	run2(reader_1, reader_2)
-}
-
-// No Mixed Deadlock: both outside CS
-func TestMixedDeadlock_No_MD_BeforeCS(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int)
-
-	sender := func() {
-		c <- 1 // before CS
-		m.Lock()
-		time.Sleep(10 * time.Millisecond)
-		m.Unlock()
-	}
-
-	receiver := func() {
-		<-c // before CS
-		m.Lock()
-		time.Sleep(10 * time.Millisecond)
-		m.Unlock()
-	}
-
-	run2(sender, receiver)
-}
-
-// No Mixed Deadlock: Both after CS
-func TestMixedDeadlock_No_MD_AfterPCS(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int)
-
-	sender := func() {
-		m.Lock()
-		time.Sleep(10 * time.Millisecond)
-		m.Unlock()
-		c <- 1 // after PCS
-	}
-
-	receiver := func() {
-		m.Lock()
-		time.Sleep(10 * time.Millisecond)
-		m.Unlock()
-		<-c // after PCS
-	}
-
-	run2(sender, receiver)
-}
-
-// No Mixed Deadlock: Different Locks
-func TestMixedDeadlock_No_MD_DifferentLocks(t *testing.T) {
-	var m1, m2 sync.Mutex
-	c := make(chan int)
-
-	sender := func() {
-		m1.Lock()
-		c <- 1
-		m1.Unlock()
-	}
-
-	receiver := func() {
-		m2.Lock()
-		<-c
-		m2.Unlock()
-	}
-
-	run2(sender, receiver)
-}
-
-// WMHB: No Mixed Deadlock due to Fork Must-Order
-func TestMixedDeadlock_No_MD_ForkMustOrder(t *testing.T) {
-	var m sync.Mutex
-	c := make(chan int, 1)
-	done := make(chan struct{})
-
-	// Parent acquires BEFORE forking
-	m.Lock()
-
-	// Child after
-	go func() {
-		m.Lock()
-		<-c // receive inside CS
-		m.Unlock()
-		close(done)
-	}()
-
-	// Parent sends while STILL in CS (would look like MD2-1 if reordering was allowed),
-	// but acquires are must-ordered by the fork, so the detector should NOT flag it.
-
-	c <- 1 // send inside CS, non-blocking due to buffer
-
-	m.Unlock()
-	<-done
 }

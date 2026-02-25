@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:34:50.371535282Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/internal/resolver/dns/TestRateLimitedResolve/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/internal/resolver/dns",
+        "testRel": "grpc-go-1.51.0/internal/resolver/dns",
+        "testName": "TestRateLimitedResolve",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T13-53-58Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/internal/resolver/dns",
+          "-exec",
+          "TestRateLimitedResolve",
+          "-prog",
+          "TestRateLimitedResolve",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T13:53:58.073263953Z",
+        "endedAt": "2026-02-25T13:54:09.925793455Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 11852,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T13-53-58Z",
+        "test_name": "grpc-go-1.51.0/internal/resolver/dns/TestRateLimitedResolve"
+      }
+    }
+  ]
+}

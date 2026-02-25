@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:28:28.921695831Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/frp-0.63.0/test/e2e/TestE2E/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/frp-0.63.0/test/e2e",
+        "testRel": "frp-0.63.0/test/e2e",
+        "testName": "TestE2E",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-36-35Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/frp-0.63.0/test/e2e",
+          "-exec",
+          "TestE2E",
+          "-prog",
+          "TestE2E",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:36:35.182406256Z",
+        "endedAt": "2026-02-25T11:36:46.673754902Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 11491,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-36-35Z",
+        "test_name": "frp-0.63.0/test/e2e/TestE2E"
+      }
+    }
+  ]
+}

@@ -3,7 +3,6 @@ package compare
 import (
 	"fmt"
 	"path/filepath"
-	"sort"
 
 	"GoAdvocateTesting/internal/discovery"
 	"GoAdvocateTesting/internal/metrics"
@@ -56,20 +55,8 @@ func CompareCrossTest(p CrossTestParams) (outDir string, err error) {
 	for _, r := range runs {
 		ms, _ := metrics.Extract(r)
 		sets = append(sets, ms)
-		rows = append(rows, rowForCompareCSV(ms, true))
+		rows = append(rows, RowForCompareCSV(ms, true))
 	}
-
-	// Sort by Test, then Mode
-	sort.Slice(rows, func(i, j int) bool {
-		ti, _ := rows[i].Get("Test")
-		tj, _ := rows[j].Get("Test")
-		if ti != tj {
-			return ti < tj
-		}
-		mi, _ := rows[i].Get("Mode")
-		mj, _ := rows[j].Get("Mode")
-		return mi < mj
-	})
 
 	labelFolder := p.Label
 	if labelFolder == "" {
@@ -84,8 +71,13 @@ func CompareCrossTest(p CrossTestParams) (outDir string, err error) {
 		"label-"+labelFolder,
 	)
 
+	header, err := metrics.ActiveCSVHeader(true, true)
+	if err != nil {
+		return "", err
+	}
+
 	csvPath := filepath.Join(outDir, "cross_test.csv")
-	if err := WriteCSVOrdered(csvPath, rows, compareHeaderCrossTest()); err != nil {
+	if err := WriteCSVOrdered(csvPath, rows, header); err != nil {
 		return "", err
 	}
 
@@ -95,83 +87,4 @@ func CompareCrossTest(p CrossTestParams) (outDir string, err error) {
 	}
 
 	return outDir, nil
-}
-
-func compareHeaderCrossTest() []string {
-	return []string{
-		"Test",
-		"Mode",
-		"Unique_Bugs",
-		"Bug_Types",
-		"Total_Bugs",
-		"Panics",
-		"Leaks",
-		"Confirmed_Replays",
-		"Total_Runs",
-		"Total_Time_s",
-		"Rec_s",
-		"Ana_s",
-		"Rep_s",
-		"Replays_Written",
-		"Replays_Successful",
-	}
-}
-
-// rowForCompareCSV maps MetricSet -> Row with the exact column names used by the compare CSVs.
-func rowForCompareCSV(ms metrics.MetricSet, includeTest bool) Row {
-	r := Row{
-		Fixed:   map[string]string{},
-		Numbers: map[string]float64{},
-		Strings: map[string]string{},
-	}
-
-	// Identity
-	if includeTest {
-		if v, ok := ms.Strings["test_name"]; ok {
-			r.Fixed["Test"] = v
-		}
-	}
-	if v, ok := ms.Strings["Mode"]; ok {
-		r.Fixed["Mode"] = v
-	} else if v2, ok2 := ms.Strings["mode"]; ok2 {
-		r.Fixed["Mode"] = v2
-	} else {
-		r.Fixed["Mode"] = ""
-	}
-
-	// Prefer explicitly named outputs from Extract()
-	if v, ok := ms.Strings["Bug_Types"]; ok {
-		r.Strings["Bug_Types"] = v
-	} else if v2, ok2 := ms.Strings["bug_types"]; ok2 {
-		r.Strings["Bug_Types"] = v2
-	}
-
-	for _, k := range []string{
-		"Unique_Bugs",
-		"Total_Bugs",
-		"Panics",
-		"Leaks",
-		"Confirmed_Replays",
-		"Total_Runs",
-		"Total_Time_s",
-		"Rec_s",
-		"Ana_s",
-		"Rep_s",
-		"Replays_Written",
-		"Replays_Successful",
-	} {
-		if v, ok := ms.Numbers[k]; ok {
-			r.Numbers[k] = v
-		} else if v2, ok2 := ms.Numbers[stringsToLegacyKey(k)]; ok2 {
-			r.Numbers[k] = v2
-		}
-	}
-
-	// Ensure missing numeric columns appear as blanks (WriteCSVOrdered handles it)
-	return r
-}
-
-func stringsToLegacyKey(k string) string {
-	// kept for backwards compatibility if you had older keys; currently no-op-ish.
-	return k
 }

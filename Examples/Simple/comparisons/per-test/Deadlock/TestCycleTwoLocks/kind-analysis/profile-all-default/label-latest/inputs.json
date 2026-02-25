@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:31.907557067Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/Deadlock/TestCycleTwoLocks/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Deadlock",
+        "testRel": "Deadlock",
+        "testName": "TestCycleTwoLocks",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-52-46Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Deadlock",
+          "-exec",
+          "TestCycleTwoLocks",
+          "-prog",
+          "TestCycleTwoLocks",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:52:46.746806257Z",
+        "endedAt": "2026-02-25T01:54:20.390282912Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "L08;P05",
+        "Total_Bugs": 2,
+        "Unique_Bugs": 2,
+        "duration_ms": 93643,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-52-46Z",
+        "test_name": "Deadlock/TestCycleTwoLocks"
+      }
+    }
+  ]
+}

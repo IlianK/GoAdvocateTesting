@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:19:54.231169864Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/dns-1.1.50/TestMsgCompressLengthEscapingMatch/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+        "testRel": "dns-1.1.50",
+        "testName": "TestMsgCompressLengthEscapingMatch",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-02-38Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+          "-exec",
+          "TestMsgCompressLengthEscapingMatch",
+          "-prog",
+          "TestMsgCompressLengthEscapingMatch",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:02:38.25755349Z",
+        "endedAt": "2026-02-25T11:02:41.109390749Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2851,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-02-38Z",
+        "test_name": "dns-1.1.50/TestMsgCompressLengthEscapingMatch"
+      }
+    }
+  ]
+}

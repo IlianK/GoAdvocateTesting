@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:58:18.836116454Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/application/TestMaxPodLogsRender/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/application",
+        "testRel": "argo-cd-3.1.0/server/application",
+        "testName": "TestMaxPodLogsRender",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-39-09Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/application",
+          "-exec",
+          "TestMaxPodLogsRender",
+          "-prog",
+          "TestMaxPodLogsRender",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:39:09.09762364Z",
+        "endedAt": "2026-02-25T04:39:49.15431836Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40056,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-39-09Z",
+        "test_name": "argo-cd-3.1.0/server/application/TestMaxPodLogsRender"
+      }
+    }
+  ]
+}

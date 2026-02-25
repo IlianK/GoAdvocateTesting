@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:35:19.165358597Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/xds/csds/Test/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/xds/csds",
+        "testRel": "grpc-go-1.51.0/xds/csds",
+        "testName": "Test",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T14-07-23Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/xds/csds",
+          "-exec",
+          "Test",
+          "-prog",
+          "Test",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T14:07:23.346825406Z",
+        "endedAt": "2026-02-25T14:08:17.747127559Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P06",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 1,
+        "duration_ms": 54400,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T14-07-23Z",
+        "test_name": "grpc-go-1.51.0/xds/csds/Test"
+      }
+    }
+  ]
+}

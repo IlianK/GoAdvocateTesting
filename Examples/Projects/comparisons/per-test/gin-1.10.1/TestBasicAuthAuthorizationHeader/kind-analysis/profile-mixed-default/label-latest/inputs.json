@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:28:35.579820716Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/gin-1.10.1/TestBasicAuthAuthorizationHeader/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+        "testRel": "gin-1.10.1",
+        "testName": "TestBasicAuthAuthorizationHeader",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-37-10Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+          "-exec",
+          "TestBasicAuthAuthorizationHeader",
+          "-prog",
+          "TestBasicAuthAuthorizationHeader",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:37:10.424055766Z",
+        "endedAt": "2026-02-25T11:37:12.884466798Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2460,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-37-10Z",
+        "test_name": "gin-1.10.1/TestBasicAuthAuthorizationHeader"
+      }
+    }
+  ]
+}

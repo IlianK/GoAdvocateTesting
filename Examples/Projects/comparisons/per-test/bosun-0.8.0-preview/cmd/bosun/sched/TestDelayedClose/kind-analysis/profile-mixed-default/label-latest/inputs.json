@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:18:03.074646436Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bosun-0.8.0-preview/cmd/bosun/sched/TestDelayedClose/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/cmd/bosun/sched",
+        "testRel": "bosun-0.8.0-preview/cmd/bosun/sched",
+        "testName": "TestDelayedClose",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-57-27Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/cmd/bosun/sched",
+          "-exec",
+          "TestDelayedClose",
+          "-prog",
+          "TestDelayedClose",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:57:27.418824405Z",
+        "endedAt": "2026-02-25T10:57:27.536825645Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 118,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-57-27Z",
+        "test_name": "bosun-0.8.0-preview/cmd/bosun/sched/TestDelayedClose"
+      }
+    }
+  ]
+}

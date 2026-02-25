@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:55:07.801377514Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestAppSource_GetKubeVersionOrDefault/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testRel": "argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testName": "TestAppSource_GetKubeVersionOrDefault",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-04-45Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+          "-exec",
+          "TestAppSource_GetKubeVersionOrDefault",
+          "-prog",
+          "TestAppSource_GetKubeVersionOrDefault",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:04:45.838305745Z",
+        "endedAt": "2026-02-25T04:04:54.097000638Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 8258,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-04-45Z",
+        "test_name": "argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestAppSource_GetKubeVersionOrDefault"
+      }
+    }
+  ]
+}

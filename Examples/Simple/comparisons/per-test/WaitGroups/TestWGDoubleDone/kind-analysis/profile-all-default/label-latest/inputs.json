@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:34.377014127Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/WaitGroups/TestWGDoubleDone/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/WaitGroups",
+        "testRel": "WaitGroups",
+        "testName": "TestWGDoubleDone",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-02-09Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/WaitGroups",
+          "-exec",
+          "TestWGDoubleDone",
+          "-prog",
+          "TestWGDoubleDone",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:02:09.394062553Z",
+        "endedAt": "2026-02-25T02:02:10.706229607Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "A05",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 1,
+        "duration_ms": 1312,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-02-09Z",
+        "test_name": "WaitGroups/TestWGDoubleDone"
+      }
+    }
+  ]
+}

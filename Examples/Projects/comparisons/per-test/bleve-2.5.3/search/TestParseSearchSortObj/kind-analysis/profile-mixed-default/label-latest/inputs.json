@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:15:42.206524182Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/TestParseSearchSortObj/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search",
+        "testRel": "bleve-2.5.3/search",
+        "testName": "TestParseSearchSortObj",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-13-54Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search",
+          "-exec",
+          "TestParseSearchSortObj",
+          "-prog",
+          "TestParseSearchSortObj",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:13:54.946203185Z",
+        "endedAt": "2026-02-25T10:13:56.525006422Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1578,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-13-54Z",
+        "test_name": "bleve-2.5.3/search/TestParseSearchSortObj"
+      }
+    }
+  ]
+}

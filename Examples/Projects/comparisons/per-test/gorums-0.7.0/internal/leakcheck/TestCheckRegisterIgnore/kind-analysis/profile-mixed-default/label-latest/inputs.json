@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:33:39.930505062Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/gorums-0.7.0/internal/leakcheck/TestCheckRegisterIgnore/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gorums-0.7.0/internal/leakcheck",
+        "testRel": "gorums-0.7.0/internal/leakcheck",
+        "testName": "TestCheckRegisterIgnore",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-55-01Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gorums-0.7.0/internal/leakcheck",
+          "-exec",
+          "TestCheckRegisterIgnore",
+          "-prog",
+          "TestCheckRegisterIgnore",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:55:01.075395075Z",
+        "endedAt": "2026-02-25T11:55:08.45161387Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7376,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-55-01Z",
+        "test_name": "gorums-0.7.0/internal/leakcheck/TestCheckRegisterIgnore"
+      }
+    }
+  ]
+}

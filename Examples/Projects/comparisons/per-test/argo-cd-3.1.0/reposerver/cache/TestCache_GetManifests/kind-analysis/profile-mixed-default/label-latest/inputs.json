@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:56:14.191702681Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/cache/TestCache_GetManifests/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/cache",
+        "testRel": "argo-cd-3.1.0/reposerver/cache",
+        "testName": "TestCache_GetManifests",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-16-59Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/cache",
+          "-exec",
+          "TestCache_GetManifests",
+          "-prog",
+          "TestCache_GetManifests",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:16:59.345663784Z",
+        "endedAt": "2026-02-25T04:17:05.781307894Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 6435,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-16-59Z",
+        "test_name": "argo-cd-3.1.0/reposerver/cache/TestCache_GetManifests"
+      }
+    }
+  ]
+}

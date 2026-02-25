@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:16:51.656089714Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/searcher/TestMultiLinestringIntersects/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+        "testRel": "bleve-2.5.3/search/searcher",
+        "testName": "TestMultiLinestringIntersects",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T09-08-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+          "-exec",
+          "TestMultiLinestringIntersects",
+          "-prog",
+          "TestMultiLinestringIntersects",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T09:08:29.154012002Z",
+        "endedAt": "2026-02-25T09:09:09.213651967Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40059,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T09-08-29Z",
+        "test_name": "bleve-2.5.3/search/searcher/TestMultiLinestringIntersects"
+      }
+    }
+  ]
+}

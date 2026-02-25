@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:15:50.397205025Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/highlight/format/html/TestHTMLFragmentFormatter/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/highlight/format/html",
+        "testRel": "bleve-2.5.3/search/highlight/format/html",
+        "testName": "TestHTMLFragmentFormatter",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T08-49-36Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/highlight/format/html",
+          "-exec",
+          "TestHTMLFragmentFormatter",
+          "-prog",
+          "TestHTMLFragmentFormatter",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T08:49:36.371412538Z",
+        "endedAt": "2026-02-25T08:49:37.811934791Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1440,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T08-49-36Z",
+        "test_name": "bleve-2.5.3/search/highlight/format/html/TestHTMLFragmentFormatter"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:10:49.841395526Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/webhook/TestGitLabSystemEvent/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/webhook",
+        "testRel": "argo-cd-3.1.0/util/webhook",
+        "testName": "TestGitLabSystemEvent",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-27-42Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/webhook",
+          "-exec",
+          "TestGitLabSystemEvent",
+          "-prog",
+          "TestGitLabSystemEvent",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:27:42.646235209Z",
+        "endedAt": "2026-02-25T07:27:49.331652794Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 6685,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-27-42Z",
+        "test_name": "argo-cd-3.1.0/util/webhook/TestGitLabSystemEvent"
+      }
+    }
+  ]
+}

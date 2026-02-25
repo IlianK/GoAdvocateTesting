@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:56:09.329563725Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/apiclient/TestNewConnection_TLSWithStrictValidation/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/apiclient",
+        "testRel": "argo-cd-3.1.0/reposerver/apiclient",
+        "testName": "TestNewConnection_TLSWithStrictValidation",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-16-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/apiclient",
+          "-exec",
+          "TestNewConnection_TLSWithStrictValidation",
+          "-prog",
+          "TestNewConnection_TLSWithStrictValidation",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:16:08.981882524Z",
+        "endedAt": "2026-02-25T04:16:15.12580886Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 6143,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-16-08Z",
+        "test_name": "argo-cd-3.1.0/reposerver/apiclient/TestNewConnection_TLSWithStrictValidation"
+      }
+    }
+  ]
+}

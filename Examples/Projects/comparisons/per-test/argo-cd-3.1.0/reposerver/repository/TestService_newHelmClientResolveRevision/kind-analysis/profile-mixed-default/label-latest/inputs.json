@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:57:19.905441407Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/TestService_newHelmClientResolveRevision/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "TestService_newHelmClientResolveRevision",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-30-27Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "TestService_newHelmClientResolveRevision",
+          "-prog",
+          "TestService_newHelmClientResolveRevision",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:30:27.716831526Z",
+        "endedAt": "2026-02-25T04:30:35.24646915Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7529,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-30-27Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/TestService_newHelmClientResolveRevision"
+      }
+    }
+  ]
+}

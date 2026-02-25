@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:16:33.297623106Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/searcher/TestGeoJsonMultiPolygonWithInQuery/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+        "testRel": "bleve-2.5.3/search/searcher",
+        "testName": "TestGeoJsonMultiPolygonWithInQuery",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T09-57-13Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+          "-exec",
+          "TestGeoJsonMultiPolygonWithInQuery",
+          "-prog",
+          "TestGeoJsonMultiPolygonWithInQuery",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T09:57:13.448449399Z",
+        "endedAt": "2026-02-25T09:57:53.473775266Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40025,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T09-57-13Z",
+        "test_name": "bleve-2.5.3/search/searcher/TestGeoJsonMultiPolygonWithInQuery"
+      }
+    }
+  ]
+}

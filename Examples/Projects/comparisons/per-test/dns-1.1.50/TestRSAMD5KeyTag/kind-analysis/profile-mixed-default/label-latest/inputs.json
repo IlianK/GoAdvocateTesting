@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:21:01.011731306Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/dns-1.1.50/TestRSAMD5KeyTag/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+        "testRel": "dns-1.1.50",
+        "testName": "TestRSAMD5KeyTag",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-59-56Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+          "-exec",
+          "TestRSAMD5KeyTag",
+          "-prog",
+          "TestRSAMD5KeyTag",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:59:56.799210723Z",
+        "endedAt": "2026-02-25T10:59:59.648328091Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2849,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-59-56Z",
+        "test_name": "dns-1.1.50/TestRSAMD5KeyTag"
+      }
+    }
+  ]
+}

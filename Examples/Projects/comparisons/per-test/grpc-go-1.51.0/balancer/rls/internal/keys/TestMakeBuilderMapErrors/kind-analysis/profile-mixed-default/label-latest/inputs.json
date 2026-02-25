@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:34:04.919921422Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/balancer/rls/internal/keys/TestMakeBuilderMapErrors/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/rls/internal/keys",
+        "testRel": "grpc-go-1.51.0/balancer/rls/internal/keys",
+        "testName": "TestMakeBuilderMapErrors",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T12-29-17Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/rls/internal/keys",
+          "-exec",
+          "TestMakeBuilderMapErrors",
+          "-prog",
+          "TestMakeBuilderMapErrors",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T12:29:17.991230567Z",
+        "endedAt": "2026-02-25T12:29:19.692179205Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1700,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T12-29-17Z",
+        "test_name": "grpc-go-1.51.0/balancer/rls/internal/keys/TestMakeBuilderMapErrors"
+      }
+    }
+  ]
+}

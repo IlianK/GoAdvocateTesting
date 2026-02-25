@@ -1,6 +1,32 @@
 analysisProfiles:
+  # scen: "" (all scenarios)
   all-quick:
     scen: ""
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
+
+  all-default:
+    scen: ""
+    timeoutRec: 20
+    timeoutRep: 20
+    keepTrace: true
+    stats: true
+    time: true
+
+  all-deep:
+    scen: ""
+    timeoutRec: 60
+    timeoutRep: 60
+    keepTrace: true
+    stats: true
+    time: true
+
+  # scen: "m" (mixed deadlocks)
+  mixed-quick:
+    scen: "m"
     timeoutRec: 5
     timeoutRep: 5
     keepTrace: false
@@ -14,14 +40,6 @@ analysisProfiles:
     keepTrace: true
     stats: true
     time: true
-    
-  mixed-quick:
-    scen: "m"
-    timeoutRec: 5
-    timeoutRep: 5
-    keepTrace: false
-    stats: true
-    time: true
 
   mixed-deep:
     scen: "m"
@@ -31,23 +49,47 @@ analysisProfiles:
     stats: true
     time: true
 
+  # scen: "mc" (blocking / channel+lock)
+  block-quick:
+    scen: "mc"
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
 
-fuzzProfiles:
-  default:
-    maxRuns: 50
-    timeoutFuz: 10
+  block-default:
+    scen: "mc"
     timeoutRec: 20
     timeoutRep: 20
     keepTrace: true
     stats: true
     time: true
 
+  block-deep:
+    scen: "mc"
+    timeoutRec: 60
+    timeoutRep: 60
+    keepTrace: true
+    stats: true
+    time: true
+
+fuzzProfiles:
   quick:
     maxRuns: 10
     timeoutFuz: 5
     timeoutRec: 5
     timeoutRep: 5
     keepTrace: false
+    stats: true
+    time: true
+
+  default:
+    maxRuns: 50
+    timeoutFuz: 10
+    timeoutRec: 20
+    timeoutRep: 20
+    keepTrace: true
     stats: true
     time: true
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// MoveAdvocateResult moves <testDir>/advocateResult into the destination for fuzzing and flattens it.
+// Moves <testDir>/advocateResult into the destination for fuzzing and flattens
 func MoveAdvocateResult(p MoveParams) (string, error) {
 	src := filepath.Join(p.TestDir, "advocateResult")
 	if _, err := os.Stat(src); err != nil {
@@ -27,7 +27,7 @@ func MoveAdvocateResult(p MoveParams) (string, error) {
 		return "", err
 	}
 
-	// If advocateResult contains exactly one directory and it's a wrapper, flatten it.
+	// If advocateResult contains exactly one directory and it's a wrapper, flatten
 	if len(entries) == 1 && entries[0].IsDir() {
 		wrapper := filepath.Join(src, entries[0].Name())
 		if looksLikeAdvocateRunDir(wrapper) {
@@ -41,7 +41,7 @@ func MoveAdvocateResult(p MoveParams) (string, error) {
 		}
 	}
 
-	// Otherwise, move advocateResult/* into dest.
+	// Otherwise, move advocateResult/* into dest
 	for _, e := range entries {
 		oldPath := filepath.Join(src, e.Name())
 		newPath := filepath.Join(dest, e.Name())
@@ -56,8 +56,7 @@ func MoveAdvocateResult(p MoveParams) (string, error) {
 	return dest, nil
 }
 
-// ---------- ANALYSIS HELPERS ----------
-
+// ---------- HELPERS ----------
 func MoveAdvocateAnalysisForTest(p MoveParams) (string, error) {
 	if p.Kind != "analysis" {
 		return "", fmt.Errorf("MoveAdvocateAnalysisForTest: Kind must be 'analysis'")
@@ -131,8 +130,8 @@ func MoveAdvocateAnalysisForTest(p MoveParams) (string, error) {
 
 type AnalysisSplitParams struct {
 	TestDir     string
-	DatasetDir  string // NEW (optional): where results should be written
-	TestRel     string // NEW (optional): relative test path within dataset
+	DatasetDir  string // where results should be written
+	TestRel     string // relative test path within dataset
 	ResultsRoot string
 	Profile     string
 	RunID       string

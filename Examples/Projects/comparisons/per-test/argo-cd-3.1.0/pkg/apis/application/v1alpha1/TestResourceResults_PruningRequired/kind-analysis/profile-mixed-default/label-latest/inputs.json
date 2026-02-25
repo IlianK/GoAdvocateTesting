@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:55:48.215873391Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestResourceResults_PruningRequired/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testRel": "argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testName": "TestResourceResults_PruningRequired",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-11-55Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+          "-exec",
+          "TestResourceResults_PruningRequired",
+          "-prog",
+          "TestResourceResults_PruningRequired",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:11:55.040070789Z",
+        "endedAt": "2026-02-25T04:12:03.249470834Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 8209,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-11-55Z",
+        "test_name": "argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestResourceResults_PruningRequired"
+      }
+    }
+  ]
+}

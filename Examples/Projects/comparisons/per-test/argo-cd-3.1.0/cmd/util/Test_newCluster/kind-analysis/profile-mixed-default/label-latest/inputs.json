@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:52:45.465668323Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/cmd/util/Test_newCluster/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/util",
+        "testRel": "argo-cd-3.1.0/cmd/util",
+        "testName": "Test_newCluster",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-27-52Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/util",
+          "-exec",
+          "Test_newCluster",
+          "-prog",
+          "Test_newCluster",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:27:52.944537128Z",
+        "endedAt": "2026-02-25T03:28:00.244322007Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7299,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-27-52Z",
+        "test_name": "argo-cd-3.1.0/cmd/util/Test_newCluster"
+      }
+    }
+  ]
+}

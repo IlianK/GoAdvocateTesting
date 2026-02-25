@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:18.146819572Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/hugo/3251/TestHugo3251/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/hugo/3251",
+        "testRel": "hugo/3251",
+        "testName": "TestHugo3251",
+        "profile": "all-default",
+        "runId": "2026-02-25T01-58-15Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/hugo/3251",
+          "-exec",
+          "TestHugo3251",
+          "-prog",
+          "TestHugo3251",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T01:58:15.836225776Z",
+        "endedAt": "2026-02-25T01:58:55.859387167Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40023,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T01-58-15Z",
+        "test_name": "hugo/3251/TestHugo3251"
+      }
+    }
+  ]
+}

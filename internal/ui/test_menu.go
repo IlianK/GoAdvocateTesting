@@ -77,10 +77,10 @@ func RunMenu(p RunMenuParams) Selection {
 	return Selection{Kind: kind, Profile: profile, ModeType: mt, Mode: mode, Test: tc}
 }
 
-// DisplayTest shows a unique-ish label in recursive discovery.
-// If File contains a subdir, display "subdir :: TestName".
+// DisplayTest shows a unique label in recursive discovery
+// If File contains a subdir, display "subdir :: TestName"
 func DisplayTest(tc app.TestCase) string {
-	// tc.File is either "foo_test.go" or "subdir/foo_test.go" in recursive mode
+	// tc.File is either "md_test.go" or "subdir/md_test.go" in recursive mode
 	if strings.Contains(tc.File, string(os.PathSeparator)) {
 		dir := filepath.Dir(tc.File)
 		if dir != "." && dir != "" {

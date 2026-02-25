@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:19:15.815997176Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/dns-1.1.50/TestCopy/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+        "testRel": "dns-1.1.50",
+        "testName": "TestCopy",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-59-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+          "-exec",
+          "TestCopy",
+          "-prog",
+          "TestCopy",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:59:08.434635592Z",
+        "endedAt": "2026-02-25T10:59:11.082510588Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2647,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-59-08Z",
+        "test_name": "dns-1.1.50/TestCopy"
+      }
+    }
+  ]
+}

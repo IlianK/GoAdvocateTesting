@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:23:44.69073436Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/Test_Ctx_Body/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+        "testRel": "fiber-2.40.1",
+        "testName": "Test_Ctx_Body",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-16-00Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1",
+          "-exec",
+          "Test_Ctx_Body",
+          "-prog",
+          "Test_Ctx_Body",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:16:00.126054544Z",
+        "endedAt": "2026-02-25T11:16:02.756883709Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2630,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-16-00Z",
+        "test_name": "fiber-2.40.1/Test_Ctx_Body"
+      }
+    }
+  ]
+}

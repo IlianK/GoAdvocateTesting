@@ -1,0 +1,71 @@
+metrics:
+  default:
+    sources:
+      statsAnalysis:
+        number:
+          - NrPanicsTotal
+          - NrLeaksTotal
+          - NrPanicsVerifiedViaReplayTotal
+          - NrLeaksResolvedViaReplayTotal
+          - NrProbInRecordingTotal
+          - NrUnexpectedPanicsInReplayTotal
+
+      statsFuzz:
+        number:
+          - NrMut
+          - NrMutInvalid
+          - ActiveReleased
+          - AllActiveReleased
+
+      statsAll:
+        number:
+          - NrEvents
+          - NrGoroutines
+          - NrSpawnEvents
+          - NrRoutineEndEvents
+          - NrChannels
+          - NrBufferedChannels
+          - NrUnbufferedChannels
+          - NrChannelEvents
+          - NrMutex
+          - NrMutexEvents
+          - NrWaitgroup
+          - NrWaitgroupEvent
+          - NrSelectEvents
+          - NrSelectCases
+
+      statsTrace:
+        number:
+          - NrEvents
+          - NrGoroutines
+          - NrChannelEvents
+          - NrMutexEvents
+          - NrWaitgroupEvents
+          - NrSelectEvents
+
+      timesDetail:
+        number:
+          - Io
+          - Rewrite
+          - NumberReplay
+
+    derived:
+      - Bug_Types
+      - Unique_Bugs
+      - Total_Bugs
+      - Confirmed_Replays
+      - Total_Runs
+      - Total_Time_s
+      - Rec_s
+      - Ana_s
+      - Rep_s
+      - Replays_Written
+      - Replays_Successful
+
+  # If non-empty -> overrides default entirely
+  specific:
+    sources: {}
+    derived:
+      - Bug_Types
+      - Unique_Bugs
+      - Total_Bugs

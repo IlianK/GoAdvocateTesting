@@ -1,0 +1,7 @@
+Mode,Bug_Types,Unique_Bugs,Total_Bugs
+GFuzz,A04,1,1
+GFuzzHB,A04,1,1
+GFuzzHBFlow,A04,1,1
+Flow,A04,1,1
+GoCR,A04,1,1
+GoCRHB,A04,1,1

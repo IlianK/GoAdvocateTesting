@@ -1,0 +1,13 @@
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go
+TestName:  TestP01_PossibleSendOnClosed
+Import added at line: 3
+Header added at line: 59
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestP01_PossibleSendOnClosed
+Init FuzzingReplay
+Reading trace from /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/fuzzingTraces/fuzzingTrace_2
+1:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:66  ->  1
+2:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:68  ->  1
+RELEASE ACTIVE:  2:/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/scenarios_test.go:68
+PANIC

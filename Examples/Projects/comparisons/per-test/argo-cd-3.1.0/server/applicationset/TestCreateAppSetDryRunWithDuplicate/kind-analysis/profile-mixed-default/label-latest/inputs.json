@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:58:37.555744045Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/applicationset/TestCreateAppSetDryRunWithDuplicate/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/applicationset",
+        "testRel": "argo-cd-3.1.0/server/applicationset",
+        "testName": "TestCreateAppSetDryRunWithDuplicate",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-00-13Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/applicationset",
+          "-exec",
+          "TestCreateAppSetDryRunWithDuplicate",
+          "-prog",
+          "TestCreateAppSetDryRunWithDuplicate",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:00:13.484833378Z",
+        "endedAt": "2026-02-25T05:00:23.288721691Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 9803,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-00-13Z",
+        "test_name": "argo-cd-3.1.0/server/applicationset/TestCreateAppSetDryRunWithDuplicate"
+      }
+    }
+  ]
+}

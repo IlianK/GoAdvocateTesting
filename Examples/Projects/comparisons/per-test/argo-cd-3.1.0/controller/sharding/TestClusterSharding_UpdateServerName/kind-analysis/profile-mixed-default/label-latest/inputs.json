@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:54:26.984343664Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/sharding/TestClusterSharding_UpdateServerName/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller/sharding",
+        "testRel": "argo-cd-3.1.0/controller/sharding",
+        "testName": "TestClusterSharding_UpdateServerName",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-47-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller/sharding",
+          "-exec",
+          "TestClusterSharding_UpdateServerName",
+          "-prog",
+          "TestClusterSharding_UpdateServerName",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:47:08.496973166Z",
+        "endedAt": "2026-02-25T03:47:15.544363236Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7047,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-47-08Z",
+        "test_name": "argo-cd-3.1.0/controller/sharding/TestClusterSharding_UpdateServerName"
+      }
+    }
+  ]
+}

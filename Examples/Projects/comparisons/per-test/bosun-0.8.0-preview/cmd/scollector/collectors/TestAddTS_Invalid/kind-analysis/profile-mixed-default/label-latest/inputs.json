@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:18:16.497629758Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bosun-0.8.0-preview/cmd/scollector/collectors/TestAddTS_Invalid/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/cmd/scollector/collectors",
+        "testRel": "bosun-0.8.0-preview/cmd/scollector/collectors",
+        "testName": "TestAddTS_Invalid",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-57-30Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/cmd/scollector/collectors",
+          "-exec",
+          "TestAddTS_Invalid",
+          "-prog",
+          "TestAddTS_Invalid",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:57:30.165766454Z",
+        "endedAt": "2026-02-25T10:57:30.285390992Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 119,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-57-30Z",
+        "test_name": "bosun-0.8.0-preview/cmd/scollector/collectors/TestAddTS_Invalid"
+      }
+    }
+  ]
+}

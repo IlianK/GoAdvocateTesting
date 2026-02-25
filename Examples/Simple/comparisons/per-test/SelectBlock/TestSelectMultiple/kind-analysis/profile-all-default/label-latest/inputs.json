@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T22:23:34.258504392Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/SelectBlock/TestSelectMultiple/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/SelectBlock",
+        "testRel": "SelectBlock",
+        "testName": "TestSelectMultiple",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-02-05Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/SelectBlock",
+          "-exec",
+          "TestSelectMultiple",
+          "-prog",
+          "TestSelectMultiple",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:02:05.039821035Z",
+        "endedAt": "2026-02-25T02:02:06.46634135Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1426,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-02-05Z",
+        "test_name": "SelectBlock/TestSelectMultiple"
+      }
+    }
+  ]
+}

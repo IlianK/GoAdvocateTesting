@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:34:58.599646173Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/internal/xds/matcher/TestHeaderPresentMatcherMatch/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/internal/xds/matcher",
+        "testRel": "grpc-go-1.51.0/internal/xds/matcher",
+        "testName": "TestHeaderPresentMatcherMatch",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T13-56-49Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/internal/xds/matcher",
+          "-exec",
+          "TestHeaderPresentMatcherMatch",
+          "-prog",
+          "TestHeaderPresentMatcherMatch",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T13:56:49.206872145Z",
+        "endedAt": "2026-02-25T13:56:50.783208269Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1576,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T13-56-49Z",
+        "test_name": "grpc-go-1.51.0/internal/xds/matcher/TestHeaderPresentMatcherMatch"
+      }
+    }
+  ]
+}

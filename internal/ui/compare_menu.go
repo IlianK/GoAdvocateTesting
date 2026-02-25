@@ -31,53 +31,38 @@ type CompareSelection struct {
 	Metric   string // pivot
 }
 
-// add near top of file
-var pivotAllowedMetrics = map[string]struct{}{
-	"Unique_Bugs":        {},
-	"Bug_Types":          {},
-	"Total_Bugs":         {},
-	"Panics":             {},
-	"Leaks":              {},
-	"Confirmed_Replays":  {},
-	"Total_Runs":         {},
-	"Total_Time_s":       {},
-	"Rec_s":              {},
-	"Ana_s":              {},
-	"Rep_s":              {},
-	"Replays_Written":    {},
-	"Replays_Successful": {},
-}
-
-func filterPivotMetrics(keys []string) []string {
-	out := make([]string, 0, len(keys))
-	seen := map[string]bool{}
-	for _, k := range keys {
-		if _, ok := pivotAllowedMetrics[k]; ok && !seen[k] {
-			out = append(out, k)
-			seen[k] = true
-		}
-	}
-	out = uniqueSorted(out)
-	return out
-}
-
 func CompareMenu(p CompareMenuParams) CompareSelection {
 	PrintHeader(fmt.Sprintf("Compare dataset: %s", p.TestDir))
 
-	action := chooseOne("Select compare action:", []string{
-		"Per-test (compare fuzz modes within one test)",
+	kinds := p.Index.Kinds()
+	if len(kinds) == 0 {
+		PrintError("No runs discovered.")
+		return CompareSelection{}
+	}
+
+	kind := chooseOneFromList("Select kind:", kinds)
+
+	// Actions depend on kind:
+	actions := []string{
 		"Cross-test (compare across tests)",
-		"Pivot (compare fuzzing modes across tests for one metric)",
-	})
+		"Per-test (compare modes within one test)",
+	}
+	actionMap := []CompareAction{
+		CompareActionCrossTest,
+		CompareActionPerTest,
+	}
+
+	// Pivot only makes sense for fuzzing
+	if kind == "fuzzing" {
+		actions = append(actions, "Pivot (compare fuzzing modes across tests for one metric)")
+		actionMap = append(actionMap, CompareActionPivot)
+	}
+
+	ch := chooseOne("Select compare action:", actions)
+	action := actionMap[ch-1]
 
 	switch action {
-	case 1:
-		kinds := p.Index.Kinds()
-		if len(kinds) == 0 {
-			PrintError("No runs discovered.")
-			return CompareSelection{}
-		}
-		kind := chooseOneFromList("Select kind:", kinds)
+	case CompareActionPerTest:
 		profile := chooseOneFromList("Select profile:", p.Index.Profiles(kind))
 		label := chooseLabel(p.Index.Labels(kind, profile))
 		testName := chooseOneFromList("Select test:", p.Index.Tests(kind, profile, label))
@@ -90,22 +75,16 @@ func CompareMenu(p CompareMenuParams) CompareSelection {
 			TestName: testName,
 		}
 
-	case 2:
-		kinds := p.Index.Kinds()
-		if len(kinds) == 0 {
-			PrintError("No runs discovered.")
-			return CompareSelection{}
-		}
-		kind := chooseOneFromList("Select kind:", kinds)
+	case CompareActionCrossTest:
 		profile := chooseOneFromList("Select profile:", p.Index.Profiles(kind))
 		label := chooseLabel(p.Index.Labels(kind, profile))
 
 		mode := ""
 		if kind == "fuzzing" {
 			modes := append([]string{"(ALL modes)"}, p.Index.Modes(profile, label)...)
-			ch := chooseOneFromList("Restrict to one mode?", modes)
-			if ch != "(ALL modes)" {
-				mode = ch
+			chm := chooseOneFromList("Restrict to one mode?", modes)
+			if chm != "(ALL modes)" {
+				mode = chm
 			}
 		}
 
@@ -117,24 +96,28 @@ func CompareMenu(p CompareMenuParams) CompareSelection {
 			Mode:    mode,
 		}
 
-	case 3:
-		// pivot is fuzzing-only
-		kind := "fuzzing"
-		profile := chooseOneFromList("Select fuzzing profile:", p.Index.Profiles(kind))
-		label := chooseLabel(p.Index.Labels(kind, profile))
-		metricKeys := filterPivotMetrics(p.MetricKeys)
+	case CompareActionPivot:
+		// fuzzing only
+		profile := chooseOneFromList("Select fuzzing profile:", p.Index.Profiles("fuzzing"))
+		label := chooseLabel(p.Index.Labels("fuzzing", profile))
+
+		metricKeys := uniqueSorted(p.MetricKeys)
+		if len(metricKeys) == 0 {
+			PrintError("No metrics available for pivot (check metrics_select.yaml).")
+			return CompareSelection{}
+		}
 		metric := chooseOneFromList("Select metric to pivot:", metricKeys)
 
 		return CompareSelection{
 			Action:  CompareActionPivot,
-			Kind:    kind,
+			Kind:    "fuzzing",
 			Profile: profile,
 			Label:   label,
 			Metric:  metric,
 		}
 
 	default:
-		return CompareSelection{Action: CompareActionCrossTest, Kind: "analysis"}
+		return CompareSelection{Action: CompareActionCrossTest, Kind: kind}
 	}
 }
 

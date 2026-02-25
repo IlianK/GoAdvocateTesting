@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:06:37.021064923Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/gpg/Test_ValidateGPGKeys/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/gpg",
+        "testRel": "argo-cd-3.1.0/util/gpg",
+        "testName": "Test_ValidateGPGKeys",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T06-53-58Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/gpg",
+          "-exec",
+          "Test_ValidateGPGKeys",
+          "-prog",
+          "Test_ValidateGPGKeys",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T06:53:58.805223918Z",
+        "endedAt": "2026-02-25T06:54:05.350472484Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 6545,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T06-53-58Z",
+        "test_name": "argo-cd-3.1.0/util/gpg/Test_ValidateGPGKeys"
+      }
+    }
+  ]
+}

@@ -1,40 +1,33 @@
 # Configuration
 
-`advocate-runner` reads two config files:
+`advocate-runner` reads uses three config files:
 - `config.yaml`: runner defaults (results root, comparisons root, runtime/mode info, etc.)
 - `profiles.yaml`: profiles used for running and comparing
-
+- `metrics_select.yaml`: metrics to compare results cross-test or per-test (see [Metrics](./Docs/Metrics.md))
 ---
 
 ## `config.yaml`
 `config.yaml` is read by the CLI to locate defaults such as:
 - where results are written (default: `results/`)
-- where comparisons are written (typically `<datasetDir>/comparisons/`)
-- any other repo-specific defaults like available fuzzing modes and runtime information
+- where the `advocate_bin` and `patched_go` runtime lives (runtime information)
+- which fuzzing modes are available during testing 
 
-Use it explicitly:
+Provide it explicitly like below or omit it to use the default `config.yaml` in the root dir.
 
 ```bash
-./advocate-runner --config config.yaml <command> ...
-```
-
-or per subcommand (as implemented in this project):
-```
-./advocate-runner compare --config config.yaml ...
-./advocate-runner compare all --config config.yaml ...
+./advocate-runner <test/compare> --config config.yaml ...
 ```
 
 ---
 
 ## `profiles.yaml` 
-`profiles.yaml` defines profiles to run/compare the tests with. 
+`profiles.yaml` defines individual profiles to run/compare the tests with. Currently there are three basic ones `default`, `quick`, `deep`, but are meant to be extended and individually configured.
 
-Currently there are three basic ones (extendable): `default`, `quick`, `deep`.
-
-A “profile” typically encodes:
-- ADVOCATE arguments / scenario selection
-- fuzzing modes to run (if fuzzing)
-- timeouts / flags / other run variants
+A `--profile` encodes:
+- the ADVOCATE arguments and scenario selection
+- the fuzzing modes to run (if fuzzing testing is done)
+- the timeouts set
+- whether to keep advoacte artefacts
 
 In the UI menus profiles can be selected by name and in non-interactive mode they have to be passed with `--profile <name>`.
 

@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T02:15:18.297156295Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/results/moby/30408/TestMoby30408/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/moby/30408",
+        "testRel": "moby/30408",
+        "testName": "TestMoby30408",
+        "profile": "all-default",
+        "runId": "2026-02-25T02-02-47Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/GoBench/goker/blocking/moby/30408",
+          "-exec",
+          "TestMoby30408",
+          "-prog",
+          "TestMoby30408",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:02:47.916907481Z",
+        "endedAt": "2026-02-25T02:03:27.941071716Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40024,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-25T02-02-47Z",
+        "test_name": "moby/30408/TestMoby30408"
+      }
+    }
+  ]
+}

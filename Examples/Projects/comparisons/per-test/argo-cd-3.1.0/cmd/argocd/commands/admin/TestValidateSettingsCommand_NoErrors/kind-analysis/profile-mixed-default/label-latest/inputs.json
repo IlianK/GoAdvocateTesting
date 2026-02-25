@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T14:52:28.381435097Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/cmd/argocd/commands/admin/TestValidateSettingsCommand_NoErrors/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testRel": "argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testName": "TestValidateSettingsCommand_NoErrors",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-08-09Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+          "-exec",
+          "TestValidateSettingsCommand_NoErrors",
+          "-prog",
+          "TestValidateSettingsCommand_NoErrors",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:08:09.705880285Z",
+        "endedAt": "2026-02-25T03:08:19.785455818Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 10079,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-08-09Z",
+        "test_name": "argo-cd-3.1.0/cmd/argocd/commands/admin/TestValidateSettingsCommand_NoErrors"
+      }
+    }
+  ]
+}

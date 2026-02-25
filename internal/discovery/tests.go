@@ -12,13 +12,13 @@ import (
 	"GoAdvocateTesting/internal/app"
 )
 
-// DiscoverTests finds TestXxx in *_test.go files directly under testDir (non-recursive).
+// DiscoverTests finds TestXxx in *_test.go files directly under testDir (non-recursive)
 func DiscoverTests(testDir string) ([]app.TestCase, error) {
 	return discoverTestsImpl(filepath.Clean(testDir), filepath.Clean(testDir), false)
 }
 
-// DiscoverTestsRecursive finds TestXxx in *_test.go files under root recursively.
-// It returns TestCases where TestCase.File is the relative path from root to the *_test.go file.
+// DiscoverTestsRecursive finds TestXxx in *_test.go files under root recursively
+// returns TestCases where TestCase.File is the relative path from root to the *_test.go file.
 // Example: "10214/cockroach10214_test.go"
 func DiscoverTestsRecursive(root string) ([]app.TestCase, error) {
 	return discoverTestsImpl(filepath.Clean(root), filepath.Clean(root), true)
@@ -78,7 +78,6 @@ func discoverTestsImpl(root string, current string, recursive bool) ([]app.TestC
 	for _, fpath := range goFiles {
 		f, err := parser.ParseFile(fset, fpath, nil, 0)
 		if err != nil {
-			// keep discovery robust
 			continue
 		}
 

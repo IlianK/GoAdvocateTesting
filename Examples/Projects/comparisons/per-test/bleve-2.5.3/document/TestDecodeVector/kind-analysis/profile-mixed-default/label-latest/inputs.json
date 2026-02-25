@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:13:22.854143245Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/document/TestDecodeVector/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/document",
+        "testRel": "bleve-2.5.3/document",
+        "testName": "TestDecodeVector",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-33-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/document",
+          "-exec",
+          "TestDecodeVector",
+          "-prog",
+          "TestDecodeVector",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:33:08.518011264Z",
+        "endedAt": "2026-02-25T07:33:08.991019901Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 473,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-33-08Z",
+        "test_name": "bleve-2.5.3/document/TestDecodeVector"
+      }
+    }
+  ]
+}

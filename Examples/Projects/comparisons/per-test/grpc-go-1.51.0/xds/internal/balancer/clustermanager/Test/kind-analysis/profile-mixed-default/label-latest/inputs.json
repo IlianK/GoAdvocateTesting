@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:35:25.567413191Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/xds/internal/balancer/clustermanager/Test/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/xds/internal/balancer/clustermanager",
+        "testRel": "grpc-go-1.51.0/xds/internal/balancer/clustermanager",
+        "testName": "Test",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T14-09-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/xds/internal/balancer/clustermanager",
+          "-exec",
+          "Test",
+          "-prog",
+          "Test",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T14:09:08.395491226Z",
+        "endedAt": "2026-02-25T14:09:21.377769482Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 12982,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T14-09-08Z",
+        "test_name": "grpc-go-1.51.0/xds/internal/balancer/clustermanager/Test"
+      }
+    }
+  ]
+}

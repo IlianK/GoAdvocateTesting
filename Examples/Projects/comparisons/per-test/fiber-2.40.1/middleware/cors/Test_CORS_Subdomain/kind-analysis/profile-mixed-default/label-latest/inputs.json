@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:26:00.741449466Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/cors/Test_CORS_Subdomain/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/cors",
+        "testRel": "fiber-2.40.1/middleware/cors",
+        "testName": "Test_CORS_Subdomain",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-24-44Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/cors",
+          "-exec",
+          "Test_CORS_Subdomain",
+          "-prog",
+          "Test_CORS_Subdomain",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:24:44.040783582Z",
+        "endedAt": "2026-02-25T11:24:45.596453005Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1555,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-24-44Z",
+        "test_name": "fiber-2.40.1/middleware/cors/Test_CORS_Subdomain"
+      }
+    }
+  ]
+}

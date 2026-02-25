@@ -1,0 +1,72 @@
+metrics:
+  dirs:
+    stats: "stats"
+    output: "output"
+    times: "times"
+    bugs: "bugs"
+
+  files:
+    statsAll: "statsAll_*"
+    statsAnalysis: "statsAnalysis_*"
+    statsFuzz: "statsFuzz_*"
+    statsTrace: "statsTrace_*"
+    timesTotal: "times_total_*.csv"
+    timesDetail: "times_detail_*.csv"
+    bugReports: "bug_*.md"
+
+  derived:
+    Bug_Types:
+      op: "codes_present"
+      source: "statsAll"
+      pattern: "^NoUnique(?:e)?tected([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+      present_if: ">0"
+      join: ";"
+
+    Unique_Bugs:
+      op: "count_codes"
+      from_metric: "Bug_Types"
+
+    Total_Bugs:
+      op: "count_files"
+      patterns:
+        - "{run}/{bugsDir}/{bugReports}"
+        - "{run}/{bugReports}"
+        
+    Confirmed_Replays:
+      op: "sum_columns"
+      source: "statsAnalysis"
+      columns:
+        - NrPanicsVerifiedViaReplayTotal
+        - NrLeaksResolvedViaReplayTotal
+
+    Total_Runs:
+      op: "alias"
+      source: "statsFuzz"
+      column: "NrMut"
+
+    Replays_Written:
+      op: "regex_sum"
+      source: "statsAll"
+      pattern: "^NoTotal(?:e)?playWritten([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+
+    Replays_Successful:
+      op: "regex_sum"
+      source: "statsAll"
+      pattern: "^NoTotal(?:e)?playSuccessful([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+
+    Total_Time_s:
+      op: "times_total"
+      column: "Time"
+      where:
+        column: "TestName"
+        equals: "Total"
+
+    Rec_s:
+      op: "times_detail"
+      column: "Recording"
+    Ana_s:
+      op: "times_detail"
+      column: "Analysis"
+    Rep_s:
+      op: "times_detail"
+      column: "Replay"

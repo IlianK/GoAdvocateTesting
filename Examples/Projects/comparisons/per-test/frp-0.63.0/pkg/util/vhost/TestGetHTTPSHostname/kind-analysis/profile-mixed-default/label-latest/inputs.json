@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:28:28.289275019Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/frp-0.63.0/pkg/util/vhost/TestGetHTTPSHostname/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/frp-0.63.0/pkg/util/vhost",
+        "testRel": "frp-0.63.0/pkg/util/vhost",
+        "testName": "TestGetHTTPSHostname",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-36-31Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/frp-0.63.0/pkg/util/vhost",
+          "-exec",
+          "TestGetHTTPSHostname",
+          "-prog",
+          "TestGetHTTPSHostname",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:36:31.371511119Z",
+        "endedAt": "2026-02-25T11:36:35.182017001Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 3810,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-36-31Z",
+        "test_name": "frp-0.63.0/pkg/util/vhost/TestGetHTTPSHostname"
+      }
+    }
+  ]
+}
