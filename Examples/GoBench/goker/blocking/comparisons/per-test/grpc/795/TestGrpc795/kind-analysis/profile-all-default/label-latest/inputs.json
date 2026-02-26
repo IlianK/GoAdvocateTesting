@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.138192937Z",
+  "generatedAt": "2026-02-26T23:23:23.565061307Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "grpc/795",
         "testName": "TestGrpc795",
         "profile": "all-default",
-        "runId": "2026-02-25T01-57-25Z",
+        "runId": "2026-02-26T20-48-52Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:57:25.281581733Z",
-        "endedAt": "2026-02-25T01:58:05.301272404Z",
+        "startedAt": "2026-02-26T20:48:52.384900904Z",
+        "endedAt": "2026-02-26T20:49:32.443054198Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.05018,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.05511,
         "Unique_Bugs": 0,
-        "duration_ms": 40019,
+        "duration_ms": 40058,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-57-25Z",
+        "run_id": "2026-02-26T20-48-52Z",
         "test_name": "grpc/795/TestGrpc795"
       }
     }

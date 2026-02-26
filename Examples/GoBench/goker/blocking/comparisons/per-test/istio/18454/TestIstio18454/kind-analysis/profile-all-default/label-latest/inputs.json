@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.163009067Z",
+  "generatedAt": "2026-02-26T23:23:23.897478014Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "istio/18454",
         "testName": "TestIstio18454",
         "profile": "all-default",
-        "runId": "2026-02-25T02-00-17Z",
+        "runId": "2026-02-26T20-51-20Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:00:17.218302197Z",
-        "endedAt": "2026-02-25T02:00:18.581339977Z",
+        "startedAt": "2026-02-26T20:51:20.294506127Z",
+        "endedAt": "2026-02-26T20:51:21.728623286Z",
         "exitCode": 0
       },
       "metrics": {
-        "Bug_Types": "A07",
-        "Total_Bugs": 1,
-        "Unique_Bugs": 1,
-        "duration_ms": 1363,
+        "Ana_s": 0.00151,
+        "Bug_Types": "",
+        "NrEvents": 1034,
+        "Rec_s": 1.2499,
+        "Rep_s": 0.00003,
+        "Total_Bugs": 0,
+        "Total_Time_s": 1.43217,
+        "Unique_Bugs": 0,
+        "duration_ms": 1434,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-00-17Z",
+        "run_id": "2026-02-26T20-51-20Z",
         "test_name": "istio/18454/TestIstio18454"
       }
     }

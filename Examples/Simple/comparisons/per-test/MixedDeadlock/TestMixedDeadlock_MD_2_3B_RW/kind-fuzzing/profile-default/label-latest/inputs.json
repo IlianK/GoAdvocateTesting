@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T22:23:35.691610635Z",
+  "generatedAt": "2026-02-26T22:42:08.657267265Z",
   "kind": "fuzzing",
   "profile": "default",
   "label": "latest",
@@ -14,7 +14,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "GFuzz",
         "profile": "default",
-        "runId": "2026-02-25T21-59-15Z",
+        "runId": "2026-02-26T22-11-40Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -39,21 +39,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:15.677701966Z",
-        "endedAt": "2026-02-25T21:59:17.119686382Z",
+        "startedAt": "2026-02-26T22:11:40.817247062Z",
+        "endedAt": "2026-02-26T22:11:42.356162498Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00003,
         "Bug_Types": "",
+        "NrEvents": 16,
+        "Rec_s": 1.26856,
         "Total_Bugs": 0,
+        "Total_Time_s": 1.53629,
         "Unique_Bugs": 0,
-        "duration_ms": 1441,
+        "duration_ms": 1538,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "GFuzz",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-15Z",
+        "run_id": "2026-02-26T22-11-40Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     },
@@ -67,7 +71,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "GFuzzHB",
         "profile": "default",
-        "runId": "2026-02-25T21-59-17Z",
+        "runId": "2026-02-26T22-11-42Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -92,21 +96,26 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:17.120111968Z",
-        "endedAt": "2026-02-25T21:59:19.470130016Z",
+        "startedAt": "2026-02-26T22:11:42.35651676Z",
+        "endedAt": "2026-02-26T22:11:44.631652058Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00026,
         "Bug_Types": "P06",
+        "NrEvents": 16,
+        "Rec_s": 1.23745,
+        "Rep_s": 0.81976,
         "Total_Bugs": 1,
+        "Total_Time_s": 2.2729,
         "Unique_Bugs": 1,
-        "duration_ms": 2350,
+        "duration_ms": 2275,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "GFuzzHB",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-17Z",
+        "run_id": "2026-02-26T22-11-42Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     },
@@ -120,7 +129,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "GFuzzHBFlow",
         "profile": "default",
-        "runId": "2026-02-25T21-59-19Z",
+        "runId": "2026-02-26T22-11-44Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -145,21 +154,26 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:19.471462506Z",
-        "endedAt": "2026-02-25T21:59:21.825056138Z",
+        "startedAt": "2026-02-26T22:11:44.631981385Z",
+        "endedAt": "2026-02-26T22:11:46.956448632Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00033,
         "Bug_Types": "P06",
+        "NrEvents": 16,
+        "Rec_s": 1.26451,
+        "Rep_s": 0.83455,
         "Total_Bugs": 1,
+        "Total_Time_s": 2.32165,
         "Unique_Bugs": 1,
-        "duration_ms": 2353,
+        "duration_ms": 2324,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "GFuzzHBFlow",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-19Z",
+        "run_id": "2026-02-26T22-11-44Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     },
@@ -173,7 +187,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "Flow",
         "profile": "default",
-        "runId": "2026-02-25T21-59-21Z",
+        "runId": "2026-02-26T22-11-46Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -198,21 +212,26 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:21.825509136Z",
-        "endedAt": "2026-02-25T21:59:24.13782998Z",
+        "startedAt": "2026-02-26T22:11:46.956931164Z",
+        "endedAt": "2026-02-26T22:11:49.300571454Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00026,
         "Bug_Types": "P06",
+        "NrEvents": 11,
+        "Rec_s": 1.25306,
+        "Rep_s": 0.83942,
         "Total_Bugs": 1,
+        "Total_Time_s": 2.34071,
         "Unique_Bugs": 1,
-        "duration_ms": 2312,
+        "duration_ms": 2343,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "Flow",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-21Z",
+        "run_id": "2026-02-26T22-11-46Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     },
@@ -226,7 +245,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "GoCR",
         "profile": "default",
-        "runId": "2026-02-25T21-59-24Z",
+        "runId": "2026-02-26T22-11-49Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -251,21 +270,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:24.138356218Z",
-        "endedAt": "2026-02-25T21:59:37.393744609Z",
+        "startedAt": "2026-02-26T22:11:49.301087427Z",
+        "endedAt": "2026-02-26T22:12:01.689327472Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00012,
         "Bug_Types": "",
+        "NrEvents": 16,
+        "Rec_s": 1.24781,
         "Total_Bugs": 0,
+        "Total_Time_s": 12.38512,
         "Unique_Bugs": 0,
-        "duration_ms": 13255,
+        "duration_ms": 12388,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "GoCR",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-24Z",
+        "run_id": "2026-02-26T22-11-49Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     },
@@ -279,7 +302,7 @@
         "testName": "TestMixedDeadlock_MD_2_3B_RW",
         "mode": "GoCRHB",
         "profile": "default",
-        "runId": "2026-02-25T21-59-37Z",
+        "runId": "2026-02-26T22-12-01Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -304,21 +327,26 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T21:59:37.394493654Z",
-        "endedAt": "2026-02-25T21:59:51.252978696Z",
+        "startedAt": "2026-02-26T22:12:01.689764116Z",
+        "endedAt": "2026-02-26T22:12:16.238303069Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00023,
         "Bug_Types": "P06",
+        "NrEvents": 16,
+        "Rec_s": 1.25391,
+        "Rep_s": 0.82631,
         "Total_Bugs": 1,
+        "Total_Time_s": 14.54535,
         "Unique_Bugs": 1,
-        "duration_ms": 13858,
+        "duration_ms": 14548,
         "exit_code": 0,
         "kind": "fuzzing",
         "label": "baseline",
         "mode": "GoCRHB",
         "profile": "default",
-        "run_id": "2026-02-25T21-59-37Z",
+        "run_id": "2026-02-26T22-12-01Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_MD_2_3B_RW"
       }
     }

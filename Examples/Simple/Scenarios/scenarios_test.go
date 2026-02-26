@@ -1,184 +1,362 @@
-package scenarios
+package results_scenarios
 
 import (
-	"advocate"
+	"context"
 	"sync"
 	"testing"
 	"time"
 )
 
-// ---------------- A00–A07: Absolute Bugs ----------------
-
-func TestA00_UnknownPanic(t *testing.T) {
-	panic("triggering unknown panic") // A00
+// A01: Actual Send on Closed Channel
+func TestA01_SendOnClosedChannel(t *testing.T) {
+	c := make(chan int)
+	close(c)
+	defer func() { _ = recover() }() // prevent panic from failing the entire suite
+	c <- 1
 }
 
-func TestA01_SendOnClosed(t *testing.T) {
-	ch := make(chan int)
-	close(ch)
-	ch <- 1 // A01
+// A02: Actual Receive on Closed Channel
+func TestA02_RecvOnClosedChannel(t *testing.T) {
+	c := make(chan int)
+	close(c)
+	_ = <-c // receive succeeds with zero value, but is "recv on closed"
 }
 
-func TestA02_ReceiveOnClosed(t *testing.T) {
-	ch := make(chan int)
-	close(ch)
-	_ = <-ch // A02 (Warning)
+// A03: Actual Close on Closed Channel
+func TestA03_CloseOnClosedChannel(t *testing.T) {
+	c := make(chan int)
+	close(c)
+	defer func() { _ = recover() }()
+	close(c)
 }
 
-func TestA03_CloseOnClosed(t *testing.T) {
-	ch := make(chan int)
-	close(ch)
-	close(ch) // A03
+// A04: Actual Close on nil channel
+func TestA04_CloseOnNilChannel(t *testing.T) {
+	var c chan int
+	defer func() { _ = recover() }()
+	close(c)
 }
 
-func TestA04_CloseOnNil(t *testing.T) {
-	var ch chan int
-	close(ch) // A04
-}
-
+// A05: Actual negative WaitGroup
 func TestA05_NegativeWaitGroup(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	wg.Done()
-	wg.Done() // A05
+	defer func() { _ = recover() }() // wg counter going negative panics
+	wg.Done()
 }
 
-func TestA06_UnlockUnlocked(t *testing.T) {
-	var mu sync.Mutex
-	mu.Unlock() // A06
+// A06: Actual unlock of not locked mutex
+func TestA06_UnlockNotLockedMutex(t *testing.T) {
+	var m sync.Mutex
+	defer func() { _ = recover() }() // unlocking unlocked mutex panics
+	m.Unlock()
 }
 
-func TestA07_ConcurrentRecv(t *testing.T) {
-	ch := make(chan int)
-	go func() { _ = <-ch }()
-	_ = <-ch // A07 (concurrent recv)
-	close(ch)
-}
-
-// ---------------- P01–P03: Possible Bugs ----------------
-
-func TestP01_PossibleSendOnClosed(t *testing.T) {
-	// ======= Preamble Start =======
-  advocate.InitFuzzing("/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios/fuzzingTraces/fuzzingTrace_2", 20)
-  defer advocate.FinishFuzzing()
-  // ======= Preamble End =======
-	ch := make(chan int)
+// A07: Actual Leak (Non-Cyclic blocking bug)  (goroutine blocks forever)
+func TestA07_ActualLeak_UnbufferedRecvNoPartner(t *testing.T) {
+	c := make(chan struct{})
 	go func() {
-		time.Sleep(10 * time.Millisecond)
-		close(ch)
+		<-c // blocks forever
 	}()
-	ch <- 42 // P01 (race with close)
+	time.Sleep(10 * time.Millisecond) // keep trace alive briefly
 }
 
-func TestP02_PossibleRecvOnClosed(t *testing.T) {
-	ch := make(chan int)
-	go func() {
-		ch <- 1
-		close(ch)
+// A08: Actual Deadlock (Cyclic blocking bug)  (classic two-mutex cycle)
+func TestA08_ActualDeadlock_CyclicMutex(t *testing.T) {
+	var a, b sync.Mutex
+	start := make(chan struct{})
+
+	go func() { // G1
+		<-start
+		a.Lock()
+		time.Sleep(1 * time.Millisecond)
+		b.Lock()
 	}()
+
+	go func() { // G2
+		<-start
+		b.Lock()
+		time.Sleep(1 * time.Millisecond)
+		a.Lock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
+}
+
+// A09: Concurrent Receives on the same channel
+func TestA09_ConcurrentReceivesSameChannel(t *testing.T) {
+	c := make(chan int)
+
+	ready := make(chan struct{}, 2)
+	go func() { ready <- struct{}{}; <-c }()
+	go func() { ready <- struct{}{}; <-c }()
+	<-ready
+	<-ready
+
+	// One send; one recv matches, the other remains blocked -> concurrent recv observed
+	c <- 1
 	time.Sleep(10 * time.Millisecond)
-	_ = <-ch // P02
-	_ = <-ch // P02
 }
 
-func TestP03_PossibleNegativeWaitGroup(t *testing.T) {
+// P01: Possible Send on Closed Channel (send races with close; in this run, send happens first)
+func TestP01_PossibleSendOnClosed(t *testing.T) {
+	c := make(chan int, 1)
+
+	start := make(chan struct{})
 	var wg sync.WaitGroup
-	wg.Add(1)
-	go func() {
-		wg.Done()
-		wg.Done() // P03
+	wg.Add(2)
+
+	go func() { // sender
+		defer wg.Done()
+		<-start
+		c <- 1 // in this schedule, send happens before close
 	}()
+
+	go func() { // closer
+		defer wg.Done()
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		close(c)
+	}()
+
+	close(start)
 	wg.Wait()
 }
 
-// ---------------- L00–L10: Leaks ----------------
+// P02: Possible Receive on Closed Channel (recv races with close; in this run, recv happens first)
+func TestP02_PossibleRecvOnClosed(t *testing.T) {
+	c := make(chan int, 1)
+	c <- 1
 
-func TestL00_UnknownLeak(t *testing.T) {
-	done := make(chan struct{})
-	go func() { <-done }() // never signaled → L00
-	time.Sleep(20 * time.Millisecond)
-}
+	start := make(chan struct{})
+	var wg sync.WaitGroup
+	wg.Add(2)
 
-func TestL01_UnbufferedLeakWithPartner(t *testing.T) {
-	ch := make(chan int)
-	go func() {
-		time.Sleep(10 * time.Millisecond)
-		_ = <-ch // partner exists
+	go func() { // receiver
+		defer wg.Done()
+		<-start
+		<-c // in this schedule, receive consumes before close
 	}()
-	ch <- 1 // L01 (racing)
-}
 
-func TestL02_UnbufferedLeakNoPartner(t *testing.T) {
-	ch := make(chan int)
-	ch <- 1 // L02 → no receiver
-}
-
-func TestL03_BufferedLeakWithPartner(t *testing.T) {
-	ch := make(chan int, 1)
-	ch <- 1
-	go func() {
-		time.Sleep(10 * time.Millisecond)
-		_ = <-ch // L03
+	go func() { // closer
+		defer wg.Done()
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		close(c)
 	}()
+
+	close(start)
+	wg.Wait()
 }
 
-func TestL04_BufferedLeakNoPartner(t *testing.T) {
-	ch := make(chan int, 1)
-	ch <- 1 // L04
-}
+// P03: Possible Negative WaitGroup Counter (adds/dones concurrent; schedule avoids actual negative)
+func TestP03_PossibleNegativeWaitGroup(t *testing.T) {
+	var wg sync.WaitGroup
+	start := make(chan struct{})
+	var done sync.WaitGroup
+	done.Add(3)
 
-func TestL05_LeakOnNilChan(t *testing.T) {
-	var ch chan int
-	ch <- 1 // L05 → nil channel send (blocks forever)
-}
-
-func TestL06_LeakOnSelectWithPartner(t *testing.T) {
-	ch1 := make(chan int)
-	go func() {
-		time.Sleep(10 * time.Millisecond)
-		ch1 <- 42
+	go func() { // Add(1)
+		defer done.Done()
+		<-start
+		wg.Add(1)
 	}()
-	select {
-	case <-ch1:
-	case <-time.After(50 * time.Millisecond):
-	}
-}
 
-func TestL07_LeakOnSelectWithoutPartner(t *testing.T) {
-	var ch chan int // nil channel
-	select {
-	case <-ch:
-	case <-time.After(50 * time.Millisecond):
-	}
-}
-
-func TestL08_LeakOnMutex(t *testing.T) {
-	var mu sync.Mutex
-	mu.Lock()
-	go func() {
-		time.Sleep(20 * time.Millisecond)
-		mu.Unlock()
+	go func() { // Add(1)
+		defer done.Done()
+		<-start
+		wg.Add(1)
 	}()
-	mu.Lock() // L08: blocked
+
+	go func() { // Done twice (could go negative if Add doesn't happen)
+		defer done.Done()
+		<-start
+		time.Sleep(2 * time.Millisecond) // bias toward Add first so it's only "possible"
+		wg.Done()
+		wg.Done()
+	}()
+
+	close(start)
+	done.Wait()
 }
 
-func TestL09_LeakOnWaitGroup(t *testing.T) {
+// P04: Possible unlock of not locked mutex (unlock may race with lock; schedule makes it not panic)
+func TestP04_PossibleUnlockNotLockedMutex(t *testing.T) {
+	var m sync.Mutex
+	start := make(chan struct{})
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	go func() { // locker
+		defer wg.Done()
+		<-start
+		m.Lock()
+		time.Sleep(2 * time.Millisecond)
+		m.Unlock()
+	}()
+
+	go func() { // unlocker (could be too early => actual panic, but we delay)
+		defer wg.Done()
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		m.Unlock() // in this schedule, should unlock after lock acquired -> no panic
+	}()
+
+	close(start)
+	wg.Wait()
+}
+
+// P05: Possible cyclic deadlock (two-lock ordering inversion but schedule avoids deadlock)
+func TestP05_PossibleCyclicDeadlock(t *testing.T) {
+	var a, b sync.Mutex
+	start := make(chan struct{})
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	go func() { // takes a then b
+		defer wg.Done()
+		<-start
+		a.Lock()
+		time.Sleep(1 * time.Millisecond)
+		b.Lock()
+		b.Unlock()
+		a.Unlock()
+	}()
+
+	go func() { // takes b then a, but later (avoid actual deadlock)
+		defer wg.Done()
+		<-start
+		time.Sleep(3 * time.Millisecond)
+		b.Lock()
+		a.Lock()
+		a.Unlock()
+		b.Unlock()
+	}()
+
+	close(start)
+	wg.Wait()
+}
+
+// L00: Leak (generic) — use a goroutine blocked on select with no cases firing
+func TestL00_Leak_Generic(t *testing.T) {
+	ch := make(chan struct{})
+	go func() {
+		select {
+		case <-ch:
+		}
+	}()
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L01: Leak on unbuffered channel with possible partner
+func TestL01_LeakUnbuffered_WithPartner(t *testing.T) {
+	c := make(chan int)
+
+	go func() { c <- 1 }() // send #1
+	go func() { <-c }()    // recv #1 partners with send #1
+
+	go func() { c <- 2 }() // send #2 leaks, but there *exists* a recv op on c (possible partner)
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L02: Leak on unbuffered channel without possible partner
+func TestL02_LeakUnbuffered_WithoutPartner(t *testing.T) {
+	c := make(chan int)
+	go func() { <-c }() // recv leaks; no sender exists
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L03: Leak on buffered channel with possible partner
+func TestL03_LeakBuffered_WithPartner(t *testing.T) {
+	c := make(chan int, 1)
+
+	go func() { c <- 1 }() // fills buffer
+	go func() { <-c }()    // possible partner exists
+
+	go func() { c <- 2 }() // blocks if buffer is full at that moment => leak with partner
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L04: Leak on buffered channel without possible partner
+func TestL04_LeakBuffered_WithoutPartner(t *testing.T) {
+	c := make(chan int, 1)
+	go func() { <-c }() // recv on empty buffered channel; no sender => leak
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L05: Leak on nil channel
+func TestL05_LeakNilChannel(t *testing.T) {
+	var c chan int         // nil
+	go func() { c <- 1 }() // blocks forever
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L06: Leak on select with possible partner
+func TestL06_LeakSelect_WithPartner(t *testing.T) {
+	c := make(chan int)
+
+	go func() { <-c }() // possible partner exists
+
+	go func() {
+		select {
+		case c <- 1: // leaks because no recv scheduled at same time (or already consumed)
+		}
+	}()
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L07: Leak on select without possible partner
+func TestL07_LeakSelect_WithoutPartner(t *testing.T) {
+	c := make(chan int)
+	go func() {
+		select {
+		case c <- 1: // no receiver exists => leak
+		}
+	}()
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L08: Leak on sync.Mutex (lock attempt blocks; last lock exists)
+func TestL08_LeakMutex(t *testing.T) {
+	var m sync.Mutex
+	m.Lock() // last lock
+	go func() {
+		m.Lock() // leaks here
+	}()
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L09: Leak on sync.WaitGroup (Wait blocks forever)
+func TestL09_LeakWaitGroup(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	go func() {
-		time.Sleep(100 * time.Millisecond) // never calls Done()
+		wg.Wait() // leaks forever because Done never called
 	}()
-	wg.Wait() // L09
+	time.Sleep(10 * time.Millisecond)
 }
 
-func TestL10_LeakOnCond(t *testing.T) {
-	mu := sync.Mutex{}
+// L10: Leak on sync.Cond (Wait without signal/broadcast)
+func TestL10_LeakCond(t *testing.T) {
+	var mu sync.Mutex
 	cond := sync.NewCond(&mu)
 	go func() {
-		time.Sleep(50 * time.Millisecond)
-		// no cond.Signal()
+		cond.L.Lock()
+		cond.Wait() // leaks forever
+		cond.L.Unlock()
 	}()
-	mu.Lock()
-	cond.Wait() // L10: waits forever
-	mu.Unlock()
+	time.Sleep(10 * time.Millisecond)
+}
+
+// L11: Leak on channel or select on context (block on ctx.Done that never closes)
+func TestL11_LeakContext(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	_ = cancel // never called
+
+	go func() {
+		<-ctx.Done() // leaks forever
+	}()
+	time.Sleep(10 * time.Millisecond)
 }

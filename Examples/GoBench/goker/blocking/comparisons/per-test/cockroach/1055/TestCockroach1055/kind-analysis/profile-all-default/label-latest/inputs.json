@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:17.968411273Z",
+  "generatedAt": "2026-02-26T23:23:21.867027171Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "cockroach/1055",
         "testName": "TestCockroach1055",
         "profile": "all-default",
-        "runId": "2026-02-25T01-51-30Z",
+        "runId": "2026-02-26T20-42-52Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:51:30.351231893Z",
-        "endedAt": "2026-02-25T01:51:51.522960092Z",
+        "startedAt": "2026-02-26T20:42:52.840245516Z",
+        "endedAt": "2026-02-26T20:43:32.858449398Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.01041,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.01519,
         "Unique_Bugs": 0,
-        "duration_ms": 21171,
+        "duration_ms": 40018,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-51-30Z",
+        "run_id": "2026-02-26T20-42-52Z",
         "test_name": "cockroach/1055/TestCockroach1055"
       }
     }

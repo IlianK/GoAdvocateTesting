@@ -1,5 +1,0 @@
-TestName,NumberActualBugTotal,NrLeaksTotal,NrLeaksTotalTP,NrLeaksTotalFP,NrLeaksWithRewriteTotal,NrLeaksResolvedViaReplayTotal,NrPanicsTotal,NrPanicsVerifiedViaReplayTotal,NrUnexpectedPanicsInReplayTotal,NrProbInRecordingTotal,NumberActualBugUnique,NrLeaksUnique,NrLeaksUniqueTP,NrLeaksUniqueFP,NrLeaksWithRewriteUnique,NrLeaksResolvedViaReplayUnique,NrPanicsUnique,NrPanicsVerifiedViaReplayUnique,NrUnexpectedPanicsInReplayUnique
-TestP01_PossibleSendOnClosed,2,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
-TestP01_PossibleSendOnClosed,2,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
-TestP01_PossibleSendOnClosed,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-TestP01_PossibleSendOnClosed,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

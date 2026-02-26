@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.146819572Z",
+  "generatedAt": "2026-02-26T23:23:23.678596108Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "hugo/3251",
         "testName": "TestHugo3251",
         "profile": "all-default",
-        "runId": "2026-02-25T01-58-15Z",
+        "runId": "2026-02-26T20-49-40Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:58:15.836225776Z",
-        "endedAt": "2026-02-25T01:58:55.859387167Z",
+        "startedAt": "2026-02-26T20:49:40.658863808Z",
+        "endedAt": "2026-02-26T20:50:20.680140093Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.01266,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.01772,
         "Unique_Bugs": 0,
-        "duration_ms": 40023,
+        "duration_ms": 40021,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-58-15Z",
+        "run_id": "2026-02-26T20-49-40Z",
         "test_name": "hugo/3251/TestHugo3251"
       }
     }

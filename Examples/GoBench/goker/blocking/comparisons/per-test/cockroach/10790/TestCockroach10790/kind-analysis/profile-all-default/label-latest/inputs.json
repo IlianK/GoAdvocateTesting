@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:17.976098339Z",
+  "generatedAt": "2026-02-26T23:23:21.918954251Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "cockroach/10790",
         "testName": "TestCockroach10790",
         "profile": "all-default",
-        "runId": "2026-02-25T01-51-51Z",
+        "runId": "2026-02-26T20-43-32Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:51:51.523323452Z",
-        "endedAt": "2026-02-25T01:51:52.875914629Z",
+        "startedAt": "2026-02-26T20:43:32.858904338Z",
+        "endedAt": "2026-02-26T20:43:34.182726812Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00022,
         "Bug_Types": "",
+        "NrEvents": 24,
+        "Rec_s": 1.16176,
+        "Rep_s": 0.00004,
         "Total_Bugs": 1,
+        "Total_Time_s": 1.32103,
         "Unique_Bugs": 0,
-        "duration_ms": 1352,
+        "duration_ms": 1323,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-51-51Z",
+        "run_id": "2026-02-26T20-43-32Z",
         "test_name": "cockroach/10790/TestCockroach10790"
       }
     }

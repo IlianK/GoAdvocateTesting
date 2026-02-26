@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T22:23:34.13575616Z",
+  "generatedAt": "2026-02-26T22:42:04.970683704Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "Scenarios",
         "testName": "TestP01_PossibleSendOnClosed",
         "profile": "all-default",
-        "runId": "2026-02-25T02-01-46Z",
+        "runId": "2026-02-26T21-36-35Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:01:46.58130091Z",
-        "endedAt": "2026-02-25T02:01:47.946202716Z",
+        "startedAt": "2026-02-26T21:36:35.913679155Z",
+        "endedAt": "2026-02-26T21:36:37.389607109Z",
         "exitCode": 0
       },
       "metrics": {
-        "Bug_Types": "A01",
-        "Total_Bugs": 2,
+        "Ana_s": 0.0002,
+        "Bug_Types": "P01",
+        "NrEvents": 16,
+        "Rec_s": 1.15829,
+        "Rep_s": 0.14928,
+        "Total_Bugs": 1,
+        "Total_Time_s": 1.47311,
         "Unique_Bugs": 1,
-        "duration_ms": 1364,
+        "duration_ms": 1475,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-01-46Z",
+        "run_id": "2026-02-26T21-36-35Z",
         "test_name": "Scenarios/TestP01_PossibleSendOnClosed"
       }
     }

@@ -1,97 +1,131 @@
-# Deadlock 
+# Deadlocks
 
-These test cases demonstrating various types of deadlocks in Go, including classic lock inversions, channel-based deadlocks, and other synchronization issues.
+This folder contains **cyclic deadlock** scenarios. They are meant to validate that the analyzer reliably reports **cyclic blocking bugs** (commonly `A08`) across different synchronization patterns.
 
+## Mutex cycles
 
----
-
-## Two-Lock Inversion (Classic Two-Goroutine Cycle)
-
-This test demonstrates a classic two-lock inversion deadlock, where two goroutines try to lock two resources (locks) in opposite orders, causing a deadlock.
-
-One goroutine locks `a` and then attempts to lock `b`, while the main goroutine locks `b` and then attempts to lock `a`. This inversion causes a deadlock as both goroutines are waiting on each other to release the locks.
+### `Test_CyclicDeadlock_ABBA_TwoMutexes`
+- **Scenario:** Two goroutines acquire two mutexes (`a`, `b`) in opposite order (AB–BA).
+- **Expected outcome:** Classic cyclic deadlock -> **actual cyclic deadlock** (commonly `A08`).
 
 ```go
-func TestCycleTwoLocks(t *testing.T) {
-    var a, b sync.Mutex
+func Test_CyclicDeadlock_ABBA_TwoMutexes(t *testing.T) {
+	var a, b sync.Mutex
+	start := make(chan struct{})
 
-    go func() {
-        a.Lock()
-        time.Sleep(10 * time.Millisecond)
-        b.Lock()
-        b.Unlock()
-        a.Unlock()
-    }()
+	go func() { // G1
+		<-start
+		a.Lock()
+		time.Sleep(1 * time.Millisecond)
+		b.Lock()
+	}()
 
-    b.Lock()
-    time.Sleep(5 * time.Millisecond)
-    a.Lock()
-    a.Unlock()
-    b.Unlock()
+	go func() { // G2
+		<-start
+		b.Lock()
+		time.Sleep(1 * time.Millisecond)
+		a.Lock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }
 ```
 
-
----
-
-
-## Three-Lock Cycle (A → B → C → A)
-This test demonstrates a more complex deadlock with three locks forming a cycle. Goroutines acquire locks in a circular order, resulting in a deadlock.
-
-The goroutines lock `x`, `y`, and `z` in a cycle. The main goroutine attempts to lock `z` and `x`, causing a deadlock because no goroutine can complete its lock acquisition.
+### `Test_CyclicDeadlock_ThreeWayMutexCycle`
+- **Scenario:** Three goroutines form a 3-way lock cycle (A→B, B→C, C→A).
+- **Expected outcome:** Cyclic deadlock involving three locks -> **actual cyclic deadlock** (commonly `A08`).
 
 ```go
-func TestCycleThreeLocks(t *testing.T) {
-    var x, y, z sync.Mutex
+func Test_CyclicDeadlock_ThreeWayMutexCycle(t *testing.T) {
+	var a, b, c sync.Mutex
+	start := make(chan struct{})
 
-    go func() {
-        x.Lock()
-        time.Sleep(5 * time.Millisecond)
-        y.Lock()
-        y.Unlock()
-        x.Unlock()
-    }()
-    go func() {
-        y.Lock()
-        time.Sleep(5 * time.Millisecond)
-        z.Lock()
-        z.Unlock()
-        y.Unlock()
-    }()
-    // main goroutine forms the third link:
-    z.Lock()
-    time.Sleep(5 * time.Millisecond)
-    x.Lock() // deadlock on x
-    x.Unlock()
-    z.Unlock()
+	go func() { // G1: A then B
+		<-start
+		a.Lock()
+		time.Sleep(1 * time.Millisecond)
+		b.Lock()
+	}()
+
+	go func() { // G2: B then C
+		<-start
+		b.Lock()
+		time.Sleep(1 * time.Millisecond)
+		c.Lock()
+	}()
+
+	go func() { // G3: C then A
+		<-start
+		c.Lock()
+		time.Sleep(1 * time.Millisecond)
+		a.Lock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }
 ```
 
+## RWMutex cycles
 
----
-
-
-## Cond Deadlock (Wait with No Signal)
-This test demonstrates a `sync.Cond` deadlock where the `Wait()` method is called without a corresponding `Signal()` or `Broadcast()`, causing the goroutine to block forever.
-
-The main goroutine locks the mutex and waits on the condition variable, but since no signal is sent, the goroutine blocks indefinitely.
+### `Test_CyclicDeadlock_RWMutex_WriterThenReader`
+- **Scenario:** One goroutine holds `RLock()` and then attempts to acquire `Lock()` (upgrade attempt), while another goroutine attempts `Lock()` concurrently.
+- **Expected outcome:** RWMutex upgrade-style deadlock pattern -> **actual cyclic deadlock** (commonly `A08`).
 
 ```go
-func TestCondDeadlock(t *testing.T) {
-    var mu sync.Mutex
-    cond := sync.NewCond(&mu)
-    go func() {
-        time.Sleep(10 * time.Millisecond)
-        // no cond.Signal()
-    }()
-    mu.Lock()
-    cond.Wait() // blocks forever
-    mu.Unlock()
+func Test_CyclicDeadlock_RWMutex_WriterThenReader(t *testing.T) {
+	var rw sync.RWMutex
+	start := make(chan struct{})
+
+	// G1 holds RLock and then tries to take Lock => blocks.
+	go func() {
+		<-start
+		rw.RLock()
+		time.Sleep(2 * time.Millisecond)
+		rw.Lock() // blocks
+	}()
+
+	// G2 tries to take Lock while reader holds RLock => blocks too.
+	go func() {
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		rw.Lock() // blocks because of G1 RLock
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }
 ```
 
+## Mixed (Channel + Mutex)
 
-**Comparison**:
-- [Bug Types](./results/comparison_pivot_Bug_Types.csv)
+### `Test_CyclicDeadlock_ChannelAndMutex`
+- **Scenario:** One goroutine holds a mutex while blocking on receiving from an unbuffered channel. Another goroutine needs the same mutex to perform the send.
+- **Expected outcome:** Mixed cyclic dependency between **mutex** and **channel** -> **actual cyclic deadlock** (commonly `A08`).
 
-- [Total Time](./results/comparison_pivot_Total_Time_s.csv)
+```go
+func Test_CyclicDeadlock_ChannelAndMutex(t *testing.T) {
+	var mu sync.Mutex
+	ch := make(chan struct{})
+	start := make(chan struct{})
+
+	go func() { // G1
+		<-start
+		mu.Lock()
+		<-ch // waits for send while holding mu
+		mu.Unlock()
+	}()
+
+	go func() { // G2
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		mu.Lock()        // blocks (mu held by G1)
+		ch <- struct{}{} // can't be reached
+		mu.Unlock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
+}
+```

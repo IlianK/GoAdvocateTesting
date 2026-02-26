@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.142428877Z",
+  "generatedAt": "2026-02-26T23:23:23.622996818Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "grpc/862",
         "testName": "TestGrpc862",
         "profile": "all-default",
-        "runId": "2026-02-25T01-58-05Z",
+        "runId": "2026-02-26T20-49-32Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:58:05.30210718Z",
-        "endedAt": "2026-02-25T01:58:15.834121419Z",
+        "startedAt": "2026-02-26T20:49:32.44354397Z",
+        "endedAt": "2026-02-26T20:49:40.658209908Z",
         "exitCode": 0
       },
       "metrics": {
-        "Bug_Types": "",
-        "Total_Bugs": 0,
-        "Unique_Bugs": 0,
-        "duration_ms": 10532,
+        "Ana_s": 0.58087,
+        "Bug_Types": "A07",
+        "NrEvents": 169472,
+        "Rec_s": 6.04678,
+        "Rep_s": 0.00005,
+        "Total_Bugs": 1,
+        "Total_Time_s": 8.19536,
+        "Unique_Bugs": 1,
+        "duration_ms": 8214,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-58-05Z",
+        "run_id": "2026-02-26T20-49-32Z",
         "test_name": "grpc/862/TestGrpc862"
       }
     }

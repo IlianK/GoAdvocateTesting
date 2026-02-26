@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T22:23:33.194291244Z",
+  "generatedAt": "2026-02-26T22:42:03.086073188Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "MixedDeadlock",
         "testName": "TestMixedDeadlock_No_MD_ForkMustOrder",
         "profile": "all-default",
-        "runId": "2026-02-25T01-56-26Z",
+        "runId": "2026-02-26T21-34-42Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:56:26.373643857Z",
-        "endedAt": "2026-02-25T01:56:27.764432979Z",
+        "startedAt": "2026-02-26T21:34:42.940859894Z",
+        "endedAt": "2026-02-26T21:34:44.244185915Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00015,
         "Bug_Types": "",
+        "NrEvents": 13,
+        "Rec_s": 1.26993,
+        "Rep_s": 0.00003,
         "Total_Bugs": 0,
+        "Total_Time_s": 1.30103,
         "Unique_Bugs": 0,
-        "duration_ms": 1390,
+        "duration_ms": 1303,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-56-26Z",
+        "run_id": "2026-02-26T21-34-42Z",
         "test_name": "MixedDeadlock/TestMixedDeadlock_No_MD_ForkMustOrder"
       }
     }

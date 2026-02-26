@@ -1,7 +1,7 @@
-Mode,Bug_Types,Unique_Bugs,Total_Bugs
-GFuzz,,0,0
-GFuzzHB,P06,1,1
-GFuzzHBFlow,P06,1,1
-Flow,P06,1,1
-GoCR,,0,0
-GoCRHB,P06,1,1
+Mode,NrEvents,Bug_Types,Unique_Bugs,Total_Bugs,Total_Time_s,Rec_s,Ana_s,Rep_s
+GFuzz,16,,0,0,1.47728,1.25382,3e-05,
+GFuzzHB,16,P06,1,1,2.3124,1.25887,0.00032,0.83887
+GFuzzHBFlow,16,P06,1,1,2.34025,1.26195,0.00028,0.83252
+Flow,16,P06,1,1,2.30632,1.24282,0.00024,0.82884
+GoCR,16,,0,0,12.19123,1.24589,9e-05,
+GoCRHB,16,P06,1,1,13.02871,1.24334,0.00028,0.8295

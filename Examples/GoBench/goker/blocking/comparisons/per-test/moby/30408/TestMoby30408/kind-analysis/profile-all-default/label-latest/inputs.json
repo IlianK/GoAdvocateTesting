@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.297156295Z",
+  "generatedAt": "2026-02-26T23:23:24.968591719Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "moby/30408",
         "testName": "TestMoby30408",
         "profile": "all-default",
-        "runId": "2026-02-25T02-02-47Z",
+        "runId": "2026-02-26T20-53-54Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:02:47.916907481Z",
-        "endedAt": "2026-02-25T02:03:27.941071716Z",
+        "startedAt": "2026-02-26T20:53:54.32767923Z",
+        "endedAt": "2026-02-26T20:54:34.354557317Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.01606,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.02185,
         "Unique_Bugs": 0,
-        "duration_ms": 40024,
+        "duration_ms": 40026,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-02-47Z",
+        "run_id": "2026-02-26T20-53-54Z",
         "test_name": "moby/30408/TestMoby30408"
       }
     }

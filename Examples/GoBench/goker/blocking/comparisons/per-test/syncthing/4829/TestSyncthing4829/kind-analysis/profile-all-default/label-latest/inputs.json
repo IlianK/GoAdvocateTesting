@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.347427438Z",
+  "generatedAt": "2026-02-26T23:23:25.408688501Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "syncthing/4829",
         "testName": "TestSyncthing4829",
         "profile": "all-default",
-        "runId": "2026-02-25T02-03-55Z",
+        "runId": "2026-02-26T20-54-51Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:03:55.26183538Z",
-        "endedAt": "2026-02-25T02:04:35.284764456Z",
+        "startedAt": "2026-02-26T20:54:51.396921469Z",
+        "endedAt": "2026-02-26T20:55:31.417623191Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.01237,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.0183,
         "Unique_Bugs": 0,
-        "duration_ms": 40022,
+        "duration_ms": 40020,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-03-55Z",
+        "run_id": "2026-02-26T20-54-51Z",
         "test_name": "syncthing/4829/TestSyncthing4829"
       }
     }

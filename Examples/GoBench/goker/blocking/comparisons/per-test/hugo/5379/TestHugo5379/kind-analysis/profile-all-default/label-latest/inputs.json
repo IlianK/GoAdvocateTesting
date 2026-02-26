@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.150801068Z",
+  "generatedAt": "2026-02-26T23:23:23.731764592Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "hugo/5379",
         "testName": "TestHugo5379",
         "profile": "all-default",
-        "runId": "2026-02-25T01-58-55Z",
+        "runId": "2026-02-26T20-50-20Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,22 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:58:55.860704386Z",
-        "endedAt": "2026-02-25T01:59:35.883864209Z",
+        "startedAt": "2026-02-26T20:50:20.680984976Z",
+        "endedAt": "2026-02-26T20:51:00.702224929Z",
         "exitCode": 0
       },
       "metrics": {
         "Bug_Types": "",
+        "Rec_s": 20.01267,
         "Total_Bugs": 0,
+        "Total_Time_s": 40.01811,
         "Unique_Bugs": 0,
-        "duration_ms": 40023,
+        "duration_ms": 40021,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-58-55Z",
+        "run_id": "2026-02-26T20-50-20Z",
         "test_name": "hugo/5379/TestHugo5379"
       }
     }

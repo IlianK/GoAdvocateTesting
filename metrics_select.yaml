@@ -64,8 +64,16 @@ metrics:
 
   # If non-empty -> overrides default entirely
   specific:
-    sources: {}
-    derived:
+    sources: 
+      statsAll:
+        number:
+          - NrEvents
+    
+    derived: 
       - Bug_Types
       - Unique_Bugs
       - Total_Bugs
+      - Total_Time_s
+      - Rec_s
+      - Ana_s
+      - Rep_s

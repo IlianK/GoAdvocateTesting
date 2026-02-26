@@ -1,35 +1,46 @@
 package channel
 
 import (
+	"sync"
 	"testing"
 	"time"
 )
 
-// ================================
-// Buffered channel scenarios
-// ================================
+func Test_Buffered_Leak_SendBlocksOnFullBuffer(t *testing.T) {
+	c := make(chan int, 1)
 
-// TestBufferedFillNoRead: buffered channel full, no reader
-func TestBufferedFillNoRead(t *testing.T) {
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2 // now full
+	// fill buffer
+	c <- 1
+
 	go func() {
-		// no reader
-		ch <- 3 // L04 (buffered leak no partner)
+		c <- 2 // blocks forever because buffer is full and nobody drains
 	}()
-	time.Sleep(10 * time.Millisecond)
+
+	time.Sleep(50 * time.Millisecond)
 }
 
-// TestBufferedDrainSlow: buffered channel drained slowly
-func TestBufferedDrainSlow(t *testing.T) {
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2
-	go func() {
-		time.Sleep(10 * time.Millisecond)
-		<-ch
-		<-ch
+func Test_Buffered_PossibleRecvOnClosed(t *testing.T) {
+	c := make(chan int, 1)
+	c <- 42 // ensure recv before close
+
+	start := make(chan struct{})
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	go func() { // receiver
+		defer wg.Done()
+		<-start
+		_ = <-c // gets value first
 	}()
-	// main returns quickly
+
+	go func() { // closer (races)
+		defer wg.Done()
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		close(c)
+	}()
+
+	close(start)
+	wg.Wait()
+	time.Sleep(10 * time.Millisecond)
 }

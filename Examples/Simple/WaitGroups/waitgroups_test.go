@@ -6,38 +6,55 @@ import (
 	"time"
 )
 
-// ================================
-// WaitGroup scenarios
-// ================================
-
-// TestWGDoubleDone: wg.Done() called twice without Add
-func TestWGDoubleDone(t *testing.T) {
+func Test_WG_A05_NegativeCounter(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	wg.Done()
-	wg.Done() // Negative counter
+
+	defer func() { _ = recover() }() // keep test suite running
+	wg.Done()                        // counter goes negative => panic
 }
 
-// TestWGMissingDone: wg.Add() without corresponding Done
-func TestWGMissingDone(t *testing.T) {
+func Test_WG_L09_WaitBlocksForever(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
+
 	go func() {
-		// forgot wg.Done()
-		time.Sleep(20 * time.Millisecond)
+		wg.Wait() // leaks forever because Done never called
 	}()
-	wg.Wait() // Leak
+
+	time.Sleep(50 * time.Millisecond) // allow trace capture
 }
 
-// TestWGNested: nested adds and dones
-func TestWGNested(t *testing.T) {
+func Test_WG_Possible_AddAfterWait(t *testing.T) {
 	var wg sync.WaitGroup
-	wg.Add(2)
+
+	startWait := make(chan struct{})
 	go func() {
-		wg.Done()
-		go func() {
-			wg.Done()
-		}()
+		close(startWait)
+		wg.Wait() // may return immediately, but Add happens concurrently afterwards (misuse pattern)
 	}()
-	wg.Wait()
+
+	<-startWait
+	time.Sleep(1 * time.Millisecond)
+	wg.Add(1)
+	// We purposely never call Done to keep the trace interesting; you can add Done to avoid leaking.
+	time.Sleep(50 * time.Millisecond)
+}
+
+func Test_WG_Leak_WorkerNeverDone_BlockedOnChan(t *testing.T) {
+	var wg sync.WaitGroup
+	block := make(chan struct{})
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		<-block // blocks forever, so Done never runs
+	}()
+
+	go func() {
+		wg.Wait() // leaks forever
+	}()
+
+	time.Sleep(50 * time.Millisecond)
 }

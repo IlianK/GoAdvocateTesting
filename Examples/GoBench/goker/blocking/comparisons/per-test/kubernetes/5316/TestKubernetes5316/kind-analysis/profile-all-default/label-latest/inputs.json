@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.215647247Z",
+  "generatedAt": "2026-02-26T23:23:24.383525483Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "kubernetes/5316",
         "testName": "TestKubernetes5316",
         "profile": "all-default",
-        "runId": "2026-02-25T02-00-58Z",
+        "runId": "2026-02-26T20-51-57Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:00:58.962904689Z",
-        "endedAt": "2026-02-25T02:01:00.305018986Z",
+        "startedAt": "2026-02-26T20:51:57.398039727Z",
+        "endedAt": "2026-02-26T20:51:58.738379467Z",
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 0.00009,
         "Bug_Types": "A07",
+        "NrEvents": 8,
+        "Rec_s": 1.17241,
+        "Rep_s": 0.00003,
         "Total_Bugs": 1,
+        "Total_Time_s": 1.33794,
         "Unique_Bugs": 1,
-        "duration_ms": 1342,
+        "duration_ms": 1340,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-00-58Z",
+        "run_id": "2026-02-26T20-51-57Z",
         "test_name": "kubernetes/5316/TestKubernetes5316"
       }
     }

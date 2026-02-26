@@ -6,61 +6,100 @@ import (
 	"time"
 )
 
-// 1) Two‐lock inversion (classic two‐goroutine cycle)
-func TestCycleTwoLocks(t *testing.T) {
+func Test_CyclicDeadlock_ABBA_TwoMutexes(t *testing.T) {
 	var a, b sync.Mutex
+	start := make(chan struct{})
 
-	go func() {
+	go func() { // G1
+		<-start
 		a.Lock()
-		time.Sleep(10 * time.Millisecond)
+		time.Sleep(1 * time.Millisecond)
 		b.Lock()
-		b.Unlock()
-		a.Unlock()
 	}()
 
-	b.Lock()
-	time.Sleep(5 * time.Millisecond)
-	a.Lock()
-	a.Unlock()
-	b.Unlock()
+	go func() { // G2
+		<-start
+		b.Lock()
+		time.Sleep(1 * time.Millisecond)
+		a.Lock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }
 
-// 2) Three‐lock cycle (A→B→C→A)
-func TestCycleThreeLocks(t *testing.T) {
-	var x, y, z sync.Mutex
+func Test_CyclicDeadlock_ThreeWayMutexCycle(t *testing.T) {
+	var a, b, c sync.Mutex
+	start := make(chan struct{})
 
-	go func() {
-		x.Lock()
-		time.Sleep(5 * time.Millisecond)
-		y.Lock()
-		y.Unlock()
-		x.Unlock()
+	go func() { // G1: A then B
+		<-start
+		a.Lock()
+		time.Sleep(1 * time.Millisecond)
+		b.Lock()
 	}()
-	go func() {
-		y.Lock()
-		time.Sleep(5 * time.Millisecond)
-		z.Lock()
-		z.Unlock()
-		y.Unlock()
+
+	go func() { // G2: B then C
+		<-start
+		b.Lock()
+		time.Sleep(1 * time.Millisecond)
+		c.Lock()
 	}()
-	// main goroutine forms the third link:
-	z.Lock()
-	time.Sleep(5 * time.Millisecond)
-	x.Lock() // deadlock on x
-	x.Unlock()
-	z.Unlock()
+
+	go func() { // G3: C then A
+		<-start
+		c.Lock()
+		time.Sleep(1 * time.Millisecond)
+		a.Lock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }
 
+func Test_CyclicDeadlock_RWMutex_WriterThenReader(t *testing.T) {
+	var rw sync.RWMutex
+	start := make(chan struct{})
 
-// 3) Cond deadlock: Wait with no Signal
-func TestCondDeadlock(t *testing.T) {
+	// G1 holds RLock and then tries to take Lock => blocks.
+	go func() {
+		<-start
+		rw.RLock()
+		time.Sleep(2 * time.Millisecond)
+		rw.Lock() // blocks
+	}()
+
+	// G2 tries to take Lock while reader holds RLock => blocks too.
+	go func() {
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		rw.Lock() // blocks because of G1 RLock
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
+}
+
+func Test_CyclicDeadlock_ChannelAndMutex(t *testing.T) {
 	var mu sync.Mutex
-	cond := sync.NewCond(&mu)
-	go func() {
-		time.Sleep(10 * time.Millisecond)
-		// no cond.Signal()
+	ch := make(chan struct{})
+	start := make(chan struct{})
+
+	go func() { // G1
+		<-start
+		mu.Lock()
+		<-ch // waits for send while holding mu
+		mu.Unlock()
 	}()
-	mu.Lock()
-	cond.Wait() // blocks forever
-	mu.Unlock()
+
+	go func() { // G2
+		<-start
+		time.Sleep(1 * time.Millisecond)
+		mu.Lock()        // blocks (mu held by G1)
+		ch <- struct{}{} // can't be reached
+		mu.Unlock()
+	}()
+
+	close(start)
+	time.Sleep(50 * time.Millisecond)
 }

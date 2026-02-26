@@ -1,7 +1,0 @@
-Mode,Bug_Types,Unique_Bugs,Total_Bugs
-GFuzz,,0,0
-GFuzzHB,L08,1,1
-GFuzzHBFlow,L08,1,1
-Flow,L08,1,1
-GoCR,,0,1
-GoCRHB,L08,1,1

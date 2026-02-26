@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.058621958Z",
+  "generatedAt": "2026-02-26T23:23:22.739683728Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "cockroach/9935",
         "testName": "TestCockroach9935",
         "profile": "all-default",
-        "runId": "2026-02-25T01-54-47Z",
+        "runId": "2026-02-26T20-46-29Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T01:54:47.461674571Z",
-        "endedAt": "2026-02-25T01:54:49.631323094Z",
+        "startedAt": "2026-02-26T20:46:29.173311068Z",
+        "endedAt": "2026-02-26T20:46:30.510509501Z",
         "exitCode": 0
       },
       "metrics": {
-        "Bug_Types": "L08",
+        "Ana_s": 0.00015,
+        "Bug_Types": "",
+        "NrEvents": 5,
+        "Rec_s": 1.16728,
+        "Rep_s": 0.00003,
         "Total_Bugs": 0,
-        "Unique_Bugs": 1,
-        "duration_ms": 2169,
+        "Total_Time_s": 1.33465,
+        "Unique_Bugs": 0,
+        "duration_ms": 1337,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T01-54-47Z",
+        "run_id": "2026-02-26T20-46-29Z",
         "test_name": "cockroach/9935/TestCockroach9935"
       }
     }

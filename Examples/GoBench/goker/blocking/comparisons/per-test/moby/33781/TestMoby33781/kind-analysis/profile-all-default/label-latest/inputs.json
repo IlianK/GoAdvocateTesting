@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T02:15:18.310984401Z",
+  "generatedAt": "2026-02-26T23:23:25.078991942Z",
   "kind": "analysis",
   "profile": "all-default",
   "label": "latest",
@@ -13,7 +13,7 @@
         "testRel": "moby/33781",
         "testName": "TestMoby33781",
         "profile": "all-default",
-        "runId": "2026-02-25T02-03-29Z",
+        "runId": "2026-02-26T20-54-35Z",
         "runLabel": "baseline",
         "argv": [
           "../ADVOCATE/advocate/advocate",
@@ -32,20 +32,25 @@
           "-stats",
           "-time"
         ],
-        "startedAt": "2026-02-25T02:03:29.231679668Z",
-        "endedAt": "2026-02-25T02:03:42.951079769Z",
+        "startedAt": "2026-02-26T20:54:35.728639894Z",
+        "endedAt": "2026-02-26T20:54:37.150175774Z",
         "exitCode": 0
       },
       "metrics": {
-        "Bug_Types": "A01;P01",
-        "Total_Bugs": 2,
-        "Unique_Bugs": 2,
-        "duration_ms": 13719,
+        "Ana_s": 0.00268,
+        "Bug_Types": "",
+        "NrEvents": 20,
+        "Rec_s": 1.21608,
+        "Rep_s": 0.00017,
+        "Total_Bugs": 0,
+        "Total_Time_s": 1.41732,
+        "Unique_Bugs": 0,
+        "duration_ms": 1421,
         "exit_code": 0,
         "kind": "analysis",
         "label": "baseline",
         "profile": "all-default",
-        "run_id": "2026-02-25T02-03-29Z",
+        "run_id": "2026-02-26T20-54-35Z",
         "test_name": "moby/33781/TestMoby33781"
       }
     }

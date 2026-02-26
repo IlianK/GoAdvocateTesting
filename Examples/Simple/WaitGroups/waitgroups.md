@@ -1,63 +1,87 @@
-# WaitGroup 
-The `WaitGroup` is used to wait for a collection of goroutines to finish executing. These test cases explore common problems such as double calls to `Done()`, missing `Done()` calls, and nested `WaitGroup` operations.
+# WaitGroup
 
----
+This folder contains **WaitGroup misuse and blocking** scenarios. They are meant to validate that the analyzer reliably reports **actual misuse** (panic-class bugs) and **leaks** involving `sync.WaitGroup`, including common ordering mistakes and situations where `Wait()` never completes.
 
-## Double Done Call Without Add
-This test demonstrates the scenario where the `Done()` method is called twice without a corresponding `Add()` call to match the counter. This leads to a negative counter in the `WaitGroup`, which can cause unexpected behavior.
+## Actual misuse
 
-The first call to `Done()` decreases the counter, but the second call leads to a negative counter, which is invalid. This could cause the `WaitGroup` to behave incorrectly, such as signaling when it shouldn't.
+### `Test_WG_A05_NegativeCounter`
+- **Scenario:** A `WaitGroup` counter is incremented with `Add(1)` but `Done()` is called **twice**, making the counter negative.
+- **Expected outcome:** **Actual negative WaitGroup counter** (panic in Go; recovered in test) — commonly `A05`.
 
 ```go
-func TestWGDoubleDone(t *testing.T) {
+func Test_WG_A05_NegativeCounter(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	wg.Done()
-	wg.Done() // Negative counter
+
+	defer func() { _ = recover() }() // keep test suite running
+	wg.Done()                        // counter goes negative => panic
 }
 ```
 
----
+## Leaks / blocking waits
 
-## Missing Done Call After Add
-This test shows a scenario where `Add()` is called to increment the `WaitGroup` counter, but the corresponding `Done()` call is forgotten in a goroutine. This results in the `Wait()` method blocking indefinitely.
-
-The main goroutine calls `wg.Wait()`, but since the goroutine fails to call `Done()`, the `WaitGroup` counter never reaches zero, causing the main goroutine to block forever.
+### `Test_WG_L09_WaitBlocksForever`
+- **Scenario:** A goroutine calls `wg.Wait()` after `Add(1)` but **no goroutine ever calls `Done()`**.
+- **Expected outcome:** `Wait()` blocks forever -> **leak on sync.WaitGroup** (commonly `L09`).
 
 ```go
-func TestWGMissingDone(t *testing.T) {
+func Test_WG_L09_WaitBlocksForever(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
+
 	go func() {
-		// forgot wg.Done()
-		time.Sleep(20 * time.Millisecond)
+		wg.Wait() // leaks forever because Done never called
 	}()
-	wg.Wait() // Leak
+
+	time.Sleep(50 * time.Millisecond) // allow trace capture
 }
 ```
 
----
-
-## Nested Add and Done
-This test demonstrates nested `Add()` and `Done()` calls within goroutines. The counter is adjusted within multiple nested goroutines, and the `WaitGroup` must correctly handle these nested operations.
-
-The first `Add()` increments the counter by 2, and two goroutines each call `Done()`, decrementing the counter by 1 each. The `WaitGroup` should wait until both `Done()` calls are made, ensuring synchronization across the nested goroutines.
+### `Test_WG_Leak_WorkerNeverDone_BlockedOnChan`
+- **Scenario:** A worker goroutine has `defer wg.Done()` but blocks forever on a channel receive, so `Done()` is never executed. Another goroutine waits on `wg.Wait()`.
+- **Expected outcome:** `Wait()` blocks forever due to a stuck worker -> **leak on sync.WaitGroup** (commonly `L09`), with the root cause being a blocked worker.
 
 ```go
-func TestWGNested(t *testing.T) {
+func Test_WG_Possible_AddAfterWait(t *testing.T) {
 	var wg sync.WaitGroup
-	wg.Add(2)
+
+	startWait := make(chan struct{})
 	go func() {
-		wg.Done()
-		go func() {
-			wg.Done()
-		}()
+		close(startWait)
+		wg.Wait() // may return immediately, but Add happens concurrently afterwards (misuse pattern)
 	}()
-	wg.Wait()
+
+	<-startWait
+	time.Sleep(1 * time.Millisecond)
+	wg.Add(1)
+	// We purposely never call Done to keep the trace interesting; you can add Done to avoid leaking.
+	time.Sleep(50 * time.Millisecond)
 }
 ```
 
-**Comparison**:
-- [Bug Types](./results/comparison_pivot_Bug_Types.csv)
 
-- [Total Time](./results/comparison_pivot_Total_Time_s.csv)
+## Possible misuse patterns
+
+### `Test_WG_Possible_AddAfterWait`
+- **Scenario:** `wg.Wait()` is started in one goroutine while another goroutine calls `wg.Add(1)` **after** the wait begins.
+- **Expected outcome:** This is a common misuse pattern that can lead to races or incorrect synchronization; depending on the analyzer, it may be reported as a **possible WaitGroup misuse** (or as a leak if the added work is never completed).
+
+```go
+func Test_WG_Leak_WorkerNeverDone_BlockedOnChan(t *testing.T) {
+	var wg sync.WaitGroup
+	block := make(chan struct{})
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		<-block // blocks forever, so Done never runs
+	}()
+
+	go func() {
+		wg.Wait() // leaks forever
+	}()
+
+	time.Sleep(50 * time.Millisecond)
+}
+```
