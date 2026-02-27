@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T14:58:19.924312337Z",
+  "generatedAt": "2026-02-27T20:56:06.480675236Z",
   "kind": "analysis",
   "profile": "mixed-default",
   "label": "latest",
@@ -39,8 +39,21 @@
         "exitCode": 0
       },
       "metrics": {
+        "Ana_s": 771.66094,
         "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 105000,
+        "NrChannels": 25000,
+        "NrEvents": 304868,
+        "NrGoroutines": 30001,
+        "NrMutex": 10007,
+        "NrMutexEvents": 87140,
+        "NrUnbufferedChannels": 25000,
+        "Rec_s": 19.05852,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
         "Total_Bugs": 0,
+        "Total_Time_s": 811.82622,
         "Unique_Bugs": 0,
         "duration_ms": 812306,
         "exit_code": 0,

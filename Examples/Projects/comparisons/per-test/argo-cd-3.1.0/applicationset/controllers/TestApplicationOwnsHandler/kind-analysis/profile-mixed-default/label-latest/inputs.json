@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T14:49:32.723926456Z",
+  "generatedAt": "2026-02-27T20:46:33.826784692Z",
   "kind": "analysis",
   "profile": "mixed-default",
   "label": "latest",
@@ -40,7 +40,12 @@
       },
       "metrics": {
         "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "Rec_s": 20.07202,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
         "Total_Bugs": 0,
+        "Total_Time_s": 38.61989,
         "Unique_Bugs": 0,
         "duration_ms": 38641,
         "exit_code": 0,
