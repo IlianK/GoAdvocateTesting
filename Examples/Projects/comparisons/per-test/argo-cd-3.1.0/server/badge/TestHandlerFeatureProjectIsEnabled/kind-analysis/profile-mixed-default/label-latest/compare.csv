@@ -1,2 +1,0 @@
-Mode,NrEvents,NrGoroutines,NrChannels,NrBufferedChannels,NrUnbufferedChannels,NrChannelEvents,NrMutex,NrMutexEvents,Bug_Types,Unique_Bugs,Total_Bugs,Confirmed_Replays,Total_Runs,Total_Time_s,Rec_s,Ana_s,Rep_s,Replays_Written,Replays_Successful
-,700,376,15,,15,15,106,368,,0,0,0,,10.74056,6.19909,0.01329,5e-05,0,0

@@ -1,5 +1,4 @@
 # binaries
-advocate-runner
 *.exe
 *.out
 
@@ -18,25 +17,4 @@ advocate-runner
 # Examples 
 # ----------------------------
 
-Examples/**
-
-# Simple
-!Examples/
-!Examples/Simple/
-!Examples/Simple/**
-
-Examples/Simple/results/
-Examples/Simple/results/**
-
-
-# GoBench
-!Examples/GoBench/
-!Examples/GoBench/goker/
-!Examples/GoBench/goker/blocking/
-!Examples/GoBench/goker/blocking/comparisons/
-!Examples/GoBench/goker/blocking/comparisons/**
-
-# Projects
-!Examples/Projects/
-!Examples/Projects/comparisons/
-!Examples/Projects/comparisons/**
+Examples/

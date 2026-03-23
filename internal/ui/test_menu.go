@@ -190,3 +190,47 @@ func keys[T any](m map[string]T) []string {
 	sort.Strings(out)
 	return out
 }
+
+func RunMenuFixedTests(p RunMenuParams) Selection {
+	reader := bufio.NewReader(os.Stdin)
+
+	kind := chooseKind(reader)
+
+	if kind == KindAnalysis {
+		profile := chooseProfile(reader, "Select analysis profile:", keys(p.AnalysisProfile))
+		return Selection{
+			Kind:    kind,
+			Profile: profile,
+			Scope:   ScopeAllTests,
+		}
+	}
+
+	// fuzzing on fixed/preselected tests
+	profile := chooseProfile(reader, "Select fuzz profile:", keys(p.FuzzProfiles))
+	modeType, mode := chooseFuzzPlanFixedTests(reader, p.Modes)
+
+	return Selection{
+		Kind:     kind,
+		Profile:  profile,
+		ModeType: modeType,
+		Mode:     mode,
+	}
+}
+
+func chooseFuzzPlanFixedTests(reader *bufio.Reader, modes []string) (ModeType, string) {
+	fmt.Println("1. Run ALL modes on selected tests")
+	fmt.Println("2. Run ONE mode on selected tests")
+
+	for {
+		fmt.Print("Choice: ")
+		c, _ := reader.ReadString('\n')
+		c = strings.TrimSpace(c)
+
+		switch c {
+		case "1":
+			return AllOnAll, ""
+		case "2":
+			return OneOnAll, chooseString(reader, "Select mode:", modes)
+		}
+	}
+}

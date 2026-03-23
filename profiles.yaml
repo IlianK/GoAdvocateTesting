@@ -43,8 +43,8 @@ analysisProfiles:
 
   mixed-deep:
     scen: "m"
-    timeoutRec: 60
-    timeoutRep: 60
+    timeoutRec: 150
+    timeoutRep: 150
     keepTrace: true
     stats: true
     time: true
@@ -68,6 +68,31 @@ analysisProfiles:
 
   block-deep:
     scen: "mc"
+    timeoutRec: 60
+    timeoutRep: 60
+    keepTrace: true
+    stats: true
+    time: true
+
+  # scen: "c" (cyclic)
+  cyclic-quick:
+    scen: "c"
+    timeoutRec: 5
+    timeoutRep: 5
+    keepTrace: false
+    stats: true
+    time: true
+
+  cyclic-default:
+    scen: "c"
+    timeoutRec: 20
+    timeoutRep: 20
+    keepTrace: true
+    stats: true
+    time: true
+
+  cyclic-deep:
+    scen: "c"
     timeoutRec: 60
     timeoutRep: 60
     keepTrace: true
