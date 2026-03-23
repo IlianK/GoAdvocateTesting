@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:56:34.036669307Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/badge/TestHandlerApplicationNameInBadgeIsEnabled/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/badge",
+        "testRel": "argo-cd-3.1.0/server/badge",
+        "testName": "TestHandlerApplicationNameInBadgeIsEnabled",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-02-07Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/badge",
+          "-exec",
+          "TestHandlerApplicationNameInBadgeIsEnabled",
+          "-prog",
+          "TestHandlerApplicationNameInBadgeIsEnabled",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:02:07.39750362Z",
+        "endedAt": "2026-02-25T05:02:14.908787167Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00031,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 1,
+        "NrChannels": 1,
+        "NrEvents": 52,
+        "NrGoroutines": 26,
+        "NrMutex": 8,
+        "NrMutexEvents": 28,
+        "NrUnbufferedChannels": 1,
+        "Rec_s": 4.44518,
+        "Rep_s": 0.00006,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 7.508,
+        "Unique_Bugs": 0,
+        "duration_ms": 7511,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-02-07Z",
+        "test_name": "argo-cd-3.1.0/server/badge/TestHandlerApplicationNameInBadgeIsEnabled"
+      }
+    }
+  ]
+}

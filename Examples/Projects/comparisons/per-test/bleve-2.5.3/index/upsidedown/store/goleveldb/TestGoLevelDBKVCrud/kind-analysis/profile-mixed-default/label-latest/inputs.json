@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:14:41.372560897Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/index/upsidedown/store/goleveldb/TestGoLevelDBKVCrud/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/upsidedown/store/goleveldb",
+        "testRel": "bleve-2.5.3/index/upsidedown/store/goleveldb",
+        "testName": "TestGoLevelDBKVCrud",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T08-04-48Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/upsidedown/store/goleveldb",
+          "-exec",
+          "TestGoLevelDBKVCrud",
+          "-prog",
+          "TestGoLevelDBKVCrud",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T08:04:48.571009826Z",
+        "endedAt": "2026-02-25T08:04:51.277125115Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 0,
+        "duration_ms": 2706,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T08-04-48Z",
+        "test_name": "bleve-2.5.3/index/upsidedown/store/goleveldb/TestGoLevelDBKVCrud"
+      }
+    }
+  ]
+}

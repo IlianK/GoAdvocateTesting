@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:17:20.670692601Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/searcher/TestSimpleGeoPolygons/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+        "testRel": "bleve-2.5.3/search/searcher",
+        "testName": "TestSimpleGeoPolygons",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T09-46-32Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/searcher",
+          "-exec",
+          "TestSimpleGeoPolygons",
+          "-prog",
+          "TestSimpleGeoPolygons",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T09:46:32.876594149Z",
+        "endedAt": "2026-02-25T09:47:12.899187752Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40022,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T09-46-32Z",
+        "test_name": "bleve-2.5.3/search/searcher/TestSimpleGeoPolygons"
+      }
+    }
+  ]
+}

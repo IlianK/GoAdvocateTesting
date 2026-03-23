@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:30:31.040257556Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/gin-1.10.1/TestHasRequestContext/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+        "testRel": "gin-1.10.1",
+        "testName": "TestHasRequestContext",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-45-37Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+          "-exec",
+          "TestHasRequestContext",
+          "-prog",
+          "TestHasRequestContext",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:45:37.910448073Z",
+        "endedAt": "2026-02-25T11:45:40.391163826Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2480,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-45-37Z",
+        "test_name": "gin-1.10.1/TestHasRequestContext"
+      }
+    }
+  ]
+}

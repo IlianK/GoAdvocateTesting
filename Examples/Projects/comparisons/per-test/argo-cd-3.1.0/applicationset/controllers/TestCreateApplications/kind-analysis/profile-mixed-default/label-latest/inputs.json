@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-02-27T20:46:38.287092391Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/controllers/TestCreateApplications/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+        "testRel": "argo-cd-3.1.0/applicationset/controllers",
+        "testName": "TestCreateApplications",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-36-15Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+          "-exec",
+          "TestCreateApplications",
+          "-prog",
+          "TestCreateApplications",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:36:15.69447786Z",
+        "endedAt": "2026-02-25T02:36:24.596493911Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00003,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 10,
+        "NrGoroutines": 4,
+        "NrMutex": 3,
+        "NrMutexEvents": 6,
+        "Rec_s": 5.44519,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.89919,
+        "Unique_Bugs": 0,
+        "duration_ms": 8902,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-36-15Z",
+        "test_name": "argo-cd-3.1.0/applicationset/controllers/TestCreateApplications"
+      }
+    }
+  ]
+}

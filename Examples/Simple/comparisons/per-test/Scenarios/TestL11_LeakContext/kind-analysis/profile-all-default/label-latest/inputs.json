@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-02-26T22:42:04.892488087Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/Scenarios/TestL11_LeakContext/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+        "testRel": "Scenarios",
+        "testName": "TestL11_LeakContext",
+        "profile": "all-default",
+        "runId": "2026-02-26T21-36-34Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+          "-exec",
+          "TestL11_LeakContext",
+          "-prog",
+          "TestL11_LeakContext",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-26T21:36:34.559981521Z",
+        "endedAt": "2026-02-26T21:36:35.913399217Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00009,
+        "Bug_Types": "",
+        "NrEvents": 6,
+        "Rec_s": 1.18503,
+        "Rep_s": 0.00002,
+        "Total_Bugs": 0,
+        "Total_Time_s": 1.35117,
+        "Unique_Bugs": 0,
+        "duration_ms": 1353,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-26T21-36-34Z",
+        "test_name": "Scenarios/TestL11_LeakContext"
+      }
+    }
+  ]
+}

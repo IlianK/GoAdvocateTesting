@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-02-26T22:42:03.757874753Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/Scenarios/TestA06_UnlockNotLockedMutex/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+        "testRel": "Scenarios",
+        "testName": "TestA06_UnlockNotLockedMutex",
+        "profile": "all-default",
+        "runId": "2026-02-26T21-36-10Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/Scenarios",
+          "-exec",
+          "TestA06_UnlockNotLockedMutex",
+          "-prog",
+          "TestA06_UnlockNotLockedMutex",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-26T21:36:10.738360983Z",
+        "endedAt": "2026-02-26T21:36:12.061240525Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00008,
+        "Bug_Types": "A06",
+        "NrEvents": 2,
+        "Rec_s": 1.16115,
+        "Rep_s": 0.00003,
+        "Total_Bugs": 1,
+        "Total_Time_s": 1.32041,
+        "Unique_Bugs": 1,
+        "duration_ms": 1322,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-26T21-36-10Z",
+        "test_name": "Scenarios/TestA06_UnlockNotLockedMutex"
+      }
+    }
+  ]
+}

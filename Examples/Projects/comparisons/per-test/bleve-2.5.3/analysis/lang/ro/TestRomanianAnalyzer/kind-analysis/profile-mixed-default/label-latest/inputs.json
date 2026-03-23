@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:12:56.523679062Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/analysis/lang/ro/TestRomanianAnalyzer/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis/lang/ro",
+        "testRel": "bleve-2.5.3/analysis/lang/ro",
+        "testName": "TestRomanianAnalyzer",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-30-39Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis/lang/ro",
+          "-exec",
+          "TestRomanianAnalyzer",
+          "-prog",
+          "TestRomanianAnalyzer",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:30:39.724720377Z",
+        "endedAt": "2026-02-25T07:30:41.138796969Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1414,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-30-39Z",
+        "test_name": "bleve-2.5.3/analysis/lang/ro/TestRomanianAnalyzer"
+      }
+    }
+  ]
+}

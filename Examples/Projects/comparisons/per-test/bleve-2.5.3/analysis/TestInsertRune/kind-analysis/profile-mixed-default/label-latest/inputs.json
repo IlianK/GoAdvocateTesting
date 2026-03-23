@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:12:12.983762969Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/analysis/TestInsertRune/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis",
+        "testRel": "bleve-2.5.3/analysis",
+        "testName": "TestInsertRune",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-31-40Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis",
+          "-exec",
+          "TestInsertRune",
+          "-prog",
+          "TestInsertRune",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:31:40.862729832Z",
+        "endedAt": "2026-02-25T07:31:42.273889647Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1411,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-31-40Z",
+        "test_name": "bleve-2.5.3/analysis/TestInsertRune"
+      }
+    }
+  ]
+}

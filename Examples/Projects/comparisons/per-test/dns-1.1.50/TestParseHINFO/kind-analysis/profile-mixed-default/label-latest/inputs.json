@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:20:43.052458379Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/dns-1.1.50/TestParseHINFO/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+        "testRel": "dns-1.1.50",
+        "testName": "TestParseHINFO",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-06-10Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+          "-exec",
+          "TestParseHINFO",
+          "-prog",
+          "TestParseHINFO",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:06:10.462122542Z",
+        "endedAt": "2026-02-25T11:06:13.34557854Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2883,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-06-10Z",
+        "test_name": "dns-1.1.50/TestParseHINFO"
+      }
+    }
+  ]
+}

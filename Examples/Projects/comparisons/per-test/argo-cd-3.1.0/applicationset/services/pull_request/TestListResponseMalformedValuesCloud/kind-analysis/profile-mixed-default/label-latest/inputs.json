@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:47:57.782715535Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/services/pull_request/TestListResponseMalformedValuesCloud/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/pull_request",
+        "testRel": "argo-cd-3.1.0/applicationset/services/pull_request",
+        "testName": "TestListResponseMalformedValuesCloud",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-51-07Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/pull_request",
+          "-exec",
+          "TestListResponseMalformedValuesCloud",
+          "-prog",
+          "TestListResponseMalformedValuesCloud",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:51:07.529840328Z",
+        "endedAt": "2026-02-25T02:51:14.417111666Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00014,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 3,
+        "NrChannels": 3,
+        "NrEvents": 47,
+        "NrGoroutines": 8,
+        "NrMutex": 5,
+        "NrMutexEvents": 30,
+        "NrUnbufferedChannels": 3,
+        "Rec_s": 4.08894,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 6.88474,
+        "Unique_Bugs": 0,
+        "duration_ms": 6887,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-51-07Z",
+        "test_name": "argo-cd-3.1.0/applicationset/services/pull_request/TestListResponseMalformedValuesCloud"
+      }
+    }
+  ]
+}

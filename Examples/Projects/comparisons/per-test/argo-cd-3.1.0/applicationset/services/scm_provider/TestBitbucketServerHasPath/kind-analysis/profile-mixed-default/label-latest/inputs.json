@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:48:08.662368339Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/services/scm_provider/TestBitbucketServerHasPath/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testRel": "argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testName": "TestBitbucketServerHasPath",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-56-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+          "-exec",
+          "TestBitbucketServerHasPath",
+          "-prog",
+          "TestBitbucketServerHasPath",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:56:08.359149273Z",
+        "endedAt": "2026-02-25T02:56:15.524141174Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00128,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 9,
+        "NrChannels": 9,
+        "NrEvents": 173,
+        "NrGoroutines": 15,
+        "NrMutex": 19,
+        "NrMutexEvents": 122,
+        "NrUnbufferedChannels": 9,
+        "Rec_s": 4.29394,
+        "Rep_s": 0.00005,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 7.16268,
+        "Unique_Bugs": 0,
+        "duration_ms": 7164,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-56-08Z",
+        "test_name": "argo-cd-3.1.0/applicationset/services/scm_provider/TestBitbucketServerHasPath"
+      }
+    }
+  ]
+}

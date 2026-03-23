@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:54:32.792970007Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/TestGetAppDetailsHelm_WithNoValuesFile/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "TestGetAppDetailsHelm_WithNoValuesFile",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-24-57Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "TestGetAppDetailsHelm_WithNoValuesFile",
+          "-prog",
+          "TestGetAppDetailsHelm_WithNoValuesFile",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:24:57.998729017Z",
+        "endedAt": "2026-02-25T04:25:05.590559618Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00006,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 1,
+        "NrChannels": 1,
+        "NrEvents": 29,
+        "NrGoroutines": 15,
+        "NrMutex": 3,
+        "NrMutexEvents": 14,
+        "NrUnbufferedChannels": 1,
+        "Rec_s": 4.57943,
+        "Rep_s": 0.00002,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 7.58935,
+        "Unique_Bugs": 0,
+        "duration_ms": 7591,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-24-57Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/TestGetAppDetailsHelm_WithNoValuesFile"
+      }
+    }
+  ]
+}

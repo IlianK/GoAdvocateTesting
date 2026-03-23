@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-02-27T20:54:43.89035612Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/TestGetRefs_CacheWithLockDisabled/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "TestGetRefs_CacheWithLockDisabled",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-27-07Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "TestGetRefs_CacheWithLockDisabled",
+          "-prog",
+          "TestGetRefs_CacheWithLockDisabled",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:27:07.387536439Z",
+        "endedAt": "2026-02-25T04:27:13.971324386Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "Rec_s": 3.54961,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 6.58073,
+        "Unique_Bugs": 0,
+        "duration_ms": 6583,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-27-07Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/TestGetRefs_CacheWithLockDisabled"
+      }
+    }
+  ]
+}

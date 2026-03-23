@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:27:23.019861755Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/timeout/Test_Timeout/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/timeout",
+        "testRel": "fiber-2.40.1/middleware/timeout",
+        "testName": "Test_Timeout",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-30-59Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/timeout",
+          "-exec",
+          "Test_Timeout",
+          "-prog",
+          "Test_Timeout",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:30:59.312846963Z",
+        "endedAt": "2026-02-25T11:31:02.032446519Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2719,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-30-59Z",
+        "test_name": "fiber-2.40.1/middleware/timeout/Test_Timeout"
+      }
+    }
+  ]
+}

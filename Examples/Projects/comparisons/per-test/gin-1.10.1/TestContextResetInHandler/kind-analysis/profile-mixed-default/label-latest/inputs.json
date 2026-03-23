@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:29:53.477525689Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/gin-1.10.1/TestContextResetInHandler/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+        "testRel": "gin-1.10.1",
+        "testName": "TestContextResetInHandler",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-44-31Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+          "-exec",
+          "TestContextResetInHandler",
+          "-prog",
+          "TestContextResetInHandler",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:44:31.46279363Z",
+        "endedAt": "2026-02-25T11:44:33.900812504Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2438,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-44-31Z",
+        "test_name": "gin-1.10.1/TestContextResetInHandler"
+      }
+    }
+  ]
+}

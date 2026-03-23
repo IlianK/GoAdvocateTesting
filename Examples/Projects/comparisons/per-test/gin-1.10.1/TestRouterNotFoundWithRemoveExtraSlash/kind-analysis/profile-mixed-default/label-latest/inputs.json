@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:31:33.637770396Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/gin-1.10.1/TestRouterNotFoundWithRemoveExtraSlash/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+        "testRel": "gin-1.10.1",
+        "testName": "TestRouterNotFoundWithRemoveExtraSlash",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-53-10Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/gin-1.10.1",
+          "-exec",
+          "TestRouterNotFoundWithRemoveExtraSlash",
+          "-prog",
+          "TestRouterNotFoundWithRemoveExtraSlash",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:53:10.181387349Z",
+        "endedAt": "2026-02-25T11:53:12.672410933Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2491,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-53-10Z",
+        "test_name": "gin-1.10.1/TestRouterNotFoundWithRemoveExtraSlash"
+      }
+    }
+  ]
+}

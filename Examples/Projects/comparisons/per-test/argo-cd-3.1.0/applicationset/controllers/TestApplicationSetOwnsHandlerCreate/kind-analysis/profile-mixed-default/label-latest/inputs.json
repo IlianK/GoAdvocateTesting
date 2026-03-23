@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-02-27T20:46:34.372980672Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/controllers/TestApplicationSetOwnsHandlerCreate/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+        "testRel": "argo-cd-3.1.0/applicationset/controllers",
+        "testName": "TestApplicationSetOwnsHandlerCreate",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-34-52Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+          "-exec",
+          "TestApplicationSetOwnsHandlerCreate",
+          "-prog",
+          "TestApplicationSetOwnsHandlerCreate",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:34:52.677279834Z",
+        "endedAt": "2026-02-25T02:35:26.692803977Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "Rec_s": 22.39986,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 34.00291,
+        "Unique_Bugs": 0,
+        "duration_ms": 34015,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-34-52Z",
+        "test_name": "argo-cd-3.1.0/applicationset/controllers/TestApplicationSetOwnsHandlerCreate"
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-02-27T20:49:49.412679848Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/cmd/argocd/commands/admin/Test_exportResources/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testRel": "argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testName": "Test_exportResources",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-04-13Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+          "-exec",
+          "Test_exportResources",
+          "-prog",
+          "Test_exportResources",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:04:13.095873383Z",
+        "endedAt": "2026-02-25T03:04:22.926296411Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00016,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 28,
+        "NrGoroutines": 10,
+        "NrMutex": 9,
+        "NrMutexEvents": 18,
+        "Rec_s": 5.72348,
+        "Rep_s": 0.00005,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 9.82817,
+        "Unique_Bugs": 0,
+        "duration_ms": 9830,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-04-13Z",
+        "test_name": "argo-cd-3.1.0/cmd/argocd/commands/admin/Test_exportResources"
+      }
+    }
+  ]
+}

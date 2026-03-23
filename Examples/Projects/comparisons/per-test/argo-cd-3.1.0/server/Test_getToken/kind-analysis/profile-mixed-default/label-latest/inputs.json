@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-02-27T20:55:39.021016991Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/Test_getToken/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+        "testRel": "argo-cd-3.1.0/server",
+        "testName": "Test_getToken",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-16-00Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+          "-exec",
+          "Test_getToken",
+          "-prog",
+          "Test_getToken",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:16:00.942169201Z",
+        "endedAt": "2026-02-25T05:16:11.738166611Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00004,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 13,
+        "NrGoroutines": 5,
+        "NrMutex": 4,
+        "NrMutexEvents": 8,
+        "Rec_s": 6.27244,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 10.79399,
+        "Unique_Bugs": 0,
+        "duration_ms": 10795,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-16-00Z",
+        "test_name": "argo-cd-3.1.0/server/Test_getToken"
+      }
+    }
+  ]
+}

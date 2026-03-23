@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:33:59.813595588Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/balancer/rls/TestIsFullMethodNameValid/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/rls",
+        "testRel": "grpc-go-1.51.0/balancer/rls",
+        "testName": "TestIsFullMethodNameValid",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T12-29-24Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/rls",
+          "-exec",
+          "TestIsFullMethodNameValid",
+          "-prog",
+          "TestIsFullMethodNameValid",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T12:29:24.837008977Z",
+        "endedAt": "2026-02-25T12:29:26.752654842Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1915,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T12-29-24Z",
+        "test_name": "grpc-go-1.51.0/balancer/rls/TestIsFullMethodNameValid"
+      }
+    }
+  ]
+}

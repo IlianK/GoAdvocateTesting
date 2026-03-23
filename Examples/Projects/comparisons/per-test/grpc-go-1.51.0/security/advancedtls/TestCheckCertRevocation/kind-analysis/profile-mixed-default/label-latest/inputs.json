@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:35:08.897214195Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/security/advancedtls/TestCheckCertRevocation/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/security/advancedtls",
+        "testRel": "grpc-go-1.51.0/security/advancedtls",
+        "testName": "TestCheckCertRevocation",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T14-00-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/security/advancedtls",
+          "-exec",
+          "TestCheckCertRevocation",
+          "-prog",
+          "TestCheckCertRevocation",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T14:00:29.855194888Z",
+        "endedAt": "2026-02-25T14:00:31.711672818Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1856,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T14-00-29Z",
+        "test_name": "grpc-go-1.51.0/security/advancedtls/TestCheckCertRevocation"
+      }
+    }
+  ]
+}

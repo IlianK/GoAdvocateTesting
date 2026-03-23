@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:19:49.969949325Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/dns-1.1.50/TestLineNumberError2/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+        "testRel": "dns-1.1.50",
+        "testName": "TestLineNumberError2",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-05-03Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/dns-1.1.50",
+          "-exec",
+          "TestLineNumberError2",
+          "-prog",
+          "TestLineNumberError2",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:05:03.953050587Z",
+        "endedAt": "2026-02-25T11:05:06.811109932Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 2858,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-05-03Z",
+        "test_name": "dns-1.1.50/TestLineNumberError2"
+      }
+    }
+  ]
+}

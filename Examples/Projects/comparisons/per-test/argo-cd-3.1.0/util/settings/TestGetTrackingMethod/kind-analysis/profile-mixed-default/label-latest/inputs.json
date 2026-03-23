@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:10:08.035141027Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/settings/TestGetTrackingMethod/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/settings",
+        "testRel": "argo-cd-3.1.0/util/settings",
+        "testName": "TestGetTrackingMethod",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-22-26Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/settings",
+          "-exec",
+          "TestGetTrackingMethod",
+          "-prog",
+          "TestGetTrackingMethod",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:22:26.947600132Z",
+        "endedAt": "2026-02-25T07:22:34.774263657Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 7826,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-22-26Z",
+        "test_name": "argo-cd-3.1.0/util/settings/TestGetTrackingMethod"
+      }
+    }
+  ]
+}

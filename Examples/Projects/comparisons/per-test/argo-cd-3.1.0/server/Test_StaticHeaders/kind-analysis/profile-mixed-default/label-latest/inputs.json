@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-02-27T20:55:37.821008257Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/Test_StaticHeaders/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+        "testRel": "argo-cd-3.1.0/server",
+        "testName": "Test_StaticHeaders",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-09-45Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+          "-exec",
+          "Test_StaticHeaders",
+          "-prog",
+          "Test_StaticHeaders",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:09:45.044886862Z",
+        "endedAt": "2026-02-25T05:10:22.089389345Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.04955,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrBufferedChannels": 6,
+        "NrChannelEvents": 96,
+        "NrChannels": 93,
+        "NrEvents": 1825,
+        "NrGoroutines": 517,
+        "NrMutex": 148,
+        "NrMutexEvents": 908,
+        "NrUnbufferedChannels": 87,
+        "Rec_s": 19.45625,
+        "Rep_s": 0.00006,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 37.04231,
+        "Unique_Bugs": 0,
+        "duration_ms": 37044,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-09-45Z",
+        "test_name": "argo-cd-3.1.0/server/Test_StaticHeaders"
+      }
+    }
+  ]
+}

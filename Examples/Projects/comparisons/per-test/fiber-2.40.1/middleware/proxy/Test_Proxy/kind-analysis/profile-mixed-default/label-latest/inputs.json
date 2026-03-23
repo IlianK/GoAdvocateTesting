@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:26:57.811483147Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/proxy/Test_Proxy/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/proxy",
+        "testRel": "fiber-2.40.1/middleware/proxy",
+        "testName": "Test_Proxy",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-28-04Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/proxy",
+          "-exec",
+          "Test_Proxy",
+          "-prog",
+          "Test_Proxy",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:28:04.512707993Z",
+        "endedAt": "2026-02-25T11:28:18.856002126Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 14343,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-28-04Z",
+        "test_name": "fiber-2.40.1/middleware/proxy/Test_Proxy"
+      }
+    }
+  ]
+}

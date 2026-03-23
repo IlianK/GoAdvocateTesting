@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:18:51.971203408Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bosun-0.8.0-preview/snmp/asn1/TestTruncatedExplicitTag/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/snmp/asn1",
+        "testRel": "bosun-0.8.0-preview/snmp/asn1",
+        "testName": "TestTruncatedExplicitTag",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T10-57-56Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bosun-0.8.0-preview/snmp/asn1",
+          "-exec",
+          "TestTruncatedExplicitTag",
+          "-prog",
+          "TestTruncatedExplicitTag",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T10:57:56.536303218Z",
+        "endedAt": "2026-02-25T10:57:57.843350044Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1307,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T10-57-56Z",
+        "test_name": "bosun-0.8.0-preview/snmp/asn1/TestTruncatedExplicitTag"
+      }
+    }
+  ]
+}

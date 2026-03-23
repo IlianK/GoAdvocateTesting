@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:33:56.785401885Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/authz/TestTranslatePolicy/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/authz",
+        "testRel": "grpc-go-1.51.0/authz",
+        "testName": "TestTranslatePolicy",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T12-26-39Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/authz",
+          "-exec",
+          "TestTranslatePolicy",
+          "-prog",
+          "TestTranslatePolicy",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T12:26:39.047990188Z",
+        "endedAt": "2026-02-25T12:26:41.047405432Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1999,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T12-26-39Z",
+        "test_name": "grpc-go-1.51.0/authz/TestTranslatePolicy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:08:46.098285865Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/oci/Test_nativeOCIClient_Extract/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/oci",
+        "testRel": "argo-cd-3.1.0/util/oci",
+        "testName": "Test_nativeOCIClient_Extract",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-10-02Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/oci",
+          "-exec",
+          "Test_nativeOCIClient_Extract",
+          "-prog",
+          "Test_nativeOCIClient_Extract",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:10:02.755801359Z",
+        "endedAt": "2026-02-25T07:10:06.020314262Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 3264,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-10-02Z",
+        "test_name": "argo-cd-3.1.0/util/oci/Test_nativeOCIClient_Extract"
+      }
+    }
+  ]
+}

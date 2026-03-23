@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:13:11.746687001Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/analysis/token/reverse/TestReverseFilter/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis/token/reverse",
+        "testRel": "bleve-2.5.3/analysis/token/reverse",
+        "testName": "TestReverseFilter",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-31-11Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/analysis/token/reverse",
+          "-exec",
+          "TestReverseFilter",
+          "-prog",
+          "TestReverseFilter",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:31:11.570657991Z",
+        "endedAt": "2026-02-25T07:31:12.947668198Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1377,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-31-11Z",
+        "test_name": "bleve-2.5.3/analysis/token/reverse/TestReverseFilter"
+      }
+    }
+  ]
+}

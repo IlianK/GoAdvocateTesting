@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-02-27T20:53:20.770337841Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestOptionalMapEquality/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testRel": "argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+        "testName": "TestOptionalMapEquality",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-10-24Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/pkg/apis/application/v1alpha1",
+          "-exec",
+          "TestOptionalMapEquality",
+          "-prog",
+          "TestOptionalMapEquality",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:10:24.219141893Z",
+        "endedAt": "2026-02-25T04:10:32.440422439Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00002,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 1,
+        "NrGoroutines": 14,
+        "Rec_s": 5.77448,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.21796,
+        "Unique_Bugs": 0,
+        "duration_ms": 8221,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-10-24Z",
+        "test_name": "argo-cd-3.1.0/pkg/apis/application/v1alpha1/TestOptionalMapEquality"
+      }
+    }
+  ]
+}

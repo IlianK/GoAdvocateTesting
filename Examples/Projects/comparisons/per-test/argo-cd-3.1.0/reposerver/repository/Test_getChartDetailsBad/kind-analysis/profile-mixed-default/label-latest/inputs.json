@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-02-27T20:55:08.401219125Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/Test_getChartDetailsBad/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "Test_getChartDetailsBad",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-18-45Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "Test_getChartDetailsBad",
+          "-prog",
+          "Test_getChartDetailsBad",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:18:45.015996106Z",
+        "endedAt": "2026-02-25T04:18:53.060694027Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00002,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 1,
+        "NrGoroutines": 1,
+        "Rec_s": 4.62026,
+        "Rep_s": 0.00004,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.0414,
+        "Unique_Bugs": 0,
+        "duration_ms": 8044,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-18-45Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/Test_getChartDetailsBad"
+      }
+    }
+  ]
+}

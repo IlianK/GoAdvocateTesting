@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:56:03.95318381Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/application/TestListAppsInNamespaceWithLabels/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/application",
+        "testRel": "argo-cd-3.1.0/server/application",
+        "testName": "TestListAppsInNamespaceWithLabels",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-38-50Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/application",
+          "-exec",
+          "TestListAppsInNamespaceWithLabels",
+          "-prog",
+          "TestListAppsInNamespaceWithLabels",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:38:50.722475136Z",
+        "endedAt": "2026-02-25T04:39:00.528181896Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00217,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 15,
+        "NrChannels": 15,
+        "NrEvents": 321,
+        "NrGoroutines": 107,
+        "NrMutex": 37,
+        "NrMutexEvents": 168,
+        "NrUnbufferedChannels": 15,
+        "Rec_s": 5.88856,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 9.80282,
+        "Unique_Bugs": 0,
+        "duration_ms": 9805,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-38-50Z",
+        "test_name": "argo-cd-3.1.0/server/application/TestListAppsInNamespaceWithLabels"
+      }
+    }
+  ]
+}

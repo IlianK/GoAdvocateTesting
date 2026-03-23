@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-02-27T20:51:14.453654526Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/TestSelfHealExponentialBackoff/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+        "testRel": "argo-cd-3.1.0/controller",
+        "testName": "TestSelfHealExponentialBackoff",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-36-53Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+          "-exec",
+          "TestSelfHealExponentialBackoff",
+          "-prog",
+          "TestSelfHealExponentialBackoff",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:36:53.665179081Z",
+        "endedAt": "2026-02-25T03:37:03.441154608Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00043,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrBufferedChannels": 1,
+        "NrChannelEvents": 9,
+        "NrChannels": 9,
+        "NrEvents": 148,
+        "NrGoroutines": 64,
+        "NrMutex": 18,
+        "NrMutexEvents": 56,
+        "NrUnbufferedChannels": 8,
+        "Rec_s": 6.0191,
+        "Rep_s": 0.00004,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 9.77263,
+        "Unique_Bugs": 0,
+        "duration_ms": 9775,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-36-53Z",
+        "test_name": "argo-cd-3.1.0/controller/TestSelfHealExponentialBackoff"
+      }
+    }
+  ]
+}

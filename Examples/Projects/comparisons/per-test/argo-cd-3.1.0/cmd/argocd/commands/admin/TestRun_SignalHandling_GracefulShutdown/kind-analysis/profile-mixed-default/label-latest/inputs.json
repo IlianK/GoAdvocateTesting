@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:49:44.048483642Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/cmd/argocd/commands/admin/TestRun_SignalHandling_GracefulShutdown/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testRel": "argo-cd-3.1.0/cmd/argocd/commands/admin",
+        "testName": "TestRun_SignalHandling_GracefulShutdown",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-04-42Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/cmd/argocd/commands/admin",
+          "-exec",
+          "TestRun_SignalHandling_GracefulShutdown",
+          "-prog",
+          "TestRun_SignalHandling_GracefulShutdown",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:04:42.687077952Z",
+        "endedAt": "2026-02-25T03:04:52.526649192Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00015,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 3,
+        "NrChannels": 2,
+        "NrEvents": 26,
+        "NrGoroutines": 5,
+        "NrMutex": 2,
+        "NrMutexEvents": 14,
+        "NrUnbufferedChannels": 2,
+        "Rec_s": 5.73241,
+        "Rep_s": 0.0001,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 9.8365,
+        "Unique_Bugs": 0,
+        "duration_ms": 9839,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-04-42Z",
+        "test_name": "argo-cd-3.1.0/cmd/argocd/commands/admin/TestRun_SignalHandling_GracefulShutdown"
+      }
+    }
+  ]
+}

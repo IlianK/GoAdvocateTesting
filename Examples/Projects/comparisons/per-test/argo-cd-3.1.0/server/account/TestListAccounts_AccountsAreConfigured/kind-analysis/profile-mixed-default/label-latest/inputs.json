@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:55:43.935759052Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/account/TestListAccounts_AccountsAreConfigured/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/account",
+        "testRel": "argo-cd-3.1.0/server/account",
+        "testName": "TestListAccounts_AccountsAreConfigured",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-33-49Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server/account",
+          "-exec",
+          "TestListAccounts_AccountsAreConfigured",
+          "-prog",
+          "TestListAccounts_AccountsAreConfigured",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:33:49.906055022Z",
+        "endedAt": "2026-02-25T04:33:58.071630272Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00035,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 5,
+        "NrChannels": 5,
+        "NrEvents": 107,
+        "NrGoroutines": 36,
+        "NrMutex": 14,
+        "NrMutexEvents": 60,
+        "NrUnbufferedChannels": 5,
+        "Rec_s": 4.84652,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.1633,
+        "Unique_Bugs": 0,
+        "duration_ms": 8165,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-33-49Z",
+        "test_name": "argo-cd-3.1.0/server/account/TestListAccounts_AccountsAreConfigured"
+      }
+    }
+  ]
+}

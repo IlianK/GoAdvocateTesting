@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-02-27T20:51:23.136225885Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/TestSkipAutoSync/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+        "testRel": "argo-cd-3.1.0/controller",
+        "testName": "TestSkipAutoSync",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-37-25Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+          "-exec",
+          "TestSkipAutoSync",
+          "-prog",
+          "TestSkipAutoSync",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:37:25.474590914Z",
+        "endedAt": "2026-02-25T03:37:37.852836883Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.02809,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrBufferedChannels": 7,
+        "NrChannelEvents": 70,
+        "NrChannels": 70,
+        "NrEvents": 1288,
+        "NrGoroutines": 554,
+        "NrMutex": 133,
+        "NrMutexEvents": 566,
+        "NrUnbufferedChannels": 63,
+        "Rec_s": 7.30903,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 12.37466,
+        "Unique_Bugs": 0,
+        "duration_ms": 12378,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-37-25Z",
+        "test_name": "argo-cd-3.1.0/controller/TestSkipAutoSync"
+      }
+    }
+  ]
+}

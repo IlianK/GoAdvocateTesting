@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:26:27.138028968Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/filesystem/Test_FileSystem/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/filesystem",
+        "testRel": "fiber-2.40.1/middleware/filesystem",
+        "testName": "Test_FileSystem",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-25-47Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/filesystem",
+          "-exec",
+          "Test_FileSystem",
+          "-prog",
+          "Test_FileSystem",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:25:47.578815146Z",
+        "endedAt": "2026-02-25T11:25:49.23628567Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1657,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-25-47Z",
+        "test_name": "fiber-2.40.1/middleware/filesystem/Test_FileSystem"
+      }
+    }
+  ]
+}

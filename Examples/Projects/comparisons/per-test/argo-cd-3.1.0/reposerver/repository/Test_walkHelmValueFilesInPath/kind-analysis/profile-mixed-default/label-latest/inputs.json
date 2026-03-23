@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-02-27T20:55:15.608534992Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/reposerver/repository/Test_walkHelmValueFilesInPath/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+        "testRel": "argo-cd-3.1.0/reposerver/repository",
+        "testName": "Test_walkHelmValueFilesInPath",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T04-32-36Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/reposerver/repository",
+          "-exec",
+          "Test_walkHelmValueFilesInPath",
+          "-prog",
+          "Test_walkHelmValueFilesInPath",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T04:32:36.388886721Z",
+        "endedAt": "2026-02-25T04:32:43.992425821Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00005,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 10,
+        "NrGoroutines": 4,
+        "NrMutex": 3,
+        "NrMutexEvents": 6,
+        "Rec_s": 4.53618,
+        "Rep_s": 0.00004,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 7.60106,
+        "Unique_Bugs": 0,
+        "duration_ms": 7603,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T04-32-36Z",
+        "test_name": "argo-cd-3.1.0/reposerver/repository/Test_walkHelmValueFilesInPath"
+      }
+    }
+  ]
+}

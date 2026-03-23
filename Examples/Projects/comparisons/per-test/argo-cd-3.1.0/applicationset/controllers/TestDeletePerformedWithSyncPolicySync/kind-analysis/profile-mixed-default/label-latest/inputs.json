@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:46:42.43142676Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/controllers/TestDeletePerformedWithSyncPolicySync/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+        "testRel": "argo-cd-3.1.0/applicationset/controllers",
+        "testName": "TestDeletePerformedWithSyncPolicySync",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-37-19Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/controllers",
+          "-exec",
+          "TestDeletePerformedWithSyncPolicySync",
+          "-prog",
+          "TestDeletePerformedWithSyncPolicySync",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:37:19.295921643Z",
+        "endedAt": "2026-02-25T02:37:28.528786773Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00026,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 1,
+        "NrChannels": 1,
+        "NrEvents": 62,
+        "NrGoroutines": 26,
+        "NrMutex": 8,
+        "NrMutexEvents": 38,
+        "NrUnbufferedChannels": 1,
+        "Rec_s": 5.62245,
+        "Rep_s": 0.00004,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 9.2302,
+        "Unique_Bugs": 0,
+        "duration_ms": 9232,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-37-19Z",
+        "test_name": "argo-cd-3.1.0/applicationset/controllers/TestDeletePerformedWithSyncPolicySync"
+      }
+    }
+  ]
+}

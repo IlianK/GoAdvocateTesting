@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:08:30.472702646Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/lua/TestGetResourceHealth/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/lua",
+        "testRel": "argo-cd-3.1.0/util/lua",
+        "testName": "TestGetResourceHealth",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-08-04Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/lua",
+          "-exec",
+          "TestGetResourceHealth",
+          "-prog",
+          "TestGetResourceHealth",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:08:04.779815869Z",
+        "endedAt": "2026-02-25T07:08:11.173044202Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 0,
+        "duration_ms": 6393,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-08-04Z",
+        "test_name": "argo-cd-3.1.0/util/lua/TestGetResourceHealth"
+      }
+    }
+  ]
+}

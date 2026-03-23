@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:27:59.394178163Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/flannel-0.20.2/pkg/ipmatch/TestLookupExtIface/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/pkg/ipmatch",
+        "testRel": "flannel-0.20.2/pkg/ipmatch",
+        "testName": "TestLookupExtIface",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-34-03Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/pkg/ipmatch",
+          "-exec",
+          "TestLookupExtIface",
+          "-prog",
+          "TestLookupExtIface",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:34:03.798856887Z",
+        "endedAt": "2026-02-25T11:34:43.82455358Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40025,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-34-03Z",
+        "test_name": "flannel-0.20.2/pkg/ipmatch/TestLookupExtIface"
+      }
+    }
+  ]
+}

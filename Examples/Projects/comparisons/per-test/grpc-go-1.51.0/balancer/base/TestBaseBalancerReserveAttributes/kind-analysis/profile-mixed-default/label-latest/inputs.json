@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:33:58.007437203Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/grpc-go-1.51.0/balancer/base/TestBaseBalancerReserveAttributes/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/base",
+        "testRel": "grpc-go-1.51.0/balancer/base",
+        "testName": "TestBaseBalancerReserveAttributes",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T12-26-41Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/grpc-go-1.51.0/balancer/base",
+          "-exec",
+          "TestBaseBalancerReserveAttributes",
+          "-prog",
+          "TestBaseBalancerReserveAttributes",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T12:26:41.047722031Z",
+        "endedAt": "2026-02-25T12:26:42.62006501Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1572,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T12-26-41Z",
+        "test_name": "grpc-go-1.51.0/balancer/base/TestBaseBalancerReserveAttributes"
+      }
+    }
+  ]
+}

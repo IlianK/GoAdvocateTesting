@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-02-26T22:42:05.581937062Z",
+  "kind": "analysis",
+  "profile": "all-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/results/SelectBlock/Test_Select_Leak_WithoutPartner_Send/analysis/all-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/SelectBlock",
+        "testRel": "SelectBlock",
+        "testName": "Test_Select_Leak_WithoutPartner_Send",
+        "profile": "all-default",
+        "runId": "2026-02-26T21-37-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/SelectBlock",
+          "-exec",
+          "Test_Select_Leak_WithoutPartner_Send",
+          "-prog",
+          "Test_Select_Leak_WithoutPartner_Send",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-time"
+        ],
+        "startedAt": "2026-02-26T21:37:08.821059624Z",
+        "endedAt": "2026-02-26T21:37:10.310164629Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00011,
+        "Bug_Types": "A07",
+        "NrEvents": 4,
+        "Rec_s": 1.2436,
+        "Rep_s": 0.00003,
+        "Total_Bugs": 1,
+        "Total_Time_s": 1.48642,
+        "Unique_Bugs": 1,
+        "duration_ms": 1489,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "all-default",
+        "run_id": "2026-02-26T21-37-08Z",
+        "test_name": "SelectBlock/Test_Select_Leak_WithoutPartner_Send"
+      }
+    }
+  ]
+}

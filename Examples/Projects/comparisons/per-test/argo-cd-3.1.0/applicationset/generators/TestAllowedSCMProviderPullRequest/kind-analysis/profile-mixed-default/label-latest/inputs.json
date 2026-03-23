@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-02-27T20:47:03.564466139Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/generators/TestAllowedSCMProviderPullRequest/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+        "testRel": "argo-cd-3.1.0/applicationset/generators",
+        "testName": "TestAllowedSCMProviderPullRequest",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-47-22Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+          "-exec",
+          "TestAllowedSCMProviderPullRequest",
+          "-prog",
+          "TestAllowedSCMProviderPullRequest",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:47:22.575195932Z",
+        "endedAt": "2026-02-25T02:47:31.234281963Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00003,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 1,
+        "NrGoroutines": 5,
+        "Rec_s": 5.27232,
+        "Rep_s": 0.00005,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.65396,
+        "Unique_Bugs": 0,
+        "duration_ms": 8659,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-47-22Z",
+        "test_name": "argo-cd-3.1.0/applicationset/generators/TestAllowedSCMProviderPullRequest"
+      }
+    }
+  ]
+}

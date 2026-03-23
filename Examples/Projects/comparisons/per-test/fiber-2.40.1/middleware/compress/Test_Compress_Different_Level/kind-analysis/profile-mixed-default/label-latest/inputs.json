@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:25:54.8948838Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/fiber-2.40.1/middleware/compress/Test_Compress_Different_Level/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/compress",
+        "testRel": "fiber-2.40.1/middleware/compress",
+        "testName": "Test_Compress_Different_Level",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-24-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/fiber-2.40.1/middleware/compress",
+          "-exec",
+          "Test_Compress_Different_Level",
+          "-prog",
+          "Test_Compress_Different_Level",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:24:29.806245758Z",
+        "endedAt": "2026-02-25T11:24:31.400136675Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1593,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-24-29Z",
+        "test_name": "fiber-2.40.1/middleware/compress/Test_Compress_Different_Level"
+      }
+    }
+  ]
+}

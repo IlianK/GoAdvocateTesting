@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:48:15.93363073Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/services/scm_provider/TestGetBranchesEmptyRepo/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testRel": "argo-cd-3.1.0/applicationset/services/scm_provider",
+        "testName": "TestGetBranchesEmptyRepo",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-56-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/scm_provider",
+          "-exec",
+          "TestGetBranchesEmptyRepo",
+          "-prog",
+          "TestGetBranchesEmptyRepo",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:56:29.94732052Z",
+        "endedAt": "2026-02-25T02:56:37.091803621Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00011,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 2,
+        "NrChannels": 2,
+        "NrEvents": 40,
+        "NrGoroutines": 8,
+        "NrMutex": 5,
+        "NrMutexEvents": 24,
+        "NrUnbufferedChannels": 2,
+        "Rec_s": 4.29926,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 7.14227,
+        "Unique_Bugs": 0,
+        "duration_ms": 7144,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-56-29Z",
+        "test_name": "argo-cd-3.1.0/applicationset/services/scm_provider/TestGetBranchesEmptyRepo"
+      }
+    }
+  ]
+}

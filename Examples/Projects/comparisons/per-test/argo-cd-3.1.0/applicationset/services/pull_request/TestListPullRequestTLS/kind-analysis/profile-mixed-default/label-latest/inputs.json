@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:47:53.441897344Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/services/pull_request/TestListPullRequestTLS/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/pull_request",
+        "testRel": "argo-cd-3.1.0/applicationset/services/pull_request",
+        "testName": "TestListPullRequestTLS",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-51-55Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/services/pull_request",
+          "-exec",
+          "TestListPullRequestTLS",
+          "-prog",
+          "TestListPullRequestTLS",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:51:55.373863837Z",
+        "endedAt": "2026-02-25T02:52:02.189266591Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00064,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 15,
+        "NrChannels": 15,
+        "NrEvents": 215,
+        "NrGoroutines": 38,
+        "NrMutex": 26,
+        "NrMutexEvents": 132,
+        "NrUnbufferedChannels": 15,
+        "Rec_s": 4.06624,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 6.81346,
+        "Unique_Bugs": 0,
+        "duration_ms": 6815,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-51-55Z",
+        "test_name": "argo-cd-3.1.0/applicationset/services/pull_request/TestListPullRequestTLS"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:08:20.728942992Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/lua/TestFailExternalLibCall/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/lua",
+        "testRel": "argo-cd-3.1.0/util/lua",
+        "testName": "TestFailExternalLibCall",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-06-29Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/lua",
+          "-exec",
+          "TestFailExternalLibCall",
+          "-prog",
+          "TestFailExternalLibCall",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:06:29.426558008Z",
+        "endedAt": "2026-02-25T07:06:35.872161688Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 1,
+        "Unique_Bugs": 0,
+        "duration_ms": 6445,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-06-29Z",
+        "test_name": "argo-cd-3.1.0/util/lua/TestFailExternalLibCall"
+      }
+    }
+  ]
+}

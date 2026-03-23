@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-02-27T20:55:20.196809074Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/server/TestCertsAreNotGeneratedInInsecureMode/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+        "testRel": "argo-cd-3.1.0/server",
+        "testName": "TestCertsAreNotGeneratedInInsecureMode",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T05-11-38Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/server",
+          "-exec",
+          "TestCertsAreNotGeneratedInInsecureMode",
+          "-prog",
+          "TestCertsAreNotGeneratedInInsecureMode",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T05:11:38.93091003Z",
+        "endedAt": "2026-02-25T05:11:50.163798297Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00059,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrChannelEvents": 7,
+        "NrChannels": 7,
+        "NrEvents": 181,
+        "NrGoroutines": 54,
+        "NrMutex": 18,
+        "NrMutexEvents": 106,
+        "NrUnbufferedChannels": 7,
+        "Rec_s": 6.53337,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 11.23041,
+        "Unique_Bugs": 0,
+        "duration_ms": 11232,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T05-11-38Z",
+        "test_name": "argo-cd-3.1.0/server/TestCertsAreNotGeneratedInInsecureMode"
+      }
+    }
+  ]
+}

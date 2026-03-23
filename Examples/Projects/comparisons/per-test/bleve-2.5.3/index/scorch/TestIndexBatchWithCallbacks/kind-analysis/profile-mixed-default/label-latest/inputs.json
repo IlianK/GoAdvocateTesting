@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:13:45.068224013Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/index/scorch/TestIndexBatchWithCallbacks/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/scorch",
+        "testRel": "bleve-2.5.3/index/scorch",
+        "testName": "TestIndexBatchWithCallbacks",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T07-48-48Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/index/scorch",
+          "-exec",
+          "TestIndexBatchWithCallbacks",
+          "-prog",
+          "TestIndexBatchWithCallbacks",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T07:48:48.017732099Z",
+        "endedAt": "2026-02-25T07:49:28.08127768Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 40063,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T07-48-48Z",
+        "test_name": "bleve-2.5.3/index/scorch/TestIndexBatchWithCallbacks"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:15:51.899333726Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/bleve-2.5.3/search/highlight/fragmenter/simple/TestSimpleFragmenter/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/highlight/fragmenter/simple",
+        "testRel": "bleve-2.5.3/search/highlight/fragmenter/simple",
+        "testName": "TestSimpleFragmenter",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T08-49-39Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/bleve-2.5.3/search/highlight/fragmenter/simple",
+          "-exec",
+          "TestSimpleFragmenter",
+          "-prog",
+          "TestSimpleFragmenter",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T08:49:39.263221294Z",
+        "endedAt": "2026-02-25T08:49:40.702418104Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1439,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T08-49-39Z",
+        "test_name": "bleve-2.5.3/search/highlight/fragmenter/simple/TestSimpleFragmenter"
+      }
+    }
+  ]
+}

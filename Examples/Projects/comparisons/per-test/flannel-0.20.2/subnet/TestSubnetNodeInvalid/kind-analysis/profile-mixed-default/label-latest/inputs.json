@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:28:04.873810939Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/flannel-0.20.2/subnet/TestSubnetNodeInvalid/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/subnet",
+        "testRel": "flannel-0.20.2/subnet",
+        "testName": "TestSubnetNodeInvalid",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T11-35-33Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/flannel-0.20.2/subnet",
+          "-exec",
+          "TestSubnetNodeInvalid",
+          "-prog",
+          "TestSubnetNodeInvalid",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T11:35:33.414732319Z",
+        "endedAt": "2026-02-25T11:35:34.841324108Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 1426,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T11-35-33Z",
+        "test_name": "flannel-0.20.2/subnet/TestSubnetNodeInvalid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-02-27T20:47:12.358266797Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/applicationset/generators/TestGitGenerator_GenerateParams/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+        "testRel": "argo-cd-3.1.0/applicationset/generators",
+        "testName": "TestGitGenerator_GenerateParams",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T02-45-12Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/applicationset/generators",
+          "-exec",
+          "TestGitGenerator_GenerateParams",
+          "-prog",
+          "TestGitGenerator_GenerateParams",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T02:45:12.843972427Z",
+        "endedAt": "2026-02-25T02:45:21.415672479Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.00001,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrEvents": 1,
+        "NrGoroutines": 1,
+        "Rec_s": 5.20489,
+        "Rep_s": 0.00003,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 8.56961,
+        "Unique_Bugs": 0,
+        "duration_ms": 8571,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T02-45-12Z",
+        "test_name": "argo-cd-3.1.0/applicationset/generators/TestGitGenerator_GenerateParams"
+      }
+    }
+  ]
+}

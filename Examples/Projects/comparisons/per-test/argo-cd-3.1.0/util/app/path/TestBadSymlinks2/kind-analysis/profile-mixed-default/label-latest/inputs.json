@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-02-25T15:03:35.246681078Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/util/app/path/TestBadSymlinks2/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/app/path",
+        "testRel": "argo-cd-3.1.0/util/app/path",
+        "testName": "TestBadSymlinks2",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T06-23-26Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/util/app/path",
+          "-exec",
+          "TestBadSymlinks2",
+          "-prog",
+          "TestBadSymlinks2",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T06:23:26.728942714Z",
+        "endedAt": "2026-02-25T06:23:32.60213377Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "",
+        "Total_Bugs": 0,
+        "Unique_Bugs": 0,
+        "duration_ms": 5873,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T06-23-26Z",
+        "test_name": "argo-cd-3.1.0/util/app/path/TestBadSymlinks2"
+      }
+    }
+  ]
+}

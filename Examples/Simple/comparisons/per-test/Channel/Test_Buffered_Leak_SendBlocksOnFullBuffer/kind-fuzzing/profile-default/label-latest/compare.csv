@@ -1,0 +1,7 @@
+Mode,NrEvents,Bug_Types,Unique_Bugs,Total_Bugs,Total_Time_s,Rec_s,Ana_s,Rep_s
+GFuzz,5,A07,1,1,1.41871,1.20903,5e-05,
+GFuzzHB,5,,0,0,1.49501,1.23698,8e-05,3e-05
+GFuzzHBFlow,5,,0,0,1.4759,1.23178,8e-05,3e-05
+Flow,5,A07,1,1,1.49459,1.2556,0.00012,4e-05
+GoCR,5,A07,1,1,1.43846,1.21482,0.0001,
+GoCRHB,5,A07,1,1,1.45263,1.23139,0.00013,4e-05

@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-02-27T20:51:04.549841062Z",
+  "kind": "analysis",
+  "profile": "mixed-default",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/results/argo-cd-3.1.0/controller/TestNeedRefreshAppStatus/analysis/mixed-default/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+        "testRel": "argo-cd-3.1.0/controller",
+        "testName": "TestNeedRefreshAppStatus",
+        "profile": "mixed-default",
+        "runId": "2026-02-25T03-35-09Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Projects/argo-cd-3.1.0/controller",
+          "-exec",
+          "TestNeedRefreshAppStatus",
+          "-prog",
+          "TestNeedRefreshAppStatus",
+          "-timeoutRec",
+          "20",
+          "-timeoutRep",
+          "20",
+          "-keepTrace",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-02-25T03:35:09.919593802Z",
+        "endedAt": "2026-02-25T03:35:23.575725475Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Ana_s": 0.02713,
+        "Bug_Types": "",
+        "Confirmed_Replays": 0,
+        "NrBufferedChannels": 10,
+        "NrChannelEvents": 90,
+        "NrChannels": 90,
+        "NrEvents": 1331,
+        "NrGoroutines": 551,
+        "NrMutex": 118,
+        "NrMutexEvents": 500,
+        "NrUnbufferedChannels": 80,
+        "Rec_s": 7.93086,
+        "Rep_s": 0.00006,
+        "Replays_Successful": 0,
+        "Replays_Written": 0,
+        "Total_Bugs": 0,
+        "Total_Time_s": 13.65331,
+        "Unique_Bugs": 0,
+        "duration_ms": 13656,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-default",
+        "run_id": "2026-02-25T03-35-09Z",
+        "test_name": "argo-cd-3.1.0/controller/TestNeedRefreshAppStatus"
+      }
+    }
+  ]
+}
