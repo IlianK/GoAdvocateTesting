@@ -1,0 +1,44 @@
+=== RUN   TestMixedDeadlock_MD2_3U
+--- PASS: TestMixedDeadlock_MD2_3U (0.05s)
+PASS
+ok  	mixed_deadlock	0.053s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_MD2_3U
+Import added at line: 27
+Header added at line: 191
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_MD2_3U
+--- PASS: TestMixedDeadlock_MD2_3U (1.05s)
+PASS
+ok  	mixed_deadlock	1.058s
+DEBUG: CS lock for T3 chan: lock=2000000001, tPre=22
+rewriteMixedDeadlock: main=R1, holder=R3 (lock=22, chan=34), waiter=R2 (lock=14)
+rewriteMixedDeadlock: holder R3 kept to t=36, waiter R2 kept to t=18
+rewriteMixedDeadlock: shifting waiter R2 by 19
+rewriteMixedDeadlock: forceChannelBlock on ch=1000000001
+rewriteMixedDeadlock: R1 has 6 elements, last t=75
+rewriteMixedDeadlock: R2 has 1 elements, last t=75
+rewriteMixedDeadlock: R3 has 2 elements, last t=75
+rewriteMixedDeadlock: blocked element *trace.ElementChannel (tPre=34, tPost=0)
+rewriteMixedDeadlock: blocked element *trace.ElementMutex (tPre=14, tPost=0)
+rewriteMixedDeadlock: replay marker at t=76, code=42
+Bugreport info: 0_1,suc
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_MD2_3U
+Import added at line: 27
+Header added at line: 191
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+=== RUN   TestMixedDeadlock_MD2_3U
+Reading trace from rewrittenTrace_1
+Found ReplayEnd Marker with exit code 42
+Disable Replay
+DEADLOCK_GC@9@/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go:201@mutex:lock
+LEAK_GC@6@/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/GeneralMixedDeadlock_test.go:15@waitGroup:wait
+DEADLOCK_GC@10@/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go:210@chan:revc
+
+Exit Replay with code  42 Mixed Deadlock
+Exit Message: panic: GC
+
+FAIL	mixed_deadlock	1.207s
+FAIL

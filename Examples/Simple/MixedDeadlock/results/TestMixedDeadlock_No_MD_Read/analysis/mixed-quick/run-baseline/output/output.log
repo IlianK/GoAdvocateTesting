@@ -1,0 +1,16 @@
+=== RUN   TestMixedDeadlock_No_MD_Read
+--- PASS: TestMixedDeadlock_No_MD_Read (0.00s)
+PASS
+ok  	mixed_deadlock	0.003s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_Read
+Import added at line: 3
+Header added at line: 107
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_No_MD_Read
+--- PASS: TestMixedDeadlock_No_MD_Read (1.00s)
+PASS
+ok  	mixed_deadlock	1.005s
+DEBUG: CS lock for T2 chan: lock=3000000001, tPre=20
+DEBUG: CS lock for T3 chan: lock=3000000001, tPre=14

@@ -1,0 +1,2 @@
+TestName,NrEvents,NrGoroutines,NrAtomicEvents,NrChannelEvents,NrSelectEvents,NrMutexEvents,NrWaitgroupEvents,NrCondVariablesEvents,NrOnceOperations
+TestMixedDeadlock_DoubleCS_Send_Recv_1,20,3,0,2,0,8,4,0,0

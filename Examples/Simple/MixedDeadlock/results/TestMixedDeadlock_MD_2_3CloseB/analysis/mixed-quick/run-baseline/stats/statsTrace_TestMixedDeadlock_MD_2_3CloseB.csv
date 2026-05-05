@@ -1,0 +1,2 @@
+TestName,NrEvents,NrGoroutines,NrAtomicEvents,NrChannelEvents,NrSelectEvents,NrMutexEvents,NrWaitgroupEvents,NrCondVariablesEvents,NrOnceOperations
+TestMixedDeadlock_MD_2_3CloseB,16,3,0,2,0,4,4,0,0

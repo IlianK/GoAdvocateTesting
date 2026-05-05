@@ -1,0 +1,30 @@
+{
+  "tool": "advocate",
+  "kind": "analysis",
+  "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+  "testName": "TestRWMutex_DoubleRLockCounter_MD2_1B",
+  "profile": "mixed-quick",
+  "runId": "2026-05-04T22-24-57Z",
+  "runLabel": "baseline",
+  "argv": [
+    "../ADVOCATE/advocate/advocate",
+    "analysis",
+    "-path",
+    "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+    "-exec",
+    "TestRWMutex_DoubleRLockCounter_MD2_1B",
+    "-prog",
+    "TestRWMutex_DoubleRLockCounter_MD2_1B",
+    "-timeoutRec",
+    "5",
+    "-timeoutRep",
+    "5",
+    "-stats",
+    "-scen",
+    "m",
+    "-time"
+  ],
+  "startedAt": "2026-05-04T22:24:57.127236781Z",
+  "endedAt": "2026-05-04T22:25:02.864416454Z",
+  "exitCode": 0
+}

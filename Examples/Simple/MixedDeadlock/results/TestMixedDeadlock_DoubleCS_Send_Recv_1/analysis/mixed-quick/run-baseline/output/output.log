@@ -1,0 +1,34 @@
+=== RUN   TestMixedDeadlock_DoubleCS_Send_Recv_1
+--- PASS: TestMixedDeadlock_DoubleCS_Send_Recv_1 (0.07s)
+PASS
+ok  	mixed_deadlock	0.074s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/GeneralMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_DoubleCS_Send_Recv_1
+Import added at line: 3
+Header added at line: 180
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/GeneralMixedDeadlock_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_DoubleCS_Send_Recv_1
+--- PASS: TestMixedDeadlock_DoubleCS_Send_Recv_1 (1.07s)
+PASS
+ok  	mixed_deadlock	1.077s
+DEBUG: CS lock for T2 chan: lock=2000000001, tPre=26
+DEBUG: CS lock for T3 chan: lock=2000000001, tPre=60
+rewriteMixedDeadlock: main=R1, holder=R3 (lock=60, chan=66), waiter=R2 (lock=26)
+rewriteMixedDeadlock: holder R3 kept to t=68, waiter R2 kept to t=30
+rewriteMixedDeadlock: shifting waiter R2 by 39
+rewriteMixedDeadlock: forceChannelBlock on ch=1000000001
+rewriteMixedDeadlock: R1 has 6 elements, last t=111
+rewriteMixedDeadlock: R2 has 3 elements, last t=111
+rewriteMixedDeadlock: R3 has 4 elements, last t=111
+rewriteMixedDeadlock: blocked element *trace.ElementChannel (tPre=66, tPost=0)
+rewriteMixedDeadlock: blocked element *trace.ElementMutex (tPre=26, tPost=0)
+rewriteMixedDeadlock: replay marker at t=112, code=42
+Bugreport info: 0_1,suc
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/GeneralMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_DoubleCS_Send_Recv_1
+Import added at line: 3
+Header added at line: 180
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/GeneralMixedDeadlock_test.go
+=== RUN   TestMixedDeadlock_DoubleCS_Send_Recv_1
+Reading trace from rewrittenTrace_1

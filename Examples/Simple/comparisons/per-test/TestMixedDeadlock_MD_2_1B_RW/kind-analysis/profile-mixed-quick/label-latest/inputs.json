@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-04T21:42:15.474107406Z",
+  "kind": "analysis",
+  "profile": "mixed-quick",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/results/TestMixedDeadlock_MD_2_1B_RW/analysis/mixed-quick/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+        "testName": "TestMixedDeadlock_MD_2_1B_RW",
+        "profile": "mixed-quick",
+        "runId": "2026-05-04T21-28-08Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+          "-exec",
+          "TestMixedDeadlock_MD_2_1B_RW",
+          "-prog",
+          "TestMixedDeadlock_MD_2_1B_RW",
+          "-timeoutRec",
+          "5",
+          "-timeoutRep",
+          "5",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-05-04T21:28:08.292000049Z",
+        "endedAt": "2026-05-04T21:28:15.546986768Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P06",
+        "Confirmed_Replays": 1,
+        "NrChannels": 1,
+        "NrEvents": 16,
+        "NrGoroutines": 3,
+        "NrMutex": 1,
+        "Replays_Successful": 1,
+        "Replays_Written": 1,
+        "Total_Bugs": 1,
+        "duration_ms": 7254,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-quick",
+        "run_id": "2026-05-04T21-28-08Z",
+        "test_name": "TestMixedDeadlock_MD_2_1B_RW"
+      }
+    }
+  ]
+}

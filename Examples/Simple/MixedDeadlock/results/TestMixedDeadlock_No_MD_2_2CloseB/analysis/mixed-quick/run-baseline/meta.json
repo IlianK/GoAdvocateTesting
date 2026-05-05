@@ -1,0 +1,30 @@
+{
+  "tool": "advocate",
+  "kind": "analysis",
+  "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+  "testName": "TestMixedDeadlock_No_MD_2_2CloseB",
+  "profile": "mixed-quick",
+  "runId": "2026-05-04T22-25-25Z",
+  "runLabel": "baseline",
+  "argv": [
+    "../ADVOCATE/advocate/advocate",
+    "analysis",
+    "-path",
+    "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+    "-exec",
+    "TestMixedDeadlock_No_MD_2_2CloseB",
+    "-prog",
+    "TestMixedDeadlock_No_MD_2_2CloseB",
+    "-timeoutRec",
+    "5",
+    "-timeoutRep",
+    "5",
+    "-stats",
+    "-scen",
+    "m",
+    "-time"
+  ],
+  "startedAt": "2026-05-04T22:25:25.839691602Z",
+  "endedAt": "2026-05-04T22:25:31.217273813Z",
+  "exitCode": 0
+}

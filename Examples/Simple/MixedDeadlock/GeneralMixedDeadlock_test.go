@@ -6,229 +6,370 @@ import (
 	"time"
 )
 
+// Helper
+func run2(a, b func()) {
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go func() { defer wg.Done(); a() }()
+	go func() { defer wg.Done(); b() }()
+	wg.Wait()
+}
+
+// ------------------------------------------------------------
+// RWMutex Variants
+// ------------------------------------------------------------
+
+// Multiple Read Locks/Unlocks
+func TestRWMutex_DoubleRLockCounter_MD2_1B(t *testing.T) {
+	var rw sync.RWMutex
+	c := make(chan int, 1) // buffered für MD2-1
+
+	reader := func() {
+		time.Sleep(50 * time.Millisecond) // let sender go first
+		rw.RLock()
+		rw.RLock()
+		rw.RUnlock() // Reader Count: 2 -> 1
+		time.Sleep(30 * time.Millisecond)
+		// Receive still in CS
+		<-c
+
+		rw.RUnlock()
+	}
+
+	sender := func() {
+		rw.Lock()
+		c <- 1 // Send in CS
+		rw.Unlock()
+	}
+
+	run2(reader, sender)
+}
+
+// Multiple Read Locks/Unlocks with Unbuffered Channel
+func TestRWMutex_DoubleRUnlock_MD2_2U(t *testing.T) {
+	var rw sync.RWMutex
+	c := make(chan int) // buffered
+
+	reader := func() {
+		rw.RLock()
+		rw.RLock()
+		rw.RUnlock()
+		rw.RUnlock()
+		<-c // after PCS
+	}
+
+	sender := func() {
+		time.Sleep(50 * time.Millisecond) // let receiver finish PCS
+		rw.Lock()
+		c <- 1 // in CS
+		rw.Unlock()
+	}
+
+	run2(reader, sender)
+}
+
+// ------------------------------------------------------------
+// MULTIPLE CS
+// ------------------------------------------------------------
+
+func TestMixedDeadlock_DoubleCS_Send(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1)
+
+	sender := func() {
+		m.Lock()
+		c <- 1
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond)
+		m.Lock()
+		<-c
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
+func TestMixedDeadlock_DoubleCS_Send_2(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1)
+
+	sender := func() {
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		c <- 1
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(150 * time.Millisecond)
+		m.Lock()
+		<-c
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
+func TestMixedDeadlock_DoubleCS_Recv(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1)
+
+	sender := func() {
+		m.Lock()
+		c <- 1
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond)
+		m.Lock()
+		<-c
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
+func TestMixedDeadlock_DoubleCS_Recv_2(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1)
+
+	sender := func() {
+		m.Lock()
+		c <- 1
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond)
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		<-c
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
+func TestMixedDeadlock_DoubleCS_Send_Recv_1(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1) // buffered
+
+	sender := func() {
+		m.Lock()
+		time.Sleep(10 * time.Millisecond) // CS1
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		c <- 1 // CS2 with send
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond)
+		m.Lock()
+		time.Sleep(10 * time.Millisecond) // CS1
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		<-c // CS2 with receive
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
+func TestMixedDeadlock_DoubleCS_Send_Recv_2(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1)
+
+	sender := func() {
+		m.Lock()
+		c <- 1
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+	}
+
+	receiver := func() {
+		time.Sleep(50 * time.Millisecond)
+		m.Lock()
+		<-c
+		m.Unlock()
+
+		time.Sleep(10 * time.Millisecond)
+
+		m.Lock()
+		time.Sleep(10 * time.Millisecond)
+		m.Unlock()
+	}
+
+	run2(sender, receiver)
+}
+
 /*
-GeneralCycle MD tests
+Cyclic dependency between D1 and D3.
 
-Goal: 3 distinct “general cycle” mixed-deadlock patterns (not redundant),
-while keeping them trace-friendly and deterministic.
+There are no further cyclic dependencies (pl check).
 
-Conventions:
-- We use unbuffered channels to force concrete send/recv rendezvous pairs.
-- We enforce ordering via step channels (s12, s23, …).
-- We *finish* the test (done closes) so traces are clean; the analyzer should still
-  see the mixed cycle in the offline graph.
+This shows that if we only record the "last" dependency per thread,
+we may run into false negatives.
 */
+func TestMixedDeadlock_MultiDep_LastOnly(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1) // buffered
+	s := make(chan int, 1) // buffered
 
-// -----------------------------------------------------------------------------
-// 1) GeneralCycle: 3 goroutines, 2 locks, 2 channels (no select)
-// Pattern intent:
-//   - Pair edges from c1 and c2 rendezvous
-//   - Lock edges via L1->L2 and L2->L1 cross acquisition
-//
-// Distinct from the “with select” version.
-// -----------------------------------------------------------------------------
-func TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans(t *testing.T) {
-	var l1, l2 sync.Mutex
-	c1 := make(chan int) // unbuffered rendezvous
-	c2 := make(chan int) // unbuffered rendezvous
+	receiver := func() { // G2
+		// D3 = (G2, rcv(c), {m})
+		m.Lock()
+		<-c
+		m.Unlock()
 
-	// Step channels to enforce a deterministic schedule.
-	s12 := make(chan struct{})
-	s23 := make(chan struct{})
-	done := make(chan struct{})
+		s <- 1 // allow G1 to proceed
+		<-s    // handshake
 
-	// G1: PCS on L1, then send on c1
-	go func() {
-		l1.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l1.Unlock() // PCS(L1)
-
-		close(s12)
-		c1 <- 1 // rendezvous with G2
-	}()
-
-	// G2: recv c1 while holding L1 (recv-in-CS on L1),
-	//     then create L1->L2 dependency, then PCS(L2) and send on c2
-	go func() {
-		<-s12
-		l1.Lock()
-		v := <-c1 // recv inside CS(L1)
-
-		l2.Lock() // L1 -> L2 edge
-		l2.Unlock()
-		l1.Unlock()
-
-		l2.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l2.Unlock() // PCS(L2)
-
-		close(s23)
-		c2 <- v // rendezvous with G3
-	}()
-
-	// G3: recv c2 while holding L2 (recv-in-CS on L2),
-	//     then create L2->L1 dependency to close the cycle
-	go func() {
-		<-s23
-		l2.Lock()
-		<-c2 // recv inside CS(L2)
-
-		l1.Lock() // L2 -> L1 edge (closes cycle)
-		l1.Unlock()
-		l2.Unlock()
-		close(done)
-	}()
-
-	select {
-	case <-done:
-	case <-time.After(2 * time.Second):
-		t.Fatalf("test timed out (expected progress but got stuck)")
+		// D4 = (G2, rcv(c), {m})
+		m.Lock()
+		<-c
+		m.Unlock()
 	}
+
+	sender := func() { // G1
+		// D1 = (G1, snd(c), {m})
+		m.Lock()
+		c <- 1
+		m.Unlock()
+
+		<-s // sync with G2
+
+		// D2 = (G1, snd(c), {m})
+		m.Lock()
+		s <- 1
+		c <- 1
+		m.Unlock()
+	}
+
+	run2(receiver, sender)
 }
 
-// -----------------------------------------------------------------------------
-// 2) GeneralCycle: 3 goroutines, 2 locks, 2 channels + select receives
-// Pattern intent:
-//   - Same *high-level* resources (L1/L2 + c1/c2) but introduces Select events
-//     (SS) in the trace, which is useful to validate select-aware pairing paths.
-//
-// Distinct from #1 because the receives are via `select`.
-// -----------------------------------------------------------------------------
-func TestMixedDeadlock_GeneralCycle_3G_2Locks_2Chans_WithSelectRecv(t *testing.T) {
-	var l1, l2 sync.Mutex
-	c1 := make(chan int)
-	c2 := make(chan int)
+/*
+Cyclic dependency between D2 and D3, and between D2 and D4.
+But D1 is not involved in any cyclic dependency.
 
-	s12 := make(chan struct{})
-	s23 := make(chan struct{})
-	done := make(chan struct{})
+This shows that if we only record the "first" dependency per thread,
+we may run into false negatives.
+*/
+func TestMixedDeadlock_MultiDep_FirstOnly(t *testing.T) {
+	var m sync.Mutex
+	c := make(chan int, 1) // buffered
+	s := make(chan int, 1) // buffered
 
-	// G1: PCS(L1) then send on c1
-	go func() {
-		l1.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l1.Unlock() // PCS(L1)
+	receiver := func() { // G2
+		s <- 1 // let G1 continue
 
-		close(s12)
-		c1 <- 1
-	}()
+		// D3 = (G2, rcv(c), {m})
+		m.Lock()
+		<-c
+		m.Unlock()
 
-	// G2: recv c1 via select while holding L1; create L1->L2; PCS(L2); send c2
-	go func() {
-		<-s12
-		l1.Lock()
-		var v int
-		select {
-		case v = <-c1: // recv inside CS(L1), but via select (SS)
-		}
+		time.Sleep(20 * time.Millisecond) // remove => likely deadlock
 
-		l2.Lock() // L1 -> L2
-		l2.Unlock()
-		l1.Unlock()
-
-		l2.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l2.Unlock() // PCS(L2)
-
-		close(s23)
-		c2 <- v
-	}()
-
-	// G3: recv c2 via select while holding L2; create L2->L1; done
-	go func() {
-		<-s23
-		l2.Lock()
-		select {
-		case <-c2: // recv inside CS(L2), via select (SS)
-		}
-
-		l1.Lock() // L2 -> L1 (closes cycle)
-		l1.Unlock()
-		l2.Unlock()
-		close(done)
-	}()
-
-	select {
-	case <-done:
-	case <-time.After(2 * time.Second):
-		t.Fatalf("test timed out (expected progress but got stuck)")
+		// D4 = (G2, rcv(c), {m})
+		m.Lock()
+		<-c
+		m.Unlock()
 	}
+
+	sender := func() { // G1
+		// D1 = (G1, snd(c), {m})
+		m.Lock()
+		c <- 1
+		m.Unlock()
+
+		<-s // sync with G2
+
+		// D2 = (G1, snd(c), {m})
+		m.Lock()
+		s <- 1
+		c <- 1
+		m.Unlock()
+	}
+
+	run2(receiver, sender)
 }
 
-// -----------------------------------------------------------------------------
-// 3) GeneralCycle: 4 goroutines, 2 locks, 3 channels (longer cycle)
-// Pattern intent:
-//   - Not just a stylistic variant: adds an extra channel/pair node,
-//     making the mixed cycle “longer” in terms of (Lock + Pair) alternation.
-//
-// Distinct from #1/#2 because it uses an additional rendezvous hop.
-// -----------------------------------------------------------------------------
-func TestMixedDeadlock_GeneralCycle_4G_2Locks_3Chans(t *testing.T) {
-	var l1, l2 sync.Mutex
-	c12 := make(chan int) // G1 -> G2
-	c23 := make(chan int) // G2 -> G3
-	c34 := make(chan int) // G3 -> G4
+func TestMixedDeadlock_MD3_ThreeRoutine(t *testing.T) {
+	var x, y sync.Mutex
+	c := make(chan int, 1) // buffered
 
-	s12 := make(chan struct{})
-	s23 := make(chan struct{})
-	s34 := make(chan struct{})
-	done := make(chan struct{})
-
-	// G1: PCS(L1) then send on c12
-	go func() {
-		l1.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l1.Unlock() // PCS(L1)
-
-		close(s12)
-		c12 <- 1
-	}()
-
-	// G2: recv c12 in CS(L1), create L1->L2, then send on c23
-	go func() {
-		<-s12
-		l1.Lock()
-		v := <-c12 // recv in CS(L1)
-
-		l2.Lock() // L1 -> L2
-		l2.Unlock()
-		l1.Unlock()
-
-		close(s23)
-		c23 <- v
-	}()
-
-	// G3: PCS(L2) then recv c23 outside CS, then send c34 in CS(L2)
-	// This introduces a PCS-style edge and a send-in-CS edge around the same lock.
-	go func() {
-		<-s23
-		l2.Lock()
-		time.Sleep(5 * time.Millisecond)
-		l2.Unlock() // PCS(L2)
-
-		v := <-c23 // recv after PCS(L2) (outside CS)
-
-		close(s34)
-		l2.Lock()
-		c34 <- v // send in CS(L2)
-		l2.Unlock()
-	}()
-
-	// G4: recv c34 (outside CS), then create L2->L1 to close the cycle
-	go func() {
-		<-s34
-		<-c34
-
-		l2.Lock()
-		l1.Lock() // L2 -> L1 (closes cycle)
-		l1.Unlock()
-		l2.Unlock()
-		close(done)
-	}()
-
-	select {
-	case <-done:
-	case <-time.After(2 * time.Second):
-		t.Fatalf("test timed out (expected progress but got stuck)")
+	// R2: hold x, send on c (CS on x), release x
+	r2 := func() {
+		x.Lock()
+		c <- 1 // send while holding x CD_R2
+		x.Unlock()
 	}
+
+	// R3: hold x, receive on c (CS on x), then acquire y
+	// The sleep ensures R2 sends first in the working trace
+	r3 := func() {
+		time.Sleep(60 * time.Millisecond) // let R2 go first
+		x.Lock()
+		<-c // receive while holding x CD_R3
+		x.Unlock()
+
+		y.Lock() // RD_R3: acquire y after releasing x
+		y.Unlock()
+	}
+
+	// R4: hold y first, then acquire x
+	// ensures R4 does not interfere with R2/R3 in the working trace.
+	r4 := func() {
+		time.Sleep(120 * time.Millisecond) // let R2 and R3 finish first
+		y.Lock()                           // hold y RD_R4 lockset = {y}
+		x.Lock()                           // want x RD_R4 lock = x
+		x.Unlock()
+		y.Unlock()
+	}
+
+	var wg sync.WaitGroup
+	wg.Add(3)
+	go func() { defer wg.Done(); r2() }()
+	go func() { defer wg.Done(); r3() }()
+	go func() { defer wg.Done(); r4() }()
+	wg.Wait()
 }

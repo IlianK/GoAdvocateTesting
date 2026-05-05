@@ -1,0 +1,2 @@
+TestName,NrEvents,NrGoroutines,NrAtomicEvents,NrChannelEvents,NrSelectEvents,NrMutexEvents,NrWaitgroupEvents,NrCondVariablesEvents,NrOnceOperations
+TestRWMutex_DoubleRUnlock_MD2_2U,18,3,0,2,0,6,4,0,0

@@ -1,0 +1,2 @@
+TestName,NrMut,NrMutInvalid,ActiveReleased,AllActiveReleased
+TestMixedDeadlock_No_MD_2_2B_RW_FP,0,0,1,1

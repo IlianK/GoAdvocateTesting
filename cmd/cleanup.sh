@@ -52,7 +52,8 @@ mapfile -t TARGETS < <(
     -name results -o \
     -name comparisons -o \
     -name advocateResult -o \
-    -name advocateTrace \
+    -name advocateTrace -o \
+    -name 'rewrittenTrace_*' \
   \) -prune -print
 )
 

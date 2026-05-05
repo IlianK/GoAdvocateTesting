@@ -1,0 +1,14 @@
+=== RUN   TestMixedDeadlock_No_MD_BeforeCS
+--- PASS: TestMixedDeadlock_No_MD_BeforeCS (0.02s)
+PASS
+ok  	mixed_deadlock	0.023s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_BeforeCS
+Import added at line: 3
+Header added at line: 127
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_No_MD_BeforeCS
+--- PASS: TestMixedDeadlock_No_MD_BeforeCS (1.02s)
+PASS
+ok  	mixed_deadlock	1.026s

@@ -18,7 +18,7 @@ metrics:
     Bug_Types:
       op: "codes_present"
       source: "statsAll"
-      pattern: "^NoUnique(?:e)?tected([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+      pattern: "^NrUniqueDetected([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
       present_if: ">0"
       join: ";"
 
@@ -47,13 +47,13 @@ metrics:
     Replays_Written:
       op: "regex_sum"
       source: "statsAll"
-      pattern: "^NoTotal(?:e)?playWritten([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+      pattern: "^NrTotalReplayWritten([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
 
     Replays_Successful:
       op: "regex_sum"
       source: "statsAll"
-      pattern: "^NoTotal(?:e)?playSuccessful([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
-
+      pattern: "^NrTotalReplaySuccessful([A-Z]\\d\\d|P\\d\\d|L\\d\\d)$"
+      
     Total_Time_s:
       op: "times_total"
       column: "Time"

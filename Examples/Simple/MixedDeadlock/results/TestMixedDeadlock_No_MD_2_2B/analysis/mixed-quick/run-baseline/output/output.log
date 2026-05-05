@@ -1,0 +1,44 @@
+=== RUN   TestMixedDeadlock_No_MD_2_2B
+--- PASS: TestMixedDeadlock_No_MD_2_2B (0.05s)
+=== RUN   TestMixedDeadlock_No_MD_2_2B_RW_FP
+--- PASS: TestMixedDeadlock_No_MD_2_2B_RW_FP (0.05s)
+PASS
+ok  	mixed_deadlock	0.104s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_2_2B
+Import added at line: 3
+Header added at line: 14
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+Header added at line: 81
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_No_MD_2_2B
+--- PASS: TestMixedDeadlock_No_MD_2_2B (1.05s)
+=== RUN   TestMixedDeadlock_No_MD_2_2B_RW_FP
+DEBUG: CS lock for T2 chan: lock=3000000001, tPre=20
+rewriteMixedDeadlock: main=R1, holder=R2 (lock=20, chan=40), waiter=R3 (lock=14)
+rewriteMixedDeadlock: holder R2 kept to t=42, waiter R3 kept to t=18
+rewriteMixedDeadlock: shifting waiter R3 by 25
+rewriteMixedDeadlock: forceChannelBlock on ch=1000000001
+rewriteMixedDeadlock: R3 has 1 elements, last t=58
+rewriteMixedDeadlock: R1 has 6 elements, last t=81
+rewriteMixedDeadlock: R2 has 2 elements, last t=81
+rewriteMixedDeadlock: blocked element *trace.ElementChannel (tPre=40, tPost=0)
+rewriteMixedDeadlock: blocked element *trace.ElementMutex (tPre=14, tPost=0)
+rewriteMixedDeadlock: replay marker at t=82, code=42
+Bugreport info: 0_1,suc
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_2_2B
+Import added at line: 3
+Header added at line: 14
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+Header added at line: 81
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+=== RUN   TestMixedDeadlock_No_MD_2_2B
+Reading trace from rewrittenTrace_1
+Found ReplayEnd Marker with exit code 42
+FinishReplay
+Disable Replay
+
+Exit Replay with code  0 The replay terminated normally
+ok  	mixed_deadlock	2.056s

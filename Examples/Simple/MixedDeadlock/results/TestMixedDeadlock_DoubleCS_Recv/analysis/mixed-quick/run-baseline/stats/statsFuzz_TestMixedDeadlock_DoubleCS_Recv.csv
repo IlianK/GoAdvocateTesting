@@ -1,0 +1,2 @@
+TestName,NrMut,NrMutInvalid,ActiveReleased,AllActiveReleased
+TestMixedDeadlock_DoubleCS_Recv,0,0,1,1

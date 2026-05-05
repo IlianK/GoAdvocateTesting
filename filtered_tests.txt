@@ -1,4 +1,3 @@
-argo-cd-3.1.0/server/application/TestMergeLogStreams
 gorums-0.7.0/tests/correctable/TestCorrectable
 gorums-0.7.0/tests/correctable/TestCorrectableStream
 gorums-0.7.0/tests/oneway/TestMulticastPerNode

@@ -1,0 +1,2 @@
+TestName,NrMut,NrMutInvalid,ActiveReleased,AllActiveReleased
+TestMixedDeadlock_MD2_3B,0,0,1,1

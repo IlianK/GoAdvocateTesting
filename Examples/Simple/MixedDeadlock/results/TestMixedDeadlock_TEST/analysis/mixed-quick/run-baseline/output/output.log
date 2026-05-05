@@ -1,0 +1,43 @@
+=== RUN   TestMixedDeadlock_TEST
+--- PASS: TestMixedDeadlock_TEST (0.05s)
+PASS
+ok  	mixed_deadlock	0.053s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_TEST
+Import added at line: 27
+Header added at line: 37
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_TEST
+--- PASS: TestMixedDeadlock_TEST (1.05s)
+PASS
+ok  	mixed_deadlock	1.057s
+DEBUG: CS lock for T2 chan: lock=2000000001, tPre=6
+DEBUG: CS lock for T1 chan: lock=2000000001, tPre=24
+rewriteMixedDeadlock: main=R1, holder=R1 (lock=24, chan=30), waiter=R2 (lock=6)
+rewriteMixedDeadlock: holder R1 kept to t=32, waiter R2 kept to t=10
+rewriteMixedDeadlock: shifting waiter R2 by 23
+rewriteMixedDeadlock: forceChannelBlock on ch=1000000001
+rewriteMixedDeadlock: R2 has 1 elements, last t=40
+rewriteMixedDeadlock: R1 has 4 elements, last t=40
+rewriteMixedDeadlock: blocked element *trace.ElementChannel (tPre=30, tPost=0)
+rewriteMixedDeadlock: blocked element *trace.ElementMutex (tPre=6, tPost=0)
+rewriteMixedDeadlock: replay marker at t=41, code=42
+Bugreport info: 0_1,suc
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+TestName:  TestMixedDeadlock_TEST
+Import added at line: 27
+Header added at line: 37
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go
+=== RUN   TestMixedDeadlock_TEST
+Reading trace from rewrittenTrace_1
+Found ReplayEnd Marker with exit code 42
+Disable Replay
+DEADLOCK_GC@6@/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go:54@chan:revc
+DEADLOCK_GC@9@/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlock_test.go:47@mutex:lock
+
+Exit Replay with code  42 Mixed Deadlock
+Exit Message: panic: GC
+
+FAIL	mixed_deadlock	0.257s
+FAIL

@@ -1,0 +1,30 @@
+{
+  "tool": "advocate",
+  "kind": "analysis",
+  "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+  "testName": "TestRWMutex_DoubleRUnlock_MD2_2U",
+  "profile": "mixed-quick",
+  "runId": "2026-05-04T22-25-02Z",
+  "runLabel": "baseline",
+  "argv": [
+    "../ADVOCATE/advocate/advocate",
+    "analysis",
+    "-path",
+    "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+    "-exec",
+    "TestRWMutex_DoubleRUnlock_MD2_2U",
+    "-prog",
+    "TestRWMutex_DoubleRUnlock_MD2_2U",
+    "-timeoutRec",
+    "5",
+    "-timeoutRep",
+    "5",
+    "-stats",
+    "-scen",
+    "m",
+    "-time"
+  ],
+  "startedAt": "2026-05-04T22:25:02.864780042Z",
+  "endedAt": "2026-05-04T22:25:08.793070969Z",
+  "exitCode": 0
+}

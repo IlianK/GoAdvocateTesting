@@ -1,0 +1,2 @@
+TestName,Run,Recording,Io,Analysis,AnaHb,AnaExitCode,AnaLeak,AnaClose,AnaConcurrent,AnaResource,AnaSelWithoutPartner,AnaUnlock,AnaWait,AnaMixed,FuzzingAna,FuzzingMut,Rewrite,Replay,NumberReplay
+TestMixedDeadlock_DoubleCS_Send_Recv_2,0.22266,1.21966,0.00021,0.00038,0.00001,0.00000,0.00000,0.00000,0.00000,0.00034,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00017,1.36411,1

@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-04T22:27:35.075479089Z",
+  "kind": "analysis",
+  "profile": "mixed-quick",
+  "label": "latest",
+  "runs": [
+    {
+      "path": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/results/TestRWMutex_DoubleRLockCounter_MD2_1B/analysis/mixed-quick/run-baseline/meta.json",
+      "meta": {
+        "tool": "advocate",
+        "kind": "analysis",
+        "testDir": "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+        "testName": "TestRWMutex_DoubleRLockCounter_MD2_1B",
+        "profile": "mixed-quick",
+        "runId": "2026-05-04T22-24-57Z",
+        "runLabel": "baseline",
+        "argv": [
+          "../ADVOCATE/advocate/advocate",
+          "analysis",
+          "-path",
+          "/home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock",
+          "-exec",
+          "TestRWMutex_DoubleRLockCounter_MD2_1B",
+          "-prog",
+          "TestRWMutex_DoubleRLockCounter_MD2_1B",
+          "-timeoutRec",
+          "5",
+          "-timeoutRep",
+          "5",
+          "-stats",
+          "-scen",
+          "m",
+          "-time"
+        ],
+        "startedAt": "2026-05-04T22:24:57.127236781Z",
+        "endedAt": "2026-05-04T22:25:02.864416454Z",
+        "exitCode": 0
+      },
+      "metrics": {
+        "Bug_Types": "P06",
+        "Confirmed_Replays": 1,
+        "NrChannels": 1,
+        "NrEvents": 18,
+        "NrGoroutines": 3,
+        "NrMutex": 1,
+        "Replays_Successful": 1,
+        "Replays_Written": 1,
+        "Total_Bugs": 1,
+        "duration_ms": 5737,
+        "exit_code": 0,
+        "kind": "analysis",
+        "label": "baseline",
+        "profile": "mixed-quick",
+        "run_id": "2026-05-04T22-24-57Z",
+        "test_name": "TestRWMutex_DoubleRLockCounter_MD2_1B"
+      }
+    }
+  ]
+}

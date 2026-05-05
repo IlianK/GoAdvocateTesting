@@ -1,0 +1,2 @@
+Mode,NrEvents,NrGoroutines,NrChannels,NrMutex,Bug_Types,Total_Bugs,Confirmed_Replays,Replays_Written,Replays_Successful
+,25,4,1,2,P06,1,0,0,0

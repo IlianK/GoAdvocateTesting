@@ -1,0 +1,38 @@
+=== RUN   TestMixedDeadlock_No_MD_2_2CloseB
+--- PASS: TestMixedDeadlock_No_MD_2_2CloseB (0.05s)
+PASS
+ok  	mixed_deadlock	0.052s
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_2_2CloseB
+Import added at line: 3
+Header added at line: 58
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+go version go1.25.0 linux/amd64
+=== RUN   TestMixedDeadlock_No_MD_2_2CloseB
+--- PASS: TestMixedDeadlock_No_MD_2_2CloseB (1.05s)
+PASS
+ok  	mixed_deadlock	1.056s
+DEBUG: CS lock for T3 chan: lock=3000000001, tPre=14
+rewriteMixedDeadlock: main=R1, holder=R3 (lock=14, chan=20), waiter=R2 (lock=34)
+rewriteMixedDeadlock: holder R3 kept to t=20, waiter R2 kept to t=38
+rewriteMixedDeadlock: forceChannelBlock on ch=1000000001
+rewriteMixedDeadlock: R3 has 2 elements, last t=20
+rewriteMixedDeadlock: R1 has 6 elements, last t=58
+rewriteMixedDeadlock: R2 has 1 elements, last t=58
+rewriteMixedDeadlock: blocked element *trace.ElementChannel (tPre=20, tPost=0)
+rewriteMixedDeadlock: blocked element *trace.ElementMutex (tPre=34, tPost=0)
+rewriteMixedDeadlock: replay marker at t=59, code=42
+Bugreport info: 0_1,suc
+FileName:  /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+TestName:  TestMixedDeadlock_No_MD_2_2CloseB
+Import added at line: 3
+Header added at line: 58
+Header added at file: /home/ilian/Projects/ADVOCATE/GoAdvocateTesting/Examples/Simple/MixedDeadlock/TwoCycleMixedDeadlockNoMD_test.go
+=== RUN   TestMixedDeadlock_No_MD_2_2CloseB
+Reading trace from rewrittenTrace_1
+FinishReplay
+Found ReplayEnd Marker with exit code 42
+Disable Replay
+
+Exit Replay with code  0 The replay terminated normally
+ok  	mixed_deadlock	1.058s

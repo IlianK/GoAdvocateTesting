@@ -1,0 +1,2 @@
+TestName,NrMut,NrMutInvalid,ActiveReleased,AllActiveReleased
+TestRWMutex_DoubleRLockCounter_MD2_1B,0,0,1,1

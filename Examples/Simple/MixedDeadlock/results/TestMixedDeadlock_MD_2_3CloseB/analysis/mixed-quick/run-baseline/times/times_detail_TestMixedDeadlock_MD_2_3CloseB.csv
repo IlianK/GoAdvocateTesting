@@ -1,0 +1,2 @@
+TestName,Run,Recording,Io,Analysis,AnaHb,AnaExitCode,AnaLeak,AnaClose,AnaConcurrent,AnaResource,AnaSelWithoutPartner,AnaUnlock,AnaWait,AnaMixed,FuzzingAna,FuzzingMut,Rewrite,Replay,NumberReplay
+TestMixedDeadlock_MD_2_3CloseB,0.20557,1.22334,0.00027,0.00012,0.00001,0.00000,0.00000,0.00000,0.00000,0.00007,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00026,1.35871,1
